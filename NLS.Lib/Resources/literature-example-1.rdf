@@ -1,0 +1,1414 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#"
+     xml:base="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1">
+        <rdfs:comment xml:lang="en">Test Version</rdfs:comment>
+        <rdfs:label xml:lang="en">Literary Example</rdfs:label>
+        <owl:versionInfo xml:lang="en">10/10/2019</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Location"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publisher"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Address"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasAuthor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasForm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasForm">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Literary_Form"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasGenre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasImprint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasImprint">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasPublication -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasPublication">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasPublisher -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasPublisher">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publisher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasReview -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#hasReview">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book_Link -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book_Link">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationLink</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Format -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Format">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationFormat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Identifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationIdentifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Language">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationLanguage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Pages -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Pages">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">publicationPageCount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication_Date">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">publicationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Source -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Source">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationSource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Subject -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Subject">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationSubject</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Subtitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Subtitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationSubtitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Summary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Summary">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationSummary</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Weight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">publicationWeight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#authorName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#authorName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#imprintName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#imprintName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Imprint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#publicationISBN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#publicationISBN">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#publicationThumbnail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#publicationThumbnail">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment xml:lang="en">Represents the cover of a book, or the front page of an essay, or the cover of an anthology, etc.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#publisherName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#publisherName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publisher"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publisherName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#reviewAuthor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#reviewAuthor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">reviewAuthor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#reviewSummary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#reviewSummary">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">reviewSummary</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#seriesTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#seriesTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Acrostic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Acrostic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Poetry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Address -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Address"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Adult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Adult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Age_Range"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Age_Range -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Age_Range">
+        <rdfs:label xml:lang="en">Age Range</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Anthology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Anthology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Art_Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Art_Book">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection"/>
+        <rdfs:label xml:lang="en">Art Book</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Article -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Article">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Dissertation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Author"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Autobiography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Autobiography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Non-fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Biography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Biography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Non-fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Dissertation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book_Loan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book_Loan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Local_Service"/>
+        <rdfs:label xml:lang="en">Book Loan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book_Reservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book_Reservation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Web_Service"/>
+        <rdfs:label xml:lang="en">Book Reservation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Cambridge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Cambridge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Location"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Chelmsford"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Peterborough"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Chelmsford -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Chelmsford">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Location"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Peterborough"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Collection">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Couplet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Couplet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Poetry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Cyberpunk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Cyberpunk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Science_Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Dark_Fantasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Dark_Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdfs:label xml:lang="en">Dark Fantasy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Dissertation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Dissertation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Essay"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Extract"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Journal"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Textbook"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Dystopia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Dystopia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Speculative_Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Epic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Epic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Poetry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Essay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Essay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Extract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Extract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Flash_Fiction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Flash_Fiction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Prose"/>
+        <rdfs:label xml:lang="en">Flash Fiction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Free_Verse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Free_Verse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Poetry"/>
+        <rdfs:label xml:lang="en">Free Verse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Gothic_Fantasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Gothic_Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdfs:label xml:lang="en">Gothic Fantasy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Graphic_Novel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Graphic_Novel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction"/>
+        <rdfs:label xml:lang="en">Graphic Novel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Haiku -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Haiku">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Poetry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Hardback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Hardback">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#High_Fantasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#High_Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdfs:label xml:lang="en">High Fantasy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Historical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Historical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Horror -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Horror">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Imprint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Imprint"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Information_Counter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Information_Counter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Local_Service"/>
+        <rdfs:label xml:lang="en">Information Counter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Interlibrary_Loan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Interlibrary_Loan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Local_Service"/>
+        <rdfs:label xml:lang="en">Interlibrary Loan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Journal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Journal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Library_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Library_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Service"/>
+        <rdfs:label xml:lang="en">Library Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Library_Tour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Library_Tour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Local_Service"/>
+        <rdfs:label xml:lang="en">Library Tour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Limerick -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Limerick">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Poetry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Literary_Form -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Literary_Form">
+        <rdfs:label xml:lang="en">Literary Form</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Local_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Local_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Library_Service"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Web_Service"/>
+        <rdfs:label xml:lang="en">Local Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Low_Fantasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Low_Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdfs:label xml:lang="en">Low Fantasy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Magazine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Magazine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Manga -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Manga">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Graphic_Novel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Manual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Manual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Non-fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Memoir -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Memoir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Autobiography"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Murder_Mystery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Murder_Mystery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Mystery"/>
+        <rdfs:label xml:lang="en">Murder Mystery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Mystery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Mystery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Narrative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Narrative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Poetry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Non-fiction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Non-fiction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Prose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novelette -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novelette">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Prose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novella -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novella">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Prose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Online -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Online">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Location"/>
+        <rdfs:label xml:lang="en">Online</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Paperback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Paperback">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Paranormal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Paranormal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Supernatural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Peterborough -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Peterborough">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Poetry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Poetry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Literary_Form"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Political_Thriller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Political_Thriller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Thriller"/>
+        <rdfs:label xml:lang="en">Political Thriller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Prose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Prose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Literary_Form"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publisher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publisher"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Review"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Romance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Romance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Science_Fiction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Science_Fiction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction"/>
+        <rdfs:label xml:lang="en">Science Fiction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Screenplay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Screenplay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Prose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Short_Story -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Short_Story">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Prose"/>
+        <rdfs:label xml:lang="en">Short Story</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Sonnet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Sonnet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Poetry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Speculative_Fiction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Speculative_Fiction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction"/>
+        <rdfs:label xml:lang="en">Speculative Fiction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Steampunk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Steampunk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Science_Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Supernatural -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Supernatural">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Textbook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Textbook">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Thriller -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Thriller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Travel_Guide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Travel_Guide">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Non-fiction"/>
+        <rdfs:label xml:lang="en">Travel Guide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Urban_Fantasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Urban_Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdfs:label xml:lang="en">Urban Fantasy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#User_Registration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#User_Registration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Local_Service"/>
+        <rdfs:label xml:lang="en">User Registration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#User_Training -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#User_Training">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Local_Service"/>
+        <rdfs:label xml:lang="en">User Training</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Utopia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Utopia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Speculative_Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Web_Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Web_Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Library_Service"/>
+        <rdfs:label xml:lang="en">Web Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Young_Adult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Young_Adult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Age_Range"/>
+        <rdfs:label xml:lang="en">Young Adult</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#eBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#eBook">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Book"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Children&apos;s -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Children&apos;s">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Age_Range"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#J._K._Rowling"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Chamber_of_Secrets"/>
+        <seriesTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</seriesTitle>
+        <rdfs:label xml:lang="en">Harry Potter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#J._K._Rowling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#J._K._Rowling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Author"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J. K. Rowling</authorName>
+        <rdfs:label xml:lang="en">J. K. Rowling</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Tana_French -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Tana_French">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Author"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tana French</authorName>
+        <rdfs:label xml:lang="en">Tana French</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Black_Magician_Trilogy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Black_Magician_Trilogy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Series"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Trudi_Canavan"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_High_Lord"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Novice"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Magicians’_Guild"/>
+        <seriesTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Black Magician Trilogy</seriesTitle>
+        <rdfs:label xml:lang="en">The Black Magician Trilogy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_High_Lord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_High_Lord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#High_Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Paperback"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The High Lord</Title>
+        <rdfs:label xml:lang="en">The High Lord</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Novice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Novice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#High_Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Paperback"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Novice</Title>
+        <rdfs:label xml:lang="en">The Novice</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Prisoner_of_Azkaban -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Prisoner_of_Azkaban">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#eBook"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Prisoner of Azkaban</Title>
+        <rdfs:label xml:lang="en">Harry Potter: The Prisoner of Azkaban</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Secret_Place -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Secret_Place">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Hardback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Murder_Mystery"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Tana_French"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Secret Place</Title>
+        <rdfs:label xml:lang="en">The Secret Place</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Trudi_Canavan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Trudi_Canavan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Author"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trudi Canavan</authorName>
+        <rdfs:label xml:lang="en">Trudi Canavan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Chamber_of_Secrets -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Chamber_of_Secrets">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#eBook"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Chamber of Secrets</Title>
+        <rdfs:label xml:lang="en">Harry Potter: The Chamber of Secrets</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Deathly_Hallows -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Deathly_Hallows">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#eBook"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Deathly Hallows</Title>
+        <rdfs:label xml:lang="en">Harry Potter: The Deathly Hallows</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Goblet_of_Fire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Goblet_of_Fire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#eBook"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Goblet of Fire</Title>
+        <rdfs:label xml:lang="en">Harry Potter: The Goblet of Fire</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Half-Blood_Prince -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Half-Blood_Prince">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#eBook"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Half-Blood Prince</Title>
+        <rdfs:label xml:lang="en">Harry Potter: The Half-Blood Prince</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Order_of_the_Phoenix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Order_of_the_Phoenix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#eBook"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Order of the Phoenix</Title>
+        <rdfs:label xml:lang="en">Harry Potter: The Order of the Phoenix</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Philosopher&apos;s_Stone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Harry_Potter:_The_Philosopher&apos;s_Stone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#eBook"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Philosopher&apos;s Stone</Title>
+        <rdfs:label xml:lang="en">Harry Potter: The Philosopher&apos;s Stone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Magicians’_Guild -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Magicians’_Guild">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#High_Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Paperback"/>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Magicians&apos; Guild</Title>
+        <rdfs:label xml:lang="en">The Magicians’ Guild</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Magician’s_Apprentice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#The_Magician’s_Apprentice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#High_Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/literary-example-1#Paperback"/>
+        <rdfs:label xml:lang="en">The Magician’s Apprentice</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -55,15 +55,9 @@ namespace NLS.Lib
             fusekiProcess.Dispose();
         }
 
-        public bool Connect(string baseURI)
+        public bool Connect()
         {
-            Uri _baseURI = new Uri(baseURI);
-            fusekiConnector = new FusekiConnector(_baseURI);
-            return fusekiConnector.IsReady;
-        }
-
-        public bool Connect(Uri baseURI)
-        {
+            Uri baseURI = new Uri(APACHE_BASE_URI);
             fusekiConnector = new FusekiConnector(baseURI);
             return fusekiConnector.IsReady;
         }

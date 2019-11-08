@@ -7,16 +7,12 @@ namespace NLS.Cmd
     {
         static void Main(string[] args)
         {
-            //GraphLoader graphLoader = new GraphLoader();
-            //graphLoader.Load();
-
             Server server = new Server();
-
-            server.Launch(); // TODO: Make it so that the server doesn't attempt a connection before Fuseki has launched.
+            server.Launch();
 
             if (server.Check())
             {
-                if (server.Connect("http://localhost:3030/library-ontology/data")) // TODO: Currently doesn't reflect the actual status of the Fuseki server.
+                if (server.Connect()) // TODO: Currently doesn't reflect the actual status of the Fuseki server.
                 {
                     Console.WriteLine("Connected.");
                     server.Query();

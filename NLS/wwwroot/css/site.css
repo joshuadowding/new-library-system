@@ -39,6 +39,7 @@ html {
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -72,6 +73,10 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
+.container-fluid {
+    padding: 0;
+}
+
 .container-search {
     display: flex;
     flex-direction: row;
@@ -79,7 +84,8 @@ body {
 
 .container-search .search-filters {
     width: 256px;
-    padding: 8px;
+    padding: 16px;
+    border-right: 1px solid #dee2e6;
 }
 
 .container-search .search-filters .filters {
@@ -93,7 +99,7 @@ body {
 
 .container-search .search-results {
     width: 100%;
-    padding: 8px;
+    padding: 16px;
 }
 
 .container-search .search-results .results {

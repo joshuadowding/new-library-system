@@ -29,6 +29,7 @@ a {
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -62,10 +63,40 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+.container-search {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-search .search-filters {
+    width: 256px;
+    padding: 8px;
+}
+
+.container-search .search-filters .filters {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-search .search-filters .filters .select {
+    margin-bottom: 8px;
+}
+
+.container-search .search-results {
+    width: 100%;
+    padding: 8px;
+}
+
+.container-search .search-results .results {
+    display: flex;
+    flex-direction: column;
 }

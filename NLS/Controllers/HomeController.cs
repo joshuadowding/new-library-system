@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using NLS.Lib;
 using NLS.Models;
 using System.Diagnostics;
 
@@ -16,7 +18,21 @@ namespace NLS.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            SearchViewModel viewModel = new SearchViewModel();
+            PopulateSearchFilters(viewModel);
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Index(SearchViewModel viewModel)
+        {
+            //TODO: Query Ontology - Take values from viewModel and construct a query with them.
+
+            viewModel = new SearchViewModel();
+            PopulateSearchFilters(viewModel);
+
+            return View(viewModel);
         }
 
         public IActionResult Privacy()
@@ -28,6 +44,59 @@ namespace NLS.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        private void PopulateSearchFilters(SearchViewModel viewModel)
+        {
+            foreach (string option in Server.QueryClassesForSelectors("Location"))
+            {
+                viewModel.AvailableLocations.Add(new SelectListItem(option, option));
+            }
+
+            foreach (string option in Server.QueryClassesForSelectors("Prose"))
+            {
+                viewModel.AvailableForms.Add(new SelectListItem(option, option));
+            }
+
+            foreach (string option in Server.QueryClassesForSelectors("Poetry"))
+            {
+                viewModel.AvailableForms.Add(new SelectListItem(option, option));
+            }
+
+            foreach (string option in Server.QueryClassesForSelectors("Fiction"))
+            {
+                viewModel.AvailableGenres.Add(new SelectListItem(option, option));
+            }
+
+            foreach (string option in Server.QueryClassesForSelectors("Non-Fiction"))
+            {
+                viewModel.AvailableGenres.Add(new SelectListItem(option, option));
+            }
+
+            foreach (string option in Server.QueryClassesForSelectors("Publication"))
+            {
+                viewModel.AvailableTypes.Add(new SelectListItem(option, option));
+            }
+
+            foreach (string option in Server.QueryClassesForSelectors("Book"))
+            {
+                viewModel.AvailableTypes.Add(new SelectListItem(option, option));
+            }
+
+            foreach (string option in Server.QueryIndividualsForSelectors("Series"))
+            {
+                viewModel.AvailableSeries.Add(new SelectListItem(option, option));
+            }
+
+            foreach (string option in Server.QueryIndividualsForSelectors("Publisher"))
+            {
+                viewModel.AvailablePublishers.Add(new SelectListItem(option, option));
+            }
+
+            foreach (string option in Server.QueryIndividualsForSelectors("Author"))
+            {
+                viewModel.AvailableAuthors.Add(new SelectListItem(option, option));
+            }
         }
     }
 }

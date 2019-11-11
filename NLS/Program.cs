@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using NLS.Lib;
 
 namespace NLS
 {
@@ -7,7 +8,16 @@ namespace NLS
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            if (Server.Connect())
+            {
+                // TODO: Logger - 'Connected'
+                CreateHostBuilder(args).Build().Run();
+            }
+            else
+            {
+                //TODO: Logger - 'Disconnected'
+                Server.Disconnect();
+            }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

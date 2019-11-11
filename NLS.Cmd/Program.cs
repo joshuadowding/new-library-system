@@ -14,11 +14,14 @@ namespace NLS.Cmd
             {
                 if (server.Connect()) // TODO: Currently doesn't reflect the actual status of the Fuseki server.
                 {
-                    Console.WriteLine("Connected.");
-                    server.Query();
+                    Console.WriteLine("Connected");
+                    //server.Query();
 
                     Console.WriteLine("\n");
                     server.QueryCount();
+
+                    Console.WriteLine("\n");
+                    server.QueryPublicationsPerSeries();
 
                     server.Close();
                 }

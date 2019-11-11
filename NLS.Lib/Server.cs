@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Net;
+using System.Collections.Generic;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
@@ -12,54 +11,24 @@ namespace NLS.Lib
 {
     public class Server
     {
-        private const string APACHE_FUSEKI_DIR = "Resources/apache-jena-fuseki";
-        private const string APACHE_BASE_URI = "http://localhost:3030/library-ontology/data";
+        private const string APACHE_FUSEKI_DIR = "~/Resources/apache-jena-fuseki";
+        private const string APACHE_SERVER_URL = "http://localhost:3030";
+        private const string APACHE_FUSEKI_URI = "http://localhost:3030/library-ontology/data";
         private const string ONTOLOGY_BASE_URI = "http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#";
+        private const string RDFS_BASE_URI = "http://www.w3.org/2000/01/rdf-schema#";
 
-        private FusekiConnector fusekiConnector;
-        private Process fusekiProcess;
+        private static FusekiConnector fusekiConnector;
 
-        public void Launch()
+        public static bool Connect()
         {
-            ProcessStartInfo processInfo = new ProcessStartInfo("cmd.exe", "/c fuseki-server --port 3030")
-            {
-                WorkingDirectory = APACHE_FUSEKI_DIR,
-                CreateNoWindow = false,
-                UseShellExecute = false
-            };
-
-            fusekiProcess = Process.Start(processInfo);
-        }
-
-        public bool Check()
-        {
-            bool result = false;
-
-            for (int index = 0; index < 10; index++)
-            {
-                Console.WriteLine("Connection Attempt " + index + "...");
-
-                if (TestServer())
-                {
-                    result = true;
-                    break;
-                }
-            }
-
-            return result;
-        }
-
-        public void Close()
-        {
-            fusekiProcess.Close();
-            fusekiProcess.Dispose();
-        }
-
-        public bool Connect()
-        {
-            Uri baseURI = new Uri(APACHE_BASE_URI);
+            Uri baseURI = new Uri(APACHE_FUSEKI_URI);
             fusekiConnector = new FusekiConnector(baseURI);
             return fusekiConnector.IsReady;
+        }
+
+        public static void Disconnect()
+        {
+            fusekiConnector.Dispose();
         }
 
         public void Query()
@@ -86,6 +55,9 @@ namespace NLS.Lib
             }
         }
 
+        /// <summary>
+        /// Gets the total number of publications per series.
+        /// </summary>
         public void QueryCount()
         {
             SparqlParameterizedString queryString = new SparqlParameterizedString();
@@ -105,12 +77,94 @@ namespace NLS.Lib
                 Console.WriteLine(GetResultValue(result, "series"));
                 Console.WriteLine(GetResultValue(result, "novels"));
 
-                Console.WriteLine(result.ToString(resultFormatter));
+                //Console.WriteLine(result.ToString(resultFormatter));
                 Console.WriteLine("");
             }
         }
 
-        private string GetResultValue(SparqlResult result, string variable)
+        /// <summary>
+        /// Gets all of the individual publications per series.
+        /// </summary>
+        public void QueryPublicationsPerSeries()
+        {
+            SparqlParameterizedString queryString = new SparqlParameterizedString();
+            queryString.Namespaces.AddNamespace("lit", new Uri(ONTOLOGY_BASE_URI));
+            queryString.CommandText = "SELECT ?series ?novel ";
+            queryString.CommandText += "WHERE { ?series a lit:Series. ?novel lit:isPartOf ?series } ";
+            queryString.CommandText += "ORDER BY ASC(?series)";
+
+            SparqlQueryParser queryParser = new SparqlQueryParser();
+            SparqlQuery query = queryParser.ParseFromString(queryString);
+
+            SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+            INodeFormatter resultFormatter = new SparqlFormatter();
+
+            foreach (SparqlResult result in resultSet)
+            {
+                Console.WriteLine(GetResultValue(result, "series"));
+                Console.WriteLine(GetResultValue(result, "novel"));
+
+                //Console.WriteLine(result.ToString(resultFormatter));
+                Console.WriteLine("");
+            }
+        }
+
+        public static List<string> QueryClassesForSelectors(string className)
+        {
+            List<string> selectOptions = new List<string>();
+
+            SparqlParameterizedString queryString = new SparqlParameterizedString();
+            queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
+            queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
+
+            queryString.CommandText = "SELECT DISTINCT ?class ";
+            queryString.CommandText += "WHERE { ?class rdfs:subClassOf lib:" + className + " } ";
+
+            SparqlQueryParser queryParser = new SparqlQueryParser();
+            SparqlQuery query = queryParser.ParseFromString(queryString);
+
+            SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+            foreach (SparqlResult result in resultSet)
+            {
+                string classURI = GetResultValue(result, "class");
+                string[] classSplit = classURI.Split('#');
+                string classOption = classSplit[1].Trim();
+
+                selectOptions.Add(classOption);
+            }
+
+            return selectOptions;
+        }
+
+        public static List<string> QueryIndividualsForSelectors(string className)
+        {
+            List<string> selectOptions = new List<string>();
+
+            SparqlParameterizedString queryString = new SparqlParameterizedString();
+            queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
+            queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
+
+            queryString.CommandText = "SELECT DISTINCT ?class ";
+            queryString.CommandText += "WHERE { ?class a lib:" + className + " } ";
+            queryString.CommandText += "ORDER BY ASC(?class)";
+
+            SparqlQueryParser queryParser = new SparqlQueryParser();
+            SparqlQuery query = queryParser.ParseFromString(queryString);
+
+            SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+            foreach (SparqlResult result in resultSet)
+            {
+                string classURI = GetResultValue(result, "class");
+                string[] classSplit = classURI.Split('#');
+                string classOption = classSplit[1].Trim();
+
+                selectOptions.Add(classOption);
+            }
+
+            return selectOptions;
+        }
+
+        private static string GetResultValue(SparqlResult result, string variable)
         {
             INode node;
             string value;
@@ -138,33 +192,6 @@ namespace NLS.Lib
             }
 
             return value;
-        }
-
-        private bool TestServer()
-        {
-            bool result = false;
-            HttpWebResponse response = null;
-
-            try
-            {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://localhost:3030/");
-                request.Method = "HEAD";
-                response = (HttpWebResponse)request.GetResponse();
-            }
-            catch (WebException exception)
-            {
-                Console.WriteLine("Connection failure: " + exception);
-            }
-            finally
-            {
-                if (response != null)
-                {
-                    response.Close();
-                    result = true;
-                }
-            }
-
-            return result;
         }
     }
 }

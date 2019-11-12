@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLS.Lib.Models;
+using System;
 using System.Collections.Generic;
 using VDS.RDF;
 using VDS.RDF.Parsing;
@@ -128,7 +129,7 @@ namespace NLS.Lib
             {
                 string classURI = GetResultValue(result, "class");
                 string[] classSplit = classURI.Split('#');
-                string classOption = classSplit[1].Trim();
+                string classOption = classSplit[1].Trim().Replace('_', ' ');
 
                 selectOptions.Add(classOption);
             }
@@ -156,12 +157,61 @@ namespace NLS.Lib
             {
                 string classURI = GetResultValue(result, "class");
                 string[] classSplit = classURI.Split('#');
-                string classOption = classSplit[1].Trim();
+                string classOption = classSplit[1].Trim().Replace('_', ' ');
 
                 selectOptions.Add(classOption);
             }
 
             return selectOptions;
+        }
+
+        public static List<string> QueryWithSearchModel(SearchModel searchModel)
+        {
+            List<string> queryResults = new List<string>();
+
+            SparqlParameterizedString queryString = new SparqlParameterizedString();
+            queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
+            queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
+
+            queryString.CommandText = "SELECT DISTINCT ?class ";
+            queryString.CommandText += "WHERE { ";
+
+            if (searchModel.Genre != null)
+            {
+                queryString.CommandText += "?class a lib:" + searchModel.Genre + ". ";
+            }
+
+            if (searchModel.Form != null)
+            {
+                queryString.CommandText += "?class a lib:" + searchModel.Form + " ";
+            }
+
+            if (searchModel.Author != null)
+            {
+                queryString.CommandText += "{?class lib:hasAuthor ?author}";
+            }
+
+            if (searchModel.Author != null)
+            {
+                queryString.CommandText += "FILTER(regex(str(?author), '" + searchModel.Author.Replace(' ', '_') + "')) ";
+            }
+
+            queryString.CommandText += " } ";
+
+            SparqlQueryParser queryParser = new SparqlQueryParser();
+            SparqlQuery query = queryParser.ParseFromString(queryString);
+
+            SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+            foreach (SparqlResult result in resultSet)
+            {
+                string classURI = GetResultValue(result, "class");
+                string[] classSplit = classURI.Split('#');
+                string classOption = classSplit[1].Trim().Replace('_', ' ');
+
+                queryResults.Add(classOption);
+            }
+
+            return queryResults;
         }
 
         private static string GetResultValue(SparqlResult result, string variable)

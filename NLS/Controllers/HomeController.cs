@@ -2,7 +2,10 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using NLS.Lib;
+using NLS.Lib.Models;
 using NLS.Models;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace NLS.Controllers
@@ -27,7 +30,44 @@ namespace NLS.Controllers
         [HttpPost]
         public IActionResult Index(SearchViewModel viewModel)
         {
-            //TODO: Query Ontology - Take values from viewModel and construct a query with them.
+            SearchModel searchModel = new SearchModel();
+
+            if (!String.IsNullOrWhiteSpace(viewModel.Author))
+            {
+                searchModel.Author = viewModel.Author;
+            }
+
+            if (!String.IsNullOrWhiteSpace(viewModel.Form))
+            {
+                searchModel.Form = viewModel.Form;
+            }
+
+            if (!String.IsNullOrWhiteSpace(viewModel.Genre))
+            {
+                searchModel.Genre = viewModel.Genre;
+            }
+
+            if (!String.IsNullOrWhiteSpace(viewModel.Location))
+            {
+                searchModel.Location = viewModel.Location;
+            }
+
+            if (!String.IsNullOrWhiteSpace(viewModel.Publisher))
+            {
+                searchModel.Publisher = viewModel.Publisher;
+            }
+
+            if (!String.IsNullOrWhiteSpace(viewModel.Series))
+            {
+                searchModel.Series = viewModel.Series;
+            }
+
+            if (!String.IsNullOrWhiteSpace(viewModel.Type))
+            {
+                searchModel.Type = viewModel.Type;
+            }
+
+            List<string> results = Server.QueryWithSearchModel(searchModel); //TODO: Query Ontology - Take values from viewModel and construct a query with them.
 
             viewModel = new SearchViewModel();
             PopulateSearchFilters(viewModel);

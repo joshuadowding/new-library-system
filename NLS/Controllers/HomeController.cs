@@ -19,6 +19,7 @@ namespace NLS.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             SearchViewModel viewModel = new SearchViewModel();
@@ -81,11 +82,6 @@ namespace NLS.Controllers
             PopulateSearchFilters(viewModel);
 
             return View(viewModel);
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

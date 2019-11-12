@@ -783,9 +783,6 @@
     <None Update="Resources\apache-jena-fuseki\webapp\WEB-INF\web.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\literature-example-1.rdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

@@ -6,7 +6,7 @@ using VDS.RDF.Query.Builder;
 
 namespace NLS.Lib
 {
-    public class GraphLoader
+    public class File
     {
         public void Load()
         {
@@ -70,9 +70,9 @@ namespace NLS.Lib
 
         public void TestTripleSearch(IGraph graph)
         {
-            if(graph != null)
+            if (graph != null)
             {
-                foreach(Triple triple in graph.Triples)
+                foreach (Triple triple in graph.Triples)
                 {
                     Console.WriteLine(triple.ToString());
                 }

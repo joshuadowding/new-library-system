@@ -47,7 +47,15 @@
     </div>
     <div class="search-results">
         <div class="results">
+            <h1>Results</h1>
 
+            @if (Model.Results != null)
+            {
+                for(var i = 0; i < Model.Results.Count(); i++)
+                {
+                    <p>@Model.Results[i].ToString()</p>
+                }
+            }
         </div>
     </div>
 </div>

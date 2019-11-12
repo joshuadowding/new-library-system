@@ -67,9 +67,17 @@ namespace NLS.Controllers
                 searchModel.Type = viewModel.Type;
             }
 
-            List<string> results = Server.QueryWithSearchModel(searchModel); //TODO: Query Ontology - Take values from viewModel and construct a query with them.
-
             viewModel = new SearchViewModel();
+
+            List<string> results = Server.QueryWithSearchModel(searchModel); //TODO: Query Ontology - Take values from viewModel and construct a query with them.
+            if (results != null)
+            {
+                if (results.Count > 0)
+                {
+                    viewModel.Results = results;
+                }
+            }
+
             PopulateSearchFilters(viewModel);
 
             return View(viewModel);

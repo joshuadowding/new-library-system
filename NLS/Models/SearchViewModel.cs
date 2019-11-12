@@ -21,6 +21,8 @@ namespace NLS.Models
         public List<SelectListItem> AvailablePublishers { get; set; }
         public List<SelectListItem> AvailableSeries { get; set; }
 
+        public List<string> Results { get; set; }
+
         public SearchViewModel()
         {
             AvailableAuthors = new List<SelectListItem>();

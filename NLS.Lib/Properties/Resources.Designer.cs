@@ -59,15 +59,5 @@ namespace NLS.Lib.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] literature_example_1 {
-            get {
-                object obj = ResourceManager.GetObject("literature_example_1", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

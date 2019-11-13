@@ -84,6 +84,12 @@ namespace NLS.Controllers
             return View(viewModel);
         }
 
+        [HttpGet]
+        public IActionResult Product()
+        {
+            return View(new ProductViewModel());
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

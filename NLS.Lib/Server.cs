@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
-using VDS.RDF.Query.Builder;
 using VDS.RDF.Storage;
-using VDS.RDF.Writing.Formatting;
 
 namespace NLS.Lib
 {
@@ -32,16 +30,28 @@ namespace NLS.Lib
             fusekiConnector.Dispose();
         }
 
-        public static List<string> QueryClassesForSelectors(string className)
+        public static List<string> QueryFilterOptions(string filterName, QueryFilterType filterType)
         {
-            List<string> selectOptions = new List<string>();
+            List<string> filterOptions = new List<string>();
 
             SparqlParameterizedString queryString = new SparqlParameterizedString();
             queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
             queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
 
-            queryString.CommandText = "SELECT DISTINCT ?class ";
-            queryString.CommandText += "WHERE { ?class rdfs:subClassOf lib:" + className + " } ";
+            switch(filterType)
+            {
+                case QueryFilterType.Class:
+                    queryString.CommandText = "SELECT DISTINCT ?class ";
+                    queryString.CommandText += "WHERE { ?class rdfs:subClassOf lib:" + filterName + " } ";
+                    queryString.CommandText += "ORDER BY ASC(?class)";
+                    break;
+
+                case QueryFilterType.Individual:
+                    queryString.CommandText = "SELECT DISTINCT ?class ";
+                    queryString.CommandText += "WHERE { ?class a lib:" + filterName + " } ";
+                    queryString.CommandText += "ORDER BY ASC(?class)";
+                    break;
+            }
 
             SparqlQueryParser queryParser = new SparqlQueryParser();
             SparqlQuery query = queryParser.ParseFromString(queryString);
@@ -49,42 +59,14 @@ namespace NLS.Lib
             SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
             foreach (SparqlResult result in resultSet)
             {
-                string classURI = GetResultValue(result, "class");
-                string[] classSplit = classURI.Split('#');
-                string classOption = classSplit[1].Trim().Replace('_', ' ');
+                string resultValue = GetResultValue(result, "class");
+                string[] resultSplit = resultValue.Split('#');
+                string filterOption = resultSplit[1].Trim().Replace('_', ' ');
 
-                selectOptions.Add(classOption);
+                filterOptions.Add(filterOption);
             }
 
-            return selectOptions;
-        }
-
-        public static List<string> QueryIndividualsForSelectors(string className)
-        {
-            List<string> selectOptions = new List<string>();
-
-            SparqlParameterizedString queryString = new SparqlParameterizedString();
-            queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
-            queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
-
-            queryString.CommandText = "SELECT DISTINCT ?class ";
-            queryString.CommandText += "WHERE { ?class a lib:" + className + " } ";
-            queryString.CommandText += "ORDER BY ASC(?class)";
-
-            SparqlQueryParser queryParser = new SparqlQueryParser();
-            SparqlQuery query = queryParser.ParseFromString(queryString);
-
-            SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
-            foreach (SparqlResult result in resultSet)
-            {
-                string classURI = GetResultValue(result, "class");
-                string[] classSplit = classURI.Split('#');
-                string classOption = classSplit[1].Trim().Replace('_', ' ');
-
-                selectOptions.Add(classOption);
-            }
-
-            return selectOptions;
+            return filterOptions;
         }
 
         public static List<string> QueryWithSearchModel(SearchModel searchModel)
@@ -165,5 +147,11 @@ namespace NLS.Lib
 
             return value;
         }
+    }
+
+    public enum QueryFilterType
+    {
+        Class,
+        Individual
     }
 }

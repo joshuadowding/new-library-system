@@ -5,6 +5,7 @@ namespace NLS.Models
 {
     public class SearchViewModel
     {
+        public string Age { get; set; }
         public string Author { get; set; }
         public string Genre { get; set; }
         public string Form { get; set; }
@@ -13,6 +14,7 @@ namespace NLS.Models
         public string Publisher { get; set; }
         public string Series { get; set; }
 
+        public List<SelectListItem> AvailableAges { get; set; }
         public List<SelectListItem> AvailableAuthors { get; set; }
         public List<SelectListItem> AvailableGenres { get; set; }
         public List<SelectListItem> AvailableForms { get; set; }
@@ -25,6 +27,7 @@ namespace NLS.Models
 
         public SearchViewModel()
         {
+            AvailableAges = new List<SelectListItem>();
             AvailableAuthors = new List<SelectListItem>();
             AvailableGenres = new List<SelectListItem>();
             AvailableForms = new List<SelectListItem>();

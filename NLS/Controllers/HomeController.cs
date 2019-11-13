@@ -98,52 +98,52 @@ namespace NLS.Controllers
 
         private void PopulateSearchFilters(SearchViewModel viewModel)
         {
-            foreach (string option in Server.QueryClassesForSelectors("Location"))
+            foreach (string option in Server.QueryFilterOptions("Location", QueryFilterType.Class))
             {
                 viewModel.AvailableLocations.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryClassesForSelectors("Prose"))
+            foreach (string option in Server.QueryFilterOptions("Literary_Form", QueryFilterType.Class))
             {
                 viewModel.AvailableForms.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryClassesForSelectors("Poetry"))
-            {
-                viewModel.AvailableForms.Add(new SelectListItem(option, option));
-            }
-
-            foreach (string option in Server.QueryClassesForSelectors("Fiction"))
+            foreach (string option in Server.QueryFilterOptions("Fiction", QueryFilterType.Class))
             {
                 viewModel.AvailableGenres.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryClassesForSelectors("Non-Fiction"))
+            foreach (string option in Server.QueryFilterOptions("Non-Fiction", QueryFilterType.Class))
             {
                 viewModel.AvailableGenres.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryClassesForSelectors("Publication"))
+            foreach (string option in Server.QueryFilterOptions("Publication", QueryFilterType.Class))
             {
                 viewModel.AvailableTypes.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryClassesForSelectors("Book"))
+            foreach (string option in Server.QueryFilterOptions("Book", QueryFilterType.Class))
             {
                 viewModel.AvailableTypes.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryIndividualsForSelectors("Series"))
+            foreach (string option in Server.QueryFilterOptions("Age_Range", QueryFilterType.Class))
+            {
+                viewModel.AvailableAges.Add(new SelectListItem(option, option));
+            }
+
+            foreach (string option in Server.QueryFilterOptions("Series", QueryFilterType.Individual))
             {
                 viewModel.AvailableSeries.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryIndividualsForSelectors("Publisher"))
+            foreach (string option in Server.QueryFilterOptions("Publisher", QueryFilterType.Individual))
             {
                 viewModel.AvailablePublishers.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryIndividualsForSelectors("Author"))
+            foreach (string option in Server.QueryFilterOptions("Author", QueryFilterType.Individual))
             {
                 viewModel.AvailableAuthors.Add(new SelectListItem(option, option));
             }

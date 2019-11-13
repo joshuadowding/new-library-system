@@ -7,6 +7,11 @@
 <div class="container-search">
     <div class="search-filters">
         <form class="filters" asp-controller="Home" asp-action="Index" method="post">
+            <label asp-for="Age"></label>
+            <select class="select" asp-for="Age" asp-items="Model.AvailableAges">
+                <option></option>
+            </select>
+
             <label asp-for="Author"></label>
             <select class="select" asp-for="Author" asp-items="Model.AvailableAuthors">
                 <option></option>

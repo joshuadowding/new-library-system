@@ -461,14 +461,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Acrostic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Acrostic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Poetry"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Address -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Address"/>
@@ -486,7 +478,7 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range">
-        <rdfs:label xml:lang="en">Age Range</rdfs:label>
+        <rdfs:label xml:lang="en">Age</rdfs:label>
     </owl:Class>
     
 
@@ -604,14 +596,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Couplet -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Couplet">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Poetry"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cyberpunk -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cyberpunk">
@@ -645,14 +629,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Dystopia">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Speculative_Fiction"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Epic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Epic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Poetry"/>
     </owl:Class>
     
 
@@ -692,17 +668,8 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Flash_Fiction -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Flash_Fiction">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Prose"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
         <rdfs:label xml:lang="en">Flash Fiction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Free_Verse -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Free_Verse">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Poetry"/>
-        <rdfs:label xml:lang="en">Free Verse</rdfs:label>
     </owl:Class>
     
 
@@ -727,14 +694,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Graphic_Novel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fiction"/>
         <rdfs:label xml:lang="en">Graphic Novel</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Haiku -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Haiku">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Poetry"/>
     </owl:Class>
     
 
@@ -810,14 +769,6 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Service"/>
         <rdfs:comment xml:lang="en">Available services relating to individual publications.</rdfs:comment>
         <rdfs:label xml:lang="en">Library Service</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Limerick -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Limerick">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Poetry"/>
     </owl:Class>
     
 
@@ -904,14 +855,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Narrative -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Narrative">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Poetry"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Non-fiction -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Non-fiction">
@@ -923,7 +866,7 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Prose"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
     </owl:Class>
     
 
@@ -931,7 +874,7 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novelette -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novelette">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Prose"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
     </owl:Class>
     
 
@@ -939,7 +882,7 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novella -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novella">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Prose"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
     </owl:Class>
     
 
@@ -977,27 +920,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Poetry -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Poetry">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Political_Thriller -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Political_Thriller">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Thriller"/>
         <rdfs:label xml:lang="en">Political Thriller</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Prose -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Prose">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
     </owl:Class>
     
 
@@ -1040,7 +967,7 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Screenplay -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Screenplay">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Prose"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
     </owl:Class>
     
 
@@ -1060,16 +987,8 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Short_Story -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Short_Story">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Prose"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
         <rdfs:label xml:lang="en">Short Story</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Sonnet -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Sonnet">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Poetry"/>
     </owl:Class>
     
 
@@ -1154,7 +1073,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range"/>
-        <rdfs:label xml:lang="en">Young Adult</rdfs:label>
+        <rdfs:label xml:lang="en">Teen</rdfs:label>
     </owl:Class>
     
 
@@ -1171,6 +1090,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Children&apos;s">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range"/>
+        <rdfs:label xml:lang="en">Child</rdfs:label>
     </owl:Class>
     
 

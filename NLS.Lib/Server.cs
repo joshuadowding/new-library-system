@@ -40,10 +40,12 @@ namespace NLS.Lib
 
             switch(filterType)
             {
+                //Reference: https://stackoverflow.com/questions/7557564/sparql-query-to-find-all-sub-classes-and-a-super-class-of-a-given-class
                 case QueryFilterType.Class:
                     queryString.CommandText = "SELECT DISTINCT ?class ";
-                    queryString.CommandText += "WHERE { ?class rdfs:subClassOf lib:" + filterName + " } ";
-                    queryString.CommandText += "ORDER BY ASC(?class)";
+                    queryString.CommandText += "WHERE { ?class rdfs:subClassOf* lib:" + filterName + ". ";
+                    queryString.CommandText += "FILTER(?class != lib:" + filterName + ") } "; // TODO: Make this exclude the lib:Fiction and lib:Non-Fiction classes as well.
+                    queryString.CommandText += "ORDER BY ASC(?class)"; // TODO: Get the class' rdfs:label instead of it's literal name.
                     break;
 
                 case QueryFilterType.Individual:

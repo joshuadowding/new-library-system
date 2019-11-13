@@ -7,13 +7,23 @@
 <div class="container-search">
     <div class="search-filters">
         <form class="filters" asp-controller="Home" asp-action="Index" method="post">
-            <label asp-for="Age"></label>
-            <select class="select" asp-for="Age" asp-items="Model.AvailableAges">
+            <label asp-for="Author"></label>
+            <select class="select" asp-for="Author" asp-items="Model.AvailableAuthors">
                 <option></option>
             </select>
 
-            <label asp-for="Author"></label>
-            <select class="select" asp-for="Author" asp-items="Model.AvailableAuthors">
+            <label asp-for="Publisher"></label>
+            <select class="select" asp-for="Publisher" asp-items="Model.AvailablePublishers">
+                <option></option>
+            </select>
+
+            <label asp-for="Series"></label>
+            <select class="select" asp-for="Series" asp-items="Model.AvailableSeries">
+                <option></option>
+            </select>
+
+            <label asp-for="Type"></label>
+            <select class="select" asp-for="Type" asp-items="Model.AvailableTypes">
                 <option></option>
             </select>
 
@@ -27,23 +37,13 @@
                 <option></option>
             </select>
 
+            <label asp-for="Age"></label>
+            <select class="select" asp-for="Age" asp-items="Model.AvailableAges">
+                <option></option>
+            </select>
+
             <label asp-for="Location"></label>
             <select class="select" asp-for="Location" asp-items="Model.AvailableLocations">
-                <option></option>
-            </select>
-
-            <label asp-for="Type"></label>
-            <select class="select" asp-for="Type" asp-items="Model.AvailableTypes">
-                <option></option>
-            </select>
-
-            <label asp-for="Publisher"></label>
-            <select class="select" asp-for="Publisher" asp-items="Model.AvailablePublishers">
-                <option></option>
-            </select>
-
-            <label asp-for="Series"></label>
-            <select class="select" asp-for="Series" asp-items="Model.AvailableSeries">
                 <option></option>
             </select>
 

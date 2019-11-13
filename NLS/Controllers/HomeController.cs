@@ -98,6 +98,8 @@ namespace NLS.Controllers
 
         private void PopulateSearchFilters(SearchViewModel viewModel)
         {
+            // TODO: Drastically simplify everything below.
+
             foreach (string option in Server.QueryFilterOptions("Location", QueryFilterType.Class))
             {
                 viewModel.AvailableLocations.Add(new SelectListItem(option, option));
@@ -108,22 +110,12 @@ namespace NLS.Controllers
                 viewModel.AvailableForms.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryFilterOptions("Fiction", QueryFilterType.Class))
-            {
-                viewModel.AvailableGenres.Add(new SelectListItem(option, option));
-            }
-
-            foreach (string option in Server.QueryFilterOptions("Non-Fiction", QueryFilterType.Class))
+            foreach (string option in Server.QueryFilterOptions("Genre", QueryFilterType.Class))
             {
                 viewModel.AvailableGenres.Add(new SelectListItem(option, option));
             }
 
             foreach (string option in Server.QueryFilterOptions("Publication", QueryFilterType.Class))
-            {
-                viewModel.AvailableTypes.Add(new SelectListItem(option, option));
-            }
-
-            foreach (string option in Server.QueryFilterOptions("Book", QueryFilterType.Class))
             {
                 viewModel.AvailableTypes.Add(new SelectListItem(option, option));
             }

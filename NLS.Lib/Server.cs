@@ -16,6 +16,7 @@ namespace NLS.Lib
         private const string ONTOLOGY_BASE_URI = "http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#";
         private const string RDFS_BASE_URI = "http://www.w3.org/2000/01/rdf-schema#";
         private const string RDF_BASE_URI = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+        private const string OWL_BASE_URI = "http://www.w3.org/2002/07/owl#";
 
         private static FusekiConnector fusekiConnector;
 
@@ -55,7 +56,7 @@ namespace NLS.Lib
             {
                 foreach (KeyValuePair<string, INode> _result in result)
                 {
-                    switch(_result.Key)
+                    switch (_result.Key)
                     {
                         case "title":
                             string[] resultSplit = _result.Value.ToString().Split('@');
@@ -63,22 +64,22 @@ namespace NLS.Lib
                             break;
 
                         case "author":
-                            string[] authorSplit = _result.Value.ToString().Split(':');
+                            string[] authorSplit = _result.Value.ToString().Split('#');
                             publicationModel.Authors.Add(authorSplit[1].Trim().Replace('_', ' '));
                             break;
 
                         case "publisher":
-                            string[] publisherSplit = _result.Value.ToString().Split(':');
+                            string[] publisherSplit = _result.Value.ToString().Split('#');
                             publicationModel.Publisher = publisherSplit[1].Trim().Replace('_', ' ');
                             break;
 
                         case "series":
-                            string[] seriesSplit = _result.Value.ToString().Split(':');
+                            string[] seriesSplit = _result.Value.ToString().Split('#');
                             publicationModel.Series = seriesSplit[1].Trim().Replace('_', ' ');
                             break;
 
                         case "imprint":
-                            string[] imprintSplit = _result.Value.ToString().Split(':');
+                            string[] imprintSplit = _result.Value.ToString().Split('#');
                             publicationModel.Imprint = imprintSplit[1].Trim().Replace('_', ' ');
                             break;
                     }
@@ -97,11 +98,13 @@ namespace NLS.Lib
             queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
             queryString.Namespaces.AddNamespace("rdf", new Uri(RDF_BASE_URI));
             queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
+            queryString.Namespaces.AddNamespace("owl", new Uri(OWL_BASE_URI));
 
             queryString.CommandText = "SELECT DISTINCT ?type ";
             queryString.CommandText += "WHERE { ?class rdfs:label ?title. ";
             queryString.CommandText += "?class rdf:type ?type. ";
-            queryString.CommandText += "FILTER(regex(str(?title), '" + individualName.Replace('_', ' ') + "')) }";
+            queryString.CommandText += "FILTER(regex(str(?title), '" + individualName.Replace('_', ' ') + "')). ";
+            queryString.CommandText += "FILTER(?type != owl:NamedIndividual) }";
 
             SparqlQueryParser queryParser = new SparqlQueryParser();
             SparqlQuery query = queryParser.ParseFromString(queryString);
@@ -110,7 +113,7 @@ namespace NLS.Lib
             foreach (SparqlResult result in resultSet)
             {
                 string resultValue = GetResultValue(result, "type");
-                string[] resultSplit = resultValue.Split(':');
+                string[] resultSplit = resultValue.Split('#');
                 string individualType = resultSplit[1].Trim().Replace('_', ' ');
 
                 individualTypes.Add(individualType);

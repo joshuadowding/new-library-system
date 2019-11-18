@@ -85,9 +85,22 @@ namespace NLS.Controllers
         }
 
         [HttpGet]
-        public IActionResult Product()
+        public IActionResult Search()
         {
-            return View(new ProductViewModel());
+            string selectedItem = HttpContext.Request.RouteValues["id"].ToString();
+
+            ProductViewModel productViewModel = new ProductViewModel();
+            productViewModel.SelectedItem = selectedItem;
+            return RedirectToAction("Product", productViewModel);
+        }
+
+        [HttpGet]
+        public IActionResult Product(ProductViewModel viewModel)
+        {
+            // TODO: Query ontology for product page.
+            viewModel.Publication = Server.QueryIndividualPublication(viewModel.SelectedItem);
+
+            return View(viewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

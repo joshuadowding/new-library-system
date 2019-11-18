@@ -387,15 +387,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationThumbnail -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationThumbnail">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:comment xml:lang="en">Represents the cover of a book, or the front page of an essay, or the cover of an anthology, etc.</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publisherName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publisherName">

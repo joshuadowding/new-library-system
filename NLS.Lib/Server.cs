@@ -15,6 +15,7 @@ namespace NLS.Lib
         private const string APACHE_FUSEKI_URI = "http://localhost:3030/library-ontology/data";
         private const string ONTOLOGY_BASE_URI = "http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#";
         private const string RDFS_BASE_URI = "http://www.w3.org/2000/01/rdf-schema#";
+        private const string RDF_BASE_URI = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 
         private static FusekiConnector fusekiConnector;
 
@@ -30,6 +31,94 @@ namespace NLS.Lib
             fusekiConnector.Dispose();
         }
 
+        public static PublicationModel QueryIndividualPublication(string individualName)
+        {
+            PublicationModel publicationModel = new PublicationModel();
+
+            SparqlParameterizedString queryString = new SparqlParameterizedString();
+            queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
+            queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
+
+            queryString.CommandText = "SELECT DISTINCT ?title ?author ?series ?publisher ?imprint ";
+            queryString.CommandText += "WHERE { ?class rdfs:label ?title. ";
+            queryString.CommandText += "?class lib:hasAuthor ?author. ";
+            queryString.CommandText += "?class lib:hasSeries ?series. ";
+            queryString.CommandText += "?class lib:hasPublisher ?publisher. ";
+            queryString.CommandText += "?class lib:hasImprint ?imprint. ";
+            queryString.CommandText += "FILTER(regex(str(?title), '" + individualName.Replace('_', ' ') + "')) }";
+
+            SparqlQueryParser queryParser = new SparqlQueryParser();
+            SparqlQuery query = queryParser.ParseFromString(queryString);
+
+            SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+            foreach (SparqlResult result in resultSet)
+            {
+                foreach (KeyValuePair<string, INode> _result in result)
+                {
+                    switch(_result.Key)
+                    {
+                        case "title":
+                            string[] resultSplit = _result.Value.ToString().Split('@');
+                            publicationModel.Title = resultSplit[0].Trim().Replace('_', ' ');
+                            break;
+
+                        case "author":
+                            string[] authorSplit = _result.Value.ToString().Split(':');
+                            publicationModel.Authors.Add(authorSplit[1].Trim().Replace('_', ' '));
+                            break;
+
+                        case "publisher":
+                            string[] publisherSplit = _result.Value.ToString().Split(':');
+                            publicationModel.Publisher = publisherSplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "series":
+                            string[] seriesSplit = _result.Value.ToString().Split(':');
+                            publicationModel.Series = seriesSplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "imprint":
+                            string[] imprintSplit = _result.Value.ToString().Split(':');
+                            publicationModel.Imprint = imprintSplit[1].Trim().Replace('_', ' ');
+                            break;
+                    }
+                }
+            }
+
+            publicationModel.Types = QueryIndividualTypes(individualName);
+            return publicationModel;
+        }
+
+        public static List<string> QueryIndividualTypes(string individualName)
+        {
+            List<string> individualTypes = new List<string>();
+
+            SparqlParameterizedString queryString = new SparqlParameterizedString();
+            queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
+            queryString.Namespaces.AddNamespace("rdf", new Uri(RDF_BASE_URI));
+            queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
+
+            queryString.CommandText = "SELECT DISTINCT ?type ";
+            queryString.CommandText += "WHERE { ?class rdfs:label ?title. ";
+            queryString.CommandText += "?class rdf:type ?type. ";
+            queryString.CommandText += "FILTER(regex(str(?title), '" + individualName.Replace('_', ' ') + "')) }";
+
+            SparqlQueryParser queryParser = new SparqlQueryParser();
+            SparqlQuery query = queryParser.ParseFromString(queryString);
+
+            SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+            foreach (SparqlResult result in resultSet)
+            {
+                string resultValue = GetResultValue(result, "type");
+                string[] resultSplit = resultValue.Split(':');
+                string individualType = resultSplit[1].Trim().Replace('_', ' ');
+
+                individualTypes.Add(individualType);
+            }
+
+            return individualTypes;
+        }
+
         public static List<string> QueryFilterOptions(string filterName, QueryFilterType filterType)
         {
             List<string> filterOptions = new List<string>();
@@ -38,7 +127,7 @@ namespace NLS.Lib
             queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
             queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
 
-            switch(filterType)
+            switch (filterType)
             {
                 //Reference: https://stackoverflow.com/questions/7557564/sparql-query-to-find-all-sub-classes-and-a-super-class-of-a-given-class
                 case QueryFilterType.Class:
@@ -82,15 +171,15 @@ namespace NLS.Lib
             queryString.CommandText = "SELECT DISTINCT ?class ";
             queryString.CommandText += "WHERE { ";
 
-            if(searchModel.SearchClasses.Count > 0)
+            if (searchModel.SearchClasses.Count > 0)
             {
                 foreach (string searchClass in searchModel.SearchClasses)
                 {
                     queryString.CommandText += "?class a lib:" + searchClass + ". ";
                 }
             }
-            
-            if(searchModel.SearchIndividuals.Count > 0)
+
+            if (searchModel.SearchIndividuals.Count > 0)
             {
                 foreach (KeyValuePair<string, string> searchIndividual in searchModel.SearchIndividuals)
                 {
@@ -103,7 +192,7 @@ namespace NLS.Lib
                 }
             }
 
-            queryString.CommandText += " } ";
+            queryString.CommandText += " }";
 
             SparqlQueryParser queryParser = new SparqlQueryParser();
             SparqlQuery query = queryParser.ParseFromString(queryString);

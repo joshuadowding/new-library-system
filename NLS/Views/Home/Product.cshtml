@@ -7,3 +7,22 @@
 
 <h1>Product</h1>
 
+<h2>@Model.Publication.Title</h2>
+
+<div>
+    @foreach (string author in Model.Publication.Authors)
+    {
+        <p>@author</p>
+    }
+</div>
+
+<p>@Model.Publication.Publisher</p>
+<p>@Model.Publication.Imprint</p>
+<p>@Model.Publication.Series</p>
+
+<div>
+    @foreach (string type in Model.Publication.Types)
+    {
+        <p>@type</p>
+    }
+</div>

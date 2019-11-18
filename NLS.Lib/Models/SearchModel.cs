@@ -1,19 +1,16 @@
-﻿namespace NLS.Lib.Models
+﻿using System.Collections.Generic;
+
+namespace NLS.Lib.Models
 {
     public class SearchModel
     {
-        public string Author { get; set; }
-        public string Genre { get; set; }
-        public string Form { get; set; }
-        public string Location { get; set; }
-        public string Type { get; set; }
-        public string Publisher { get; set; }
-        public string Series { get; set; }
-
+        public List<string> SearchClasses { get; set; }
+        public Dictionary<string, string> SearchIndividuals { get; set; }
 
         public SearchModel()
         {
-            // TODO ...
+            SearchClasses = new List<string>();
+            SearchIndividuals = new Dictionary<string, string>();
         }
     }
 }

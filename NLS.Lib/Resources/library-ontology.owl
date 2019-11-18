@@ -41,7 +41,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Address"/>
     </owl:ObjectProperty>
     
 
@@ -194,16 +193,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#hasSeries">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#isPartOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#isPartOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
         <rdfs:range>
             <owl:Class>
@@ -458,12 +447,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Address -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Address"/>
     
 
 
@@ -1248,7 +1231,7 @@
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Trudi_Canavan"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
         <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">647</Pages>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</Publication_Date>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the city of Imardin, where those who wield magic wield power, a young street-girl, adopted by the Magician&apos;s Guild, finds herself at the centre of a terrible plot that may destroy the entire world . . .
@@ -1272,7 +1255,7 @@ Sonea has learned much at the magicians&apos; guild and the other novices now tr
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Trudi_Canavan"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
         <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">592</Pages>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</Publication_Date>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imardin is a city of dark intrigues and deadly politics, where those who wield magic wield power. Into this established order has blundered a young street-girl with extraordinary magical gifts. Adopted by the Magicians&apos; Guild, her life is changed forever - but for better or for worse?
@@ -1296,7 +1279,7 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-13T00:00:00</Publication_Date>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Let the magic of J.K. Rowling&apos;s classic Harry Potter series take you back to Hogwarts School of Witchcraft and Wizardry. Issued to mark the 20th anniversary of first publication of Harry Potter and the Prisoner of Azkaban, this irresistible Slytherin House Edition celebrates the noble character of the Hogwarts house famed for its pride, ambition and cunning. Harry&apos;s third year at Hogwarts is packed with thrilling Slytherin moments, including Draco Malfoy&apos;s typically sneaky attempts to sabotage the Gryffindor Seeker . With vibrant sprayed edges in Slytherin house livery, the book features beautiful house-themed cover artwork with intricate gold foiling. With an exciting, bespoke introduction exploring the history of Slytherin House, and exclusive insights into the use of the Patronus Charm by favourite Slytherin characters, the book also boasts a spectacular image by Kate Greenaway winner Levi Pinfold of Severus Snape conjuring his Patronus. All seven books in the series will be issued in these highly collectable, beautifully crafted House Editions, designed to be treasured and read for years to come.</Summary>
         <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Prisoner of Azkaban</Title>
@@ -1380,7 +1363,7 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-01T00:00:00</Publication_Date>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter&apos;s summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone . Dobby&apos;s sinister predictions seem to be coming true. These new editions of the classic and internationally bestselling, multi-award-winning series feature instantly pick-up-able new jackets by Jonny Duddle, with huge child appeal, to bring Harry Potter to the next generation of readers. It&apos;s time to PASS THE MAGIC ON.</Summary>
         <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Chamber of Secrets</Title>
@@ -1405,7 +1388,7 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#John_Tiffany"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-31T00:00:00</Publication_Date>
         <Subtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parts One and Two</Subtitle>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It was always difficult being Harry Potter and it isn&apos;t much easier now that he is an overworked employee of the Ministry of Magic, a husband, and father of three school-age children. While Harry grapples with a past that refuses to stay where it belongs, his youngest son Albus must struggle with the weight of a family legacy he never wanted. As past and present fuse ominously, both father and son learn the uncomfortable truth: sometimes, darkness comes from unexpected places.</Summary>
@@ -1427,7 +1410,7 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-06T00:00:00</Publication_Date>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;Give me Harry Potter, and I shall leave the school untouched. Give me Harry Potter, and you will be rewarded&apos; Lord Voldemort Harry Potter is preparing to leave the Dursleys and Privet Drive for the last time. But the future that awaits him is full of danger, not only for him, but for anyone close to him - and Harry has already lost so much. Only by destroying Voldemort&apos;s remaining Horcruxes can Harry free himself and overcome the Dark Lord&apos;s forces of evil. In this dramatic conclusion to the Harry Potter series, Harry must leave his most loyal friends behind, and in a final perilous journey find the strength and the will to face his terrifying destiny: a deadly confrontation that is his alone to fight. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</Summary>
         <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Deathly Hallows</Title>
@@ -1448,7 +1431,7 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-06T00:00:00</Publication_Date>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;It matters not what someone is born, but what they grow to be&apos; Albus Dumbledore When the Quidditch World Cup is disrupted by Voldemort&apos;s rampaging supporters alongside the resurrection of the terrifying Dark Mark, it is obvious to Harry Potter that, far from weakening, Voldemort is getting stronger. Back at Hogwarts for his fourth year, Harry is astonished to be chosen by the Goblet of Fire to represent the school in the Triwizard Tournament. The competition is dangerous, the tasks terrifying, and true courage is no guarantee of survival - especially when the darkest forces are on the rise. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</Summary>
         <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Goblet of Fire</Title>
@@ -1469,7 +1452,7 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Large_Print_Press"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Large_Print_Press"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-07-01T00:00:00</Publication_Date>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book 6 in the Harry Potter seriesA New York Times BestsellerIn the fifth and most recent book, Harry Potter and the Order of the Phoenix, the last chapter, titled The Second War Begins, started: &apos;In a brief statement Friday night, Minister of Magic Cornelius Fudge confirmed that He-Who-Must-Not-Be-Named has returned to this country and is active once more. It is with great regret that I must confirm that the wizard styling himself Lord -- well, you know who I mean -- is alive among us again, said Fudge.&apos;Harry Potter and the Half-Blood Prince takes up the story of Harry Potter&apos;s sixth year at Hogwarts School of Witchcraft and Wizardry at this point in the midst of the storm of this battle of good and evil. The author has already said that the Half-Blood Prince is neither Harry nor Voldemort. And most importantly, the opening chapter of Harry Potter and the Half-Blood Prince has been brewing in J. K. Rowling&apos;s mind for 13 years.</Summary>
         <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Half-Blood Prince</Title>
@@ -1490,7 +1473,7 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-06T00:00:00</Publication_Date>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;This is the weapon he has been seeking so assiduously since his return: the knowledge of how to destroy you&apos; Albus Dumbledore Harry Potter is furious that he has been abandoned at the Dursleys&apos; house for the summer, for he suspects that Voldemort is gathering an army, that he himself could be attacked, and that his so-called friends are keeping him in the dark. Finally rescued by wizard bodyguards, he discovers that Dumbledore is regrouping the Order of the Phoenix - a secret society first formed years ago to fight Voldemort. But the Ministry of Magic is against the Order, lies are being spread by the wizards&apos; tabloid, the Daily Prophet, and Harry fears that he may have to take on this epic battle against evil alone. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</Summary>
         <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Order of the Phoenix</Title>
@@ -1511,7 +1494,7 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-01T00:00:00</Publication_Date>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gryffindor, Slytherin, Hufflepuff, Ravenclaw . Twenty years ago these magical words and many more flowed from a young writer&apos;s pen, an orphan called Harry Potter was freed from the cupboard under the stairs - and a global phenomenon started. Harry Potter and the Philosopher&apos;s Stone has been read and loved by every new generation since. To mark the 20th anniversary of first publication, Bloomsbury has published four House Editions of J.K. Rowling&apos;s modern classic. These stunning editions each feature the individual house crest on the jacket and line illustrations exclusive to that house, by Kate Greenaway Medal winner Levi Pinfold. Exciting new extra content includes fact files and profiles of favourite characters, and each book has sprayed edges in the house colours. Available for a limited period only, these highly collectable editions are a must-have for all Harry Potter fans.</Summary>
         <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Philosopher&apos;s Stone</Title>
@@ -1573,7 +1556,7 @@ Covering 1,000 years of history, and casting fresh light on the basics of Roman 
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Trudi_Canavan"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
-        <isPartOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
         <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465</Pages>
         <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</Publication_Date>
         <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Each year the magicians of Imardin gather together to purge the city streets of vagrants, urchins and miscreants. Masters of the disciplines of magic, they know that no one can oppose them. But their protective shield is not as impenetrable as they believe.

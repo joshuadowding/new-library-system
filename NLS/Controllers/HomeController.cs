@@ -35,42 +35,42 @@ namespace NLS.Controllers
 
             if (!String.IsNullOrWhiteSpace(viewModel.Author))
             {
-                searchModel.Author = viewModel.Author;
+                searchModel.SearchIndividuals.Add("Author", viewModel.Author);
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Form))
             {
-                searchModel.Form = viewModel.Form;
+                searchModel.SearchClasses.Add(viewModel.Form);
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Genre))
             {
-                searchModel.Genre = viewModel.Genre;
+                searchModel.SearchClasses.Add(viewModel.Genre);
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Location))
             {
-                searchModel.Location = viewModel.Location;
+                searchModel.SearchClasses.Add(viewModel.Location);
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Publisher))
             {
-                searchModel.Publisher = viewModel.Publisher;
+                searchModel.SearchIndividuals.Add("Publisher", viewModel.Publisher);
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Series))
             {
-                searchModel.Series = viewModel.Series;
+                searchModel.SearchIndividuals.Add("Series", viewModel.Series);
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Type))
             {
-                searchModel.Type = viewModel.Type;
+                searchModel.SearchClasses.Add(viewModel.Type);
             }
 
             viewModel = new SearchViewModel();
-
             List<string> results = Server.QueryWithSearchModel(searchModel); //TODO: Query Ontology - Take values from viewModel and construct a query with them.
+
             if (results != null)
             {
                 if (results.Count > 0)

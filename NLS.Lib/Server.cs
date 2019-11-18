@@ -82,24 +82,25 @@ namespace NLS.Lib
             queryString.CommandText = "SELECT DISTINCT ?class ";
             queryString.CommandText += "WHERE { ";
 
-            if (searchModel.Genre != null)
+            if(searchModel.SearchClasses.Count > 0)
             {
-                queryString.CommandText += "?class a lib:" + searchModel.Genre + ". ";
+                foreach (string searchClass in searchModel.SearchClasses)
+                {
+                    queryString.CommandText += "?class a lib:" + searchClass + ". ";
+                }
             }
-
-            if (searchModel.Form != null)
+            
+            if(searchModel.SearchIndividuals.Count > 0)
             {
-                queryString.CommandText += "?class a lib:" + searchModel.Form + " ";
-            }
+                foreach (KeyValuePair<string, string> searchIndividual in searchModel.SearchIndividuals)
+                {
+                    queryString.CommandText += "?class lib:has" + searchIndividual.Key + " ?" + searchIndividual.Key.ToLower() + ". ";
+                }
 
-            if (searchModel.Author != null)
-            {
-                queryString.CommandText += "{?class lib:hasAuthor ?author}";
-            }
-
-            if (searchModel.Author != null)
-            {
-                queryString.CommandText += "FILTER(regex(str(?author), '" + searchModel.Author.Replace(' ', '_') + "')) ";
+                foreach (KeyValuePair<string, string> searchIndividual in searchModel.SearchIndividuals)
+                {
+                    queryString.CommandText += "FILTER(regex(str(?" + searchIndividual.Key.ToLower() + "), '" + searchIndividual.Value.Replace(' ', '_') + "')) ";
+                }
             }
 
             queryString.CommandText += " } ";

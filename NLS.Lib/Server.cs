@@ -40,12 +40,21 @@ namespace NLS.Lib
             queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
             queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
 
-            queryString.CommandText = "SELECT DISTINCT ?title ?author ?series ?publisher ?imprint ";
+            queryString.CommandText = "SELECT DISTINCT ?title ?author ?series ?publisher ?imprint ?date ?isbn ?summary ?language ?format ?id ?copys ?pages ?weight ";
             queryString.CommandText += "WHERE { ?class rdfs:label ?title. ";
             queryString.CommandText += "?class lib:hasAuthor ?author. ";
             queryString.CommandText += "?class lib:hasSeries ?series. ";
             queryString.CommandText += "?class lib:hasPublisher ?publisher. ";
             queryString.CommandText += "?class lib:hasImprint ?imprint. ";
+            queryString.CommandText += "?class lib:publicationDate ?date. ";
+            queryString.CommandText += "?class lib:publicationISBN ?isbn. ";
+            queryString.CommandText += "?class lib:publicationSummary ?summary. ";
+            queryString.CommandText += "?class lib:publicationLanguage ?language. ";
+            queryString.CommandText += "?class lib:publicationFormat ?format. ";
+            queryString.CommandText += "?class lib:publicationID ?id. ";
+            queryString.CommandText += "?class lib:publicationCopyTotal ?copys. ";
+            queryString.CommandText += "?class lib:publicationPageCount ?pages. ";
+            queryString.CommandText += "?class lib:publicationWeight ?weight. ";
             queryString.CommandText += "FILTER(regex(str(?title), '" + individualName.Replace('_', ' ') + "')) }";
 
             SparqlQueryParser queryParser = new SparqlQueryParser();
@@ -81,6 +90,51 @@ namespace NLS.Lib
                         case "imprint":
                             string[] imprintSplit = _result.Value.ToString().Split('#');
                             publicationModel.Imprint = imprintSplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "date":
+                            string[] dateSplit = _result.Value.ToString().Split('#');
+                            publicationModel.Date = dateSplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "isbn":
+                            string[] isbnSplit = _result.Value.ToString().Split('#');
+                            publicationModel.ISBN = isbnSplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "summary":
+                            string[] summarySplit = _result.Value.ToString().Split('#');
+                            publicationModel.Summary = summarySplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "language":
+                            string[] languageSplit = _result.Value.ToString().Split('#');
+                            publicationModel.Language = languageSplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "format":
+                            string[] formatSplit = _result.Value.ToString().Split('#');
+                            publicationModel.Format = formatSplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "id":
+                            string[] idSplit = _result.Value.ToString().Split('#');
+                            publicationModel.Identifier = idSplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "copys":
+                            string[] copySplit = _result.Value.ToString().Split('#');
+                            publicationModel.CopyTotal = copySplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "pages":
+                            string[] pageSplit = _result.Value.ToString().Split('#');
+                            publicationModel.PageCount = pageSplit[1].Trim().Replace('_', ' ');
+                            break;
+
+                        case "weight":
+                            string[] weightSplit = _result.Value.ToString().Split('#');
+                            publicationModel.Weight = weightSplit[1].Trim().Replace('_', ' ');
                             break;
                     }
                 }

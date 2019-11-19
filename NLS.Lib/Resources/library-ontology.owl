@@ -8,10 +8,10 @@
      xmlns:obda="https://w3id.org/obda/vocabulary#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology">
-        <owl:versionIRI rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology/1.0.0"/>
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology/1.0.1"/>
         <rdfs:comment xml:lang="en">07/11/2019</rdfs:comment>
         <rdfs:label xml:lang="en">Library Ontology</rdfs:label>
-        <owl:versionInfo xml:lang="en">1.0.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">1.0.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -51,15 +51,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
     </owl:ObjectProperty>
     
@@ -71,15 +62,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
     </owl:ObjectProperty>
     
@@ -104,6 +86,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#hasIllustrator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#hasIllustrator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Illustrator"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#hasImprint -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#hasImprint">
@@ -118,15 +109,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Location"/>
     </owl:ObjectProperty>
     
@@ -136,14 +118,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#hasPublication">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
     </owl:ObjectProperty>
     
@@ -155,15 +129,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publisher"/>
     </owl:ObjectProperty>
     
@@ -175,16 +140,6 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Review"/>
     </owl:ObjectProperty>
     
 
@@ -194,14 +149,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#hasSeries">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -217,144 +164,24 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Link -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Link">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">publicationLink</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Format -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Format">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">publicationFormat</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Identifier -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Identifier">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">publicationIdentifier</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Language -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Language">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">publicationLanguage</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pages -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pages">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label xml:lang="en">publicationPageCount</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication_Date -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication_Date">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">publicationDate</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Source -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Source">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">publicationSource</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Subject -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Subject">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">publicationSubject</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Subtitle -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Subtitle">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">publicationSubtitle</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Summary -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Summary">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">publicationSummary</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Title -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Title">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">publicationTitle</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Weight -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Weight">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label xml:lang="en">publicationWeight</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#authorName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#authorName">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">authorName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#illustratorName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#illustratorName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Illustrator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">illustratorName</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -365,6 +192,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Imprint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">imprintName</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -372,7 +200,33 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationCopyTotal -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationCopyTotal">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Total number of copies spread across all locations.</rdfs:comment>
+        <rdfs:label xml:lang="en">publicationCopyTotal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">publicationDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationEdition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationEdition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">publicationEdition</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -383,6 +237,95 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">publicationISBN</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationLanguage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationPageCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationPageCount">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">publicationPageCount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationSource -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationSource">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationSource</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationSubject -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationSubject">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationSubject</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationSubtitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationSubtitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationSubtitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationSummary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationSummary">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationSummary</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">publicationTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#publicationWeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">publicationWeight</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -398,34 +341,13 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#reviewAuthor -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#reviewAuthor">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Review"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">reviewAuthor</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#reviewSummary -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#reviewSummary">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Review"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">reviewSummary</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#seriesTitle -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#seriesTitle">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">seriesTitle</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -457,29 +379,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Anthology -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Anthology">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Art_Book -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Art_Book">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection"/>
-        <rdfs:label xml:lang="en">Art Book</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Article -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Article">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Dissertation"/>
     </owl:Class>
     
 
@@ -510,7 +413,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Dissertation"/>
     </owl:Class>
     
 
@@ -534,21 +436,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Reservation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Reservation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Web_Service"/>
-        <rdfs:label xml:lang="en">Reservation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Location"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
     </owl:Class>
     
 
@@ -557,68 +448,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Location"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Collection">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cyberpunk -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cyberpunk">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Science_Fiction"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Dark_Fantasy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Dark_Fantasy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
-        <rdfs:label xml:lang="en">Dark Fantasy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Dissertation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Dissertation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Essay"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Extract"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Journal"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Textbook"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Dystopia -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Dystopia">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Speculative_Fiction"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Essay -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Essay">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Extract -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Extract">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
     </owl:Class>
     
 
@@ -639,27 +468,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Flash_Fiction -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Flash_Fiction">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
-        <rdfs:label xml:lang="en">Flash Fiction</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Genre -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Genre"/>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Gothic_Fantasy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Gothic_Fantasy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
-        <rdfs:label xml:lang="en">Gothic Fantasy</rdfs:label>
-    </owl:Class>
     
 
 
@@ -713,6 +524,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Illustrator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Illustrator"/>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Imprint -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Imprint"/>
@@ -725,14 +542,6 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Local_Service"/>
         <rdfs:comment xml:lang="en">Interlibrary Loan</rdfs:comment>
         <rdfs:label xml:lang="en">Transfer</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Journal -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Journal">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
     </owl:Class>
     
 
@@ -780,43 +589,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Magazine -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Magazine">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publication"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Manga -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Manga">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Graphic_Novel"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Manual -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Manual">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Non-fiction"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Memoir -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Memoir">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Autobiography"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Murder_Mystery -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Murder_Mystery">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Mystery"/>
-        <rdfs:label xml:lang="en">Murder Mystery</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
     </owl:Class>
     
 
@@ -840,14 +616,6 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novelette -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novelette">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Literary_Form"/>
     </owl:Class>
     
@@ -878,27 +646,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paranormal -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paranormal">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Supernatural"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Political_Thriller -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Political_Thriller">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Thriller"/>
-        <rdfs:label xml:lang="en">Political Thriller</rdfs:label>
     </owl:Class>
     
 
@@ -915,9 +666,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Review -->
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Read -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Review"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Read">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Web_Service"/>
+        <rdfs:label xml:lang="en">Read</rdfs:label>
+    </owl:Class>
     
 
 
@@ -967,19 +721,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Speculative_Fiction -->
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Commentary -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Speculative_Fiction">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fiction"/>
-        <rdfs:label xml:lang="en">Speculative Fiction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Steampunk -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Steampunk">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Science_Fiction"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Commentary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Non-fiction"/>
+        <rdfs:label xml:lang="en">Commentary</rdfs:label>
     </owl:Class>
     
 
@@ -1013,23 +759,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Travel_Guide">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Non-fiction"/>
         <rdfs:label xml:lang="en">Travel Guide</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Urban_Fantasy -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Urban_Fantasy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
-        <rdfs:label xml:lang="en">Urban Fantasy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Utopia -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Utopia">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Speculative_Fiction"/>
     </owl:Class>
     
 
@@ -1080,11 +809,86 @@
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Born_to_Run -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Born_to_Run">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Autobiography"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hardback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bruce_Springsteen"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Simon_&amp;_Schuster"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Simon_&amp;_Schuster"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-05T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781471157820</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">528</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In 2009, Bruce Springsteen and the E Street Band performed at the Super Bowl&apos;s halftime show. The experience was so exhilarating that Bruce decided to write about it. That&apos;s how this extraordinary autobiography began. 
+
+Over the past seven years, Bruce Springsteen has privately devoted himself to writing the story of his life, bringing to these pages the same honesty, humour and originality found in his songs. He describes growing up Catholic in Freehold, New Jersey, amid the poetry, danger and darkness that fuelled his imagination, leading up to the moment he refers to as &apos;The Big Bang&apos;: seeing Elvis Presley&apos;s debut on The Ed Sullivan Show. He vividly recounts his relentless drive to become a musician, his early days as a bar band king in Asbury Park, and the rise of the E Street Band. 
+
+With disarming candour, he also tells for the first time the story of the personal struggles that inspired his best work, and shows us why the song &apos;Born to Run&apos; reveals more than we previously realized. Born to Run will be revelatory for anyone who has ever enjoyed Bruce Springsteen, but this book is much more than a legendary rock star&apos;s memoir.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Born to Run</publicationTitle>
+        <rdfs:label xml:lang="en">Born to Run</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bruce_Springsteen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bruce_Springsteen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Born_to_Run"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bruce Springsteen</authorName>
+        <rdfs:label xml:lang="en">Bruce Springsteen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#David_Williams -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#David_Williams">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Williams</authorName>
+        <rdfs:label xml:lang="en">David Williams</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Eric_S._Raymond -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Eric_S._Raymond">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric S. Raymond</authorName>
+        <rdfs:label xml:lang="en">Eric S. Raymond</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#HarperCollins_Publishers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#HarperCollins_Publishers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publisher"/>
+        <publisherName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HarperCollins Publisher</publisherName>
+        <rdfs:label xml:lang="en">HarperCollins Publisher</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter">
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Jack_Thorne"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#John_Tiffany"/>
         <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Prisoner_of_Azkaban"/>
         <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Chamber_of_Secrets"/>
         <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Deathly_Hallows"/>
@@ -1155,6 +959,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Lonely_Planet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Lonely_Planet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Imprint"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publisher"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pocket_Paris"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Planet</authorName>
+        <imprintName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Planet</imprintName>
+        <publisherName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Planet</publisherName>
+        <seriesTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Planet</seriesTitle>
+        <rdfs:label xml:lang="en">Lonely Planet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Margaret_Atwood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Margaret_Atwood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Handmaid&apos;s_Tale"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Margaret Atwood</authorName>
+        <rdfs:label xml:lang="en">Margaret Atwood</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Mary_Beard -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Mary_Beard">
@@ -1166,11 +998,64 @@
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Nathaniel_Tower -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Nathaniel_Tower">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nathaniel Tower</authorName>
+        <rdfs:label xml:lang="en">Nathaniel Tower</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit">
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Imprint"/>
         <imprintName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orbit</imprintName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pan_Macmillan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pan_Macmillan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publisher"/>
+        <publisherName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pan Macmillan</publisherName>
+        <rdfs:label xml:lang="en">Pan Macmillan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pocket_Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pocket_Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Textbook"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Travel_Guide"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Lonely_Planet"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Lonely_Planet"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Lonely_Planet"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Lonely_Planet"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-07T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781786572813</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">224</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paris</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Travel Guide</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Planet&apos;s Pocket Paris is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Watch the sunset from the steps of Sacre Coeur, shop the flea markets and the Grands Boulevards and start your days at the best patisseries - all with your trusted travel companion. Get to the heart of the best of Paris and begin your journey now!
+
+Inside Lonely Planet&apos;s Pocket Paris:
+Full-colour maps and images throughoutHighlights and itineraries help you tailor your trip to your personal needs and interestsInsider tips to save time and money and get around like a local, avoiding crowds and trouble spotsEssential info at your fingertips - hours of operation, phone numbers, websites, transit tips, pricesHonest reviews for all budgets - eating, sleeping, sightseeing, going out, shopping, hidden gems that most guidebooks missFree, convenient pull-out map (included in print version), plus over 20 colour neighborhood mapsUser-friendly layout with helpful icons, and organised by neighbourhood to help you pick the best spots to spend your timeCovers Eiffel Tower, Les Invalides, Arc de Triomphe, Champs-Elysees, Louvre, Tuileries, Opera, Sacre-Coeur, Montmartre, Centre Pompidou, Marais, Notre Dame, Latin Quarter, Musee d&apos;Orsay, St-Germain des Pres, and more.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Planet Pocket Paris</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">220.0</publicationWeight>
+        <rdfs:label xml:lang="en">Pocket Paris</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1185,6 +1070,61 @@
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Rosie_Walsh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Rosie_Walsh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosie Walsh</authorName>
+        <rdfs:label xml:lang="en">Rosie Walsh</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Stephen_King -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Stephen_King">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Institute"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen King</authorName>
+        <rdfs:label xml:lang="en">Stephen King</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Steve_Jobs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Steve_Jobs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Biography"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hardback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Walter_Isaacson"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-05T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780349140438</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">592</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Exclusive Biography</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Based on more than forty interviews with Steve Jobs conducted over two years - as well as interviews with more than a hundred family members, friends, adversaries, competitors, and colleagues - this is the acclaimed, internationally bestselling biography of the ultimate icon of inventiveness.
+
+Walter Isaacson tells the story of the rollercoaster life and searingly intense personality of creative entrepreneur whose passion for perfection and ferocious drive revolutionized six industries: personal computers, animated movies,music, phones, tablet computing, and digital publishing.
+
+Although Jobs cooperated with this book, he asked for no control over what was written, nor even the right to read it before it was published. He put nothing off limits. He encouraged the people he knew to speak honestly. And Jobs speaks candidly, sometimes brutally so, about the people he worked with and competed against. His friends, foes, and colleagues provide an unvarnished view of the passions, perfectionism, obsessions, artistry, devilry, and compulsion for control that shaped his approach to business and the innovative products that resulted.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Jobs</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">488.0</publicationWeight>
+        <rdfs:label xml:lang="en">Steve Jobs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tana_French -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tana_French">
@@ -1192,6 +1132,37 @@
         <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Secret_Place"/>
         <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tana French</authorName>
         <rdfs:label xml:lang="en">Tana French</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Beast_of_Buckingham_Palace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Beast_of_Buckingham_Palace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hardback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Low_Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novella"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Supernatural"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Children&apos;s"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#David_Williams"/>
+        <hasIllustrator rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tony_Ross"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#HarperCollins_Publishers"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-21T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780008262174</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">464</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fly into a fiery and fantastical future with No. 1 bestselling author David Walliams, in an epic adventure of myth and legend, good and evil, and one small boy who must save the world… Illustrated by the artistic genius Tony Ross!</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Beast of Buckingham Palace</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">600.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Beast of Buckingham Palace</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1211,26 +1182,123 @@
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Cathedral_and_the_Bazaar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Cathedral_and_the_Bazaar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hardback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Commentary"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Eric_S._Raymond"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#O&apos;Reilly_Media"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-02-21T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780596001087</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">258</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commentary</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musings on Linux and Open Source by an Accidental Revolutionary</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open source provides the competitive advantage in the Internet Age. According to the August Forrester Report, 56 percent of IT managers interviewed at Global 2,500 companies are already using some type of open source software in their infrastructure and another 6 percent will install it in the next two years. This revolutionary model for collaborative software development is being embraced and studied by many of the biggest players in the high-tech industry, from Sun Microsystems to IBM to Intel. The Cathedral &amp; the Bazaar is a must for anyone who cares about the future of the computer industry or the dynamics of the information economy.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Cathedral and the Bazaar</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">303.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Cathedral and the Bazaar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_High_Lord -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_High_Lord">
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#High_Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Trudi_Canavan"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
-        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">647</Pages>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the city of Imardin, where those who wield magic wield power, a young street-girl, adopted by the Magician&apos;s Guild, finds herself at the centre of a terrible plot that may destroy the entire world . . .
-
-Sonea has learned much at the magicians&apos; guild and the other novices now treat her with a grudging respect. But she cannot forget what she witnessed in the High Lord&apos;s underground room - or his warning that the realm&apos;s ancient enemy is growing in power once more. As Sonea learns more, she begins to doubt her guildmaster&apos;s word. Could the truth really be as terrifying as Akkarin claims, or is he trying to trick her into assisting in some unspeakably dark scheme?</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The High Lord</Title>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841499628</publicationISBN>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">647</publicationPageCount>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the city of Imardin, where those who wield magic wield power, a young street-girl, adopted by the Magician&apos;s Guild, finds herself at the centre of a terrible plot that may destroy the entire world . . .
+
+Sonea has learned much at the magicians&apos; guild and the other novices now treat her with a grudging respect. But she cannot forget what she witnessed in the High Lord&apos;s underground room - or his warning that the realm&apos;s ancient enemy is growing in power once more. As Sonea learns more, she begins to doubt her guildmaster&apos;s word. Could the truth really be as terrifying as Akkarin claims, or is he trying to trick her into assisting in some unspeakably dark scheme?</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The High Lord</publicationTitle>
         <rdfs:label xml:lang="en">The High Lord</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Institute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Institute">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hardback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Horror"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novella"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Thriller"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Stephen_King"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hodder_Paperbacks"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781529355390</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">496</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deep in the woods of Maine, there is a dark state facility where kids, abducted from across the United States, are incarcerated. In the Institute they are subjected to a series of tests and procedures meant to combine their exceptional gifts - telepathy, telekinesis - for concentrated effect.
+
+Luke Ellis is the latest recruit. He&apos;s just a regular 12-year-old, except he&apos;s not just smart, he&apos;s super-smart. And he has another gift which the Institute wants to use...
+
+Far away in a small town in South C arolina, former cop Tim Jamieson has taken a job working for the local Sherriff. He&apos;s basically just walking the beat. But he&apos;s about to take on the biggest case of his career.
+
+Back in the Institute&apos;s downtrodden playground and corridors where posters advertise &apos;just another day in paradise&apos;, Luke, his friend Kalisha and the other kids are in no doubt that they are prisoners, not guests. And there is no hope of escape.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Institute</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">740.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Institute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Mythical_Man-Month -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Mythical_Man-Month">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Commentary"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Frederick_P._Brooks,_Jr."/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pearson_Education_(US)"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-08-08T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780201835953</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">336</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commentary</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Essays on Software Engineering</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Few books on software project management have been as influential and timeless asThe Mythical Man-Month. With a blend of software engineering facts and thought-provoking opinions, Fred Brooks offers insight for anyone managing complex projects. These essays draw from his experience as project manager for the IBM System/360 computer family and then for OS/360, its massive software system. Now, 20 years after the initial publication of his book, Brooks has revisited his original ideas and added new thoughts and advice, both for readers already familiar with his work and for readers discovering it for the first time.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Mythical Man-Month</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">466.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Mythical Man Month</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1239,7 +1307,9 @@ Sonea has learned much at the magicians&apos; guild and the other novices now tr
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Novice">
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#High_Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
@@ -1247,13 +1317,14 @@ Sonea has learned much at the magicians&apos; guild and the other novices now tr
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
-        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">592</Pages>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imardin is a city of dark intrigues and deadly politics, where those who wield magic wield power. Into this established order has blundered a young street-girl with extraordinary magical gifts. Adopted by the Magicians&apos; Guild, her life is changed forever - but for better or for worse?
-
-Sonea knew that she&apos;d face a tough time training within the Magicians&apos; Guild but she little realised the level of animosity she would face from her fellow novices. The sons and daughters of the most powerful families in the realm, her classmates seem determined to see her fail - at whatever cost. But in accepting the protection of the guild&apos;s high lord, Sonea may have embraced an even bleaker fate. For High Lord Akkarin harbours a secret that is far darker than his magician&apos;s robes.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Novice</Title>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841499611</publicationISBN>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">592</publicationPageCount>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imardin is a city of dark intrigues and deadly politics, where those who wield magic wield power. Into this established order has blundered a young street-girl with extraordinary magical gifts. Adopted by the Magicians&apos; Guild, her life is changed forever - but for better or for worse?
+
+Sonea knew that she&apos;d face a tough time training within the Magicians&apos; Guild but she little realised the level of animosity she would face from her fellow novices. The sons and daughters of the most powerful families in the realm, her classmates seem determined to see her fail - at whatever cost. But in accepting the protection of the guild&apos;s high lord, Sonea may have embraced an even bleaker fate. For High Lord Akkarin harbours a secret that is far darker than his magician&apos;s robes.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Novice</publicationTitle>
         <rdfs:label xml:lang="en">The Novice</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1262,20 +1333,66 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Prisoner_of_Azkaban -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Prisoner_of_Azkaban">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-13T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Let the magic of J.K. Rowling&apos;s classic Harry Potter series take you back to Hogwarts School of Witchcraft and Wizardry. Issued to mark the 20th anniversary of first publication of Harry Potter and the Prisoner of Azkaban, this irresistible Slytherin House Edition celebrates the noble character of the Hogwarts house famed for its pride, ambition and cunning. Harry&apos;s third year at Hogwarts is packed with thrilling Slytherin moments, including Draco Malfoy&apos;s typically sneaky attempts to sabotage the Gryffindor Seeker . With vibrant sprayed edges in Slytherin house livery, the book features beautiful house-themed cover artwork with intricate gold foiling. With an exciting, bespoke introduction exploring the history of Slytherin House, and exclusive insights into the use of the Patronus Charm by favourite Slytherin characters, the book also boasts a spectacular image by Kate Greenaway winner Levi Pinfold of Severus Snape conjuring his Patronus. All seven books in the series will be issued in these highly collectable, beautifully crafted House Editions, designed to be treasured and read for years to come.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Prisoner of Azkaban</Title>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-13T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781526606228</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Prisoner of Azkaban</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Let the magic of J.K. Rowling&apos;s classic Harry Potter series take you back to Hogwarts School of Witchcraft and Wizardry. Issued to mark the 20th anniversary of first publication of Harry Potter and the Prisoner of Azkaban, this irresistible Slytherin House Edition celebrates the noble character of the Hogwarts house famed for its pride, ambition and cunning. Harry&apos;s third year at Hogwarts is packed with thrilling Slytherin moments, including Draco Malfoy&apos;s typically sneaky attempts to sabotage the Gryffindor Seeker . With vibrant sprayed edges in Slytherin house livery, the book features beautiful house-themed cover artwork with intricate gold foiling. With an exciting, bespoke introduction exploring the history of Slytherin House, and exclusive insights into the use of the Patronus Charm by favourite Slytherin characters, the book also boasts a spectacular image by Kate Greenaway winner Levi Pinfold of Severus Snape conjuring his Patronus. All seven books in the series will be issued in these highly collectable, beautifully crafted House Editions, designed to be treasured and read for years to come.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">388.0</publicationWeight>
         <rdfs:label xml:lang="en">Harry Potter: The Prisoner of Azkaban</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Rogue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Rogue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#High_Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Historical"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Romance"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Trudi_Canavan"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Traitor_Spy_Trilogy"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-03-26T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841495941</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book 2 of The Traitor Spy Trilogy</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyralia is facing threats at home and abroad, as a rogue killer stalks its capital&apos;s streets, while the neighbouring kingdom of Sachaka is breeding a rebellion that could destabilise the entire region.
+
+High Lord Akkarin and Sonea&apos;s son Lorkin has a legacy of heroism to live up to, but despite his good intentions, his incarceration in Sachaka&apos;s rebel traitor stronghold could destroy the tenuous peace between the two countries. Angered by Lorkin&apos;s seeming defection the Sachakans blame the Kyralian ambassador, Danny--and they are a savage people when roused.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Rogue</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">346.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Rogue</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1284,19 +1401,100 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Secret_Place">
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hardback"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Murder_Mystery"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Download"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Mystery"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Read"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tana_French"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hodder_Paperbacks"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hodder_Paperbacks"/>
-        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</Pages>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-09T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A year ago a boy was found murdered at a girlsʼ boarding school, and the case was never solved. Detective Stephen Moran has been waiting for his chance to join Dublin’s Murder Squad when sixteen-year-old Holly Mackey arrives in his office with a photo of the boy with the caption: “I KNOW WHO KILLED HIM.” Stephen joins with Detective Antoinette Conway to reopen the case—beneath the watchful eye of Holly’s father, fellow detective Frank Mackey. With the clues leading back to Holly’s close-knit group of friends, to their rival clique, and to the tangle of relationships that bound them all to the murdered boy, the private underworld of teenage girls turns out to be more mysterious and more dangerous than the detectives imagined.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Secret Place</Title>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-09T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781444755619</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dublin Murder Squad</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A year ago a boy was found murdered at a girlsʼ boarding school, and the case was never solved. Detective Stephen Moran has been waiting for his chance to join Dublin’s Murder Squad when sixteen-year-old Holly Mackey arrives in his office with a photo of the boy with the caption: “I KNOW WHO KILLED HIM.” Stephen joins with Detective Antoinette Conway to reopen the case—beneath the watchful eye of Holly’s father, fellow detective Frank Mackey. With the clues leading back to Holly’s close-knit group of friends, to their rival clique, and to the tangle of relationships that bound them all to the murdered boy, the private underworld of teenage girls turns out to be more mysterious and more dangerous than the detectives imagined.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Secret Place</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">400.0</publicationWeight>
         <rdfs:label xml:lang="en">The Secret Place</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Traitor_Queen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Traitor_Queen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#High_Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Historical"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Romance"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Trudi_Canavan"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Traitor_Spy_Trilogy"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-07-30T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841495965</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">544</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book 3 of The Traitor Spy Trilogy</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Events are building to a climax in Sachaka as Lorkin returns from his exile with the Traitor rebels.
+
+The Traitor Queen has given Lorkin the huge task of brokering an alliance between his people and the Traitors. Lorkin has also had to become a feared black magician in order to harness the power of an entirely new kind of gemstone magic. This knowledge could transform the Guild of Magicians - or make Lorkin an outcast forever.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Traitor Queen</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">370.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Traitor Queen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Traitor_Spy_Trilogy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Traitor_Spy_Trilogy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Series"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Trudi_Canavan"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Rogue"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Traitor_Queen"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Ambassador&apos;s_Mission"/>
+        <seriesTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Traitor Spy Trilogy</seriesTitle>
+        <rdfs:label xml:lang="en">The Traitor Spy Trilogy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tomohito_Oda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tomohito_Oda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Komi_Can&apos;t_Communicate"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomohito Oda</authorName>
+        <rdfs:label xml:lang="en">Tomohito Oda</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tony_Ross -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tony_Ross">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Illustrator"/>
+        <illustratorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tony Ross</illustratorName>
+        <rdfs:label xml:lang="en">Tony Ross</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1309,6 +1507,39 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
         <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trudi Canavan</authorName>
         <rdfs:label xml:lang="en">Trudi Canavan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Vintage_Publishing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Vintage_Publishing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publisher"/>
+        <publisherName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vintage Publishing</publisherName>
+        <rdfs:label xml:lang="en">Vintage Publishing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Viz_Media -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Viz_Media">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Imprint"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publisher"/>
+        <imprintName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viz Media</imprintName>
+        <publisherName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viz Media</publisherName>
+        <rdfs:label xml:lang="en">Viz Media</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Walter_Isaacson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Walter_Isaacson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <hasPublication rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Steve_Jobs"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walter Isaacson</authorName>
+        <rdfs:label xml:lang="en">Walter Isaacson</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1343,22 +1574,67 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Conrad&apos;s_Bayonet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Conrad&apos;s_Bayonet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Article"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Download"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Historical"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Read"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Short_Story"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Nathaniel_Tower"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-30T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drunk Monkeys (US)</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conrad Treplet emerged from his mother wielding a tiny bayonet. The bayonet was sharp and the perfect size for a newborn boy. His mother, knowing such tools to be dangerous, ordered the bayonet to be disposed of immediately...</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conrad’s Bayonet</publicationTitle>
+        <rdfs:label xml:lang="en">Conrad&apos;s Bayonet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Frederick_P._Brooks,_Jr. -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Frederick_P._Brooks,_Jr.">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
+        <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frederick P. Brooks, Jr.</authorName>
+        <rdfs:label xml:lang="en">Frederick P. Brooks, Jr.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Chamber_of_Secrets -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Chamber_of_Secrets">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-01T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter&apos;s summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone . Dobby&apos;s sinister predictions seem to be coming true. These new editions of the classic and internationally bestselling, multi-award-winning series feature instantly pick-up-able new jackets by Jonny Duddle, with huge child appeal, to bring Harry Potter to the next generation of readers. It&apos;s time to PASS THE MAGIC ON.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Chamber of Secrets</Title>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-09-01T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781408855669</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">384</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Chamber of Secrets</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter&apos;s summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone . Dobby&apos;s sinister predictions seem to be coming true. These new editions of the classic and internationally bestselling, multi-award-winning series feature instantly pick-up-able new jackets by Jonny Duddle, with huge child appeal, to bring Harry Potter to the next generation of readers. It&apos;s time to PASS THE MAGIC ON.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">315.0</publicationWeight>
         <rdfs:label xml:lang="en">Harry Potter: The Chamber of Secrets</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1367,24 +1643,30 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Cursed_Child -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Cursed_Child">
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hardback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Screenplay"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Jack_Thorne"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#John_Tiffany"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-31T00:00:00</Publication_Date>
-        <Subtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parts One and Two</Subtitle>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It was always difficult being Harry Potter and it isn&apos;t much easier now that he is an overworked employee of the Ministry of Magic, a husband, and father of three school-age children. While Harry grapples with a past that refuses to stay where it belongs, his youngest son Albus must struggle with the weight of a family legacy he never wanted. As past and present fuse ominously, both father and son learn the uncomfortable truth: sometimes, darkness comes from unexpected places.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter and the Cursed Child</Title>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-31T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780751565355</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">352</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parts One and Two</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It was always difficult being Harry Potter and it isn&apos;t much easier now that he is an overworked employee of the Ministry of Magic, a husband, and father of three school-age children. While Harry grapples with a past that refuses to stay where it belongs, his youngest son Albus must struggle with the weight of a family legacy he never wanted. As past and present fuse ominously, both father and son learn the uncomfortable truth: sometimes, darkness comes from unexpected places.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter and the Cursed Child</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">280.0</publicationWeight>
         <rdfs:label xml:lang="en">Harry Potter: The Cursed Child</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1393,19 +1675,28 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Deathly_Hallows -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Deathly_Hallows">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-06T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;Give me Harry Potter, and I shall leave the school untouched. Give me Harry Potter, and you will be rewarded&apos; Lord Voldemort Harry Potter is preparing to leave the Dursleys and Privet Drive for the last time. But the future that awaits him is full of danger, not only for him, but for anyone close to him - and Harry has already lost so much. Only by destroying Voldemort&apos;s remaining Horcruxes can Harry free himself and overcome the Dark Lord&apos;s forces of evil. In this dramatic conclusion to the Harry Potter series, Harry must leave his most loyal friends behind, and in a final perilous journey find the strength and the will to face his terrifying destiny: a deadly confrontation that is his alone to fight. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Deathly Hallows</Title>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-06T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781408894743</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Deathly Hallows</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;Give me Harry Potter, and I shall leave the school untouched. Give me Harry Potter, and you will be rewarded&apos; Lord Voldemort Harry Potter is preparing to leave the Dursleys and Privet Drive for the last time. But the future that awaits him is full of danger, not only for him, but for anyone close to him - and Harry has already lost so much. Only by destroying Voldemort&apos;s remaining Horcruxes can Harry free himself and overcome the Dark Lord&apos;s forces of evil. In this dramatic conclusion to the Harry Potter series, Harry must leave his most loyal friends behind, and in a final perilous journey find the strength and the will to face his terrifying destiny: a deadly confrontation that is his alone to fight. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">512.0</publicationWeight>
         <rdfs:label xml:lang="en">Harry Potter: The Deathly Hallows</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1414,19 +1705,28 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Goblet_of_Fire -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Goblet_of_Fire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-06T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;It matters not what someone is born, but what they grow to be&apos; Albus Dumbledore When the Quidditch World Cup is disrupted by Voldemort&apos;s rampaging supporters alongside the resurrection of the terrifying Dark Mark, it is obvious to Harry Potter that, far from weakening, Voldemort is getting stronger. Back at Hogwarts for his fourth year, Harry is astonished to be chosen by the Goblet of Fire to represent the school in the Triwizard Tournament. The competition is dangerous, the tasks terrifying, and true courage is no guarantee of survival - especially when the darkest forces are on the rise. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Goblet of Fire</Title>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-06T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781408894651</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Goblet of Fire</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;It matters not what someone is born, but what they grow to be&apos; Albus Dumbledore When the Quidditch World Cup is disrupted by Voldemort&apos;s rampaging supporters alongside the resurrection of the terrifying Dark Mark, it is obvious to Harry Potter that, far from weakening, Voldemort is getting stronger. Back at Hogwarts for his fourth year, Harry is astonished to be chosen by the Goblet of Fire to represent the school in the Triwizard Tournament. The competition is dangerous, the tasks terrifying, and true courage is no guarantee of survival - especially when the darkest forces are on the rise. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">513.0</publicationWeight>
         <rdfs:label xml:lang="en">Harry Potter: The Goblet of Fire</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1435,19 +1735,28 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Half-Blood_Prince -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Half-Blood_Prince">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Large_Print_Press"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Large_Print_Press"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-07-01T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book 6 in the Harry Potter seriesA New York Times BestsellerIn the fifth and most recent book, Harry Potter and the Order of the Phoenix, the last chapter, titled The Second War Begins, started: &apos;In a brief statement Friday night, Minister of Magic Cornelius Fudge confirmed that He-Who-Must-Not-Be-Named has returned to this country and is active once more. It is with great regret that I must confirm that the wizard styling himself Lord -- well, you know who I mean -- is alive among us again, said Fudge.&apos;Harry Potter and the Half-Blood Prince takes up the story of Harry Potter&apos;s sixth year at Hogwarts School of Witchcraft and Wizardry at this point in the midst of the storm of this battle of good and evil. The author has already said that the Half-Blood Prince is neither Harry nor Voldemort. And most importantly, the opening chapter of Harry Potter and the Half-Blood Prince has been brewing in J. K. Rowling&apos;s mind for 13 years.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Half-Blood Prince</Title>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-07-01T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781594132216</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Half-Blood Prince</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book 6 in the Harry Potter seriesA New York Times BestsellerIn the fifth and most recent book, Harry Potter and the Order of the Phoenix, the last chapter, titled The Second War Begins, started: &apos;In a brief statement Friday night, Minister of Magic Cornelius Fudge confirmed that He-Who-Must-Not-Be-Named has returned to this country and is active once more. It is with great regret that I must confirm that the wizard styling himself Lord -- well, you know who I mean -- is alive among us again, said Fudge.&apos;Harry Potter and the Half-Blood Prince takes up the story of Harry Potter&apos;s sixth year at Hogwarts School of Witchcraft and Wizardry at this point in the midst of the storm of this battle of good and evil. The author has already said that the Half-Blood Prince is neither Harry nor Voldemort. And most importantly, the opening chapter of Harry Potter and the Half-Blood Prince has been brewing in J. K. Rowling&apos;s mind for 13 years.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">453.0</publicationWeight>
         <rdfs:label xml:lang="en">Harry Potter: The Half-Blood Prince</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1456,19 +1765,28 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Order_of_the_Phoenix -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Order_of_the_Phoenix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-06T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;This is the weapon he has been seeking so assiduously since his return: the knowledge of how to destroy you&apos; Albus Dumbledore Harry Potter is furious that he has been abandoned at the Dursleys&apos; house for the summer, for he suspects that Voldemort is gathering an army, that he himself could be attacked, and that his so-called friends are keeping him in the dark. Finally rescued by wizard bodyguards, he discovers that Dumbledore is regrouping the Order of the Phoenix - a secret society first formed years ago to fight Voldemort. But the Ministry of Magic is against the Order, lies are being spread by the wizards&apos; tabloid, the Daily Prophet, and Harry fears that he may have to take on this epic battle against evil alone. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Order of the Phoenix</Title>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-06T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781408894750</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">816</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Order of the Phoenix</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;This is the weapon he has been seeking so assiduously since his return: the knowledge of how to destroy you&apos; Albus Dumbledore Harry Potter is furious that he has been abandoned at the Dursleys&apos; house for the summer, for he suspects that Voldemort is gathering an army, that he himself could be attacked, and that his so-called friends are keeping him in the dark. Finally rescued by wizard bodyguards, he discovers that Dumbledore is regrouping the Order of the Phoenix - a secret society first formed years ago to fight Voldemort. But the Ministry of Magic is against the Order, lies are being spread by the wizards&apos; tabloid, the Daily Prophet, and Harry fears that he may have to take on this epic battle against evil alone. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">648.0</publicationWeight>
         <rdfs:label xml:lang="en">Harry Potter: The Order of the Phoenix</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1477,20 +1795,63 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Philosopher&apos;s_Stone -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter:_The_Philosopher&apos;s_Stone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-01T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gryffindor, Slytherin, Hufflepuff, Ravenclaw . Twenty years ago these magical words and many more flowed from a young writer&apos;s pen, an orphan called Harry Potter was freed from the cupboard under the stairs - and a global phenomenon started. Harry Potter and the Philosopher&apos;s Stone has been read and loved by every new generation since. To mark the 20th anniversary of first publication, Bloomsbury has published four House Editions of J.K. Rowling&apos;s modern classic. These stunning editions each feature the individual house crest on the jacket and line illustrations exclusive to that house, by Kate Greenaway Medal winner Levi Pinfold. Exciting new extra content includes fact files and profiles of favourite characters, and each book has sprayed edges in the house colours. Available for a limited period only, these highly collectable editions are a must-have for all Harry Potter fans.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter: The Philosopher&apos;s Stone</Title>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-01T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781408883747</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">352</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Philosopher&apos;s Stone</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gryffindor, Slytherin, Hufflepuff, Ravenclaw . Twenty years ago these magical words and many more flowed from a young writer&apos;s pen, an orphan called Harry Potter was freed from the cupboard under the stairs - and a global phenomenon started. Harry Potter and the Philosopher&apos;s Stone has been read and loved by every new generation since. To mark the 20th anniversary of first publication, Bloomsbury has published four House Editions of J.K. Rowling&apos;s modern classic. These stunning editions each feature the individual house crest on the jacket and line illustrations exclusive to that house, by Kate Greenaway Medal winner Levi Pinfold. Exciting new extra content includes fact files and profiles of favourite characters, and each book has sprayed edges in the house colours. Available for a limited period only, these highly collectable editions are a must-have for all Harry Potter fans.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">284.0</publicationWeight>
         <rdfs:label xml:lang="en">Harry Potter: The Philosopher&apos;s Stone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Komi_Can&apos;t_Communicate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Komi_Can&apos;t_Communicate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Graphic_Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Manga"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Romance"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tomohito_Oda"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Viz_Media"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Viz_Media"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-11T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781974707126</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English (Translated)</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The journey to 100 friends begins with a single conversation.
+
+Socially anxious high school student Shoko Komi&apos;s greatest dream is to make some friends, but everyone at school mistakes her crippling social anxiety for cool reserve! With the whole student body keeping their distance and Komi unable to utter a single word, friendship might be forever beyond her reach.
+
+Timid Tadano is a total wallflower, and that&apos;s just the way he likes it. But all that changes when he finds himself alone in a classroom on the first day of high school with the legendary Komi. He quickly realizes she isn&apos;t aloof-she&apos;s just super awkward. Now he&apos;s made it his mission to help her on her quest to make 100 friends!</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Komi Can&apos;t Communicate</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">179.0</publicationWeight>
+        <rdfs:label xml:lang="en">Komi Can&apos;t Communicate</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1507,20 +1868,49 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#O&apos;Reilly_Media -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#O&apos;Reilly_Media">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publisher"/>
+        <publisherName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O&apos;Reilly Media</publisherName>
+        <rdfs:label xml:lang="en">O&apos;Reilly Media</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pearson_Education_(US) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pearson_Education_(US)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publisher"/>
+        <imprintName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pearson Education (US)</imprintName>
+        <rdfs:label xml:lang="en">Pearson Education (US)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#SPQR:_A_History_of_Ancient_Rome -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#SPQR:_A_History_of_Ancient_Rome">
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#History"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Mary_Beard"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#CPI_Group_(UK)"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Profile_Books"/>
-        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">608</Pages>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-01T00:00:00</Publication_Date>
-        <Subtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A History of Ancient Rome</Subtitle>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ancient Rome matters.
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-01T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781846683817</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">608</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ancient Rome</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A History of Ancient Rome</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ancient Rome matters.
 
 Its history of empire, conquest, cruelty and excess is something against which we still judge ourselves. Its myths and stories - from Romulus and Remus to the Rape of Lucretia - still strike a chord with us. And its debates about citizenship, security and the rights of the individual still influence our own debates on civil liberty today.
 
@@ -1528,10 +1918,91 @@ SPQR is a new look at Roman history from one of the world&apos;s foremost classi
 
 SPQR is the Romans&apos; own abbreviation for their state: Senatus Populusque Romanus, &apos;the Senate and People of Rome&apos;.
 
-Covering 1,000 years of history, and casting fresh light on the basics of Roman culture from slavery to running water, as well as exploring democracy, migration, religious controversy, social mobility and exploitation in the larger context of the empire, this is a definitive history of ancient Rome.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPQR</Title>
-        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781846683817</publicationISBN>
+Covering 1,000 years of history, and casting fresh light on the basics of Roman culture from slavery to running water, as well as exploring democracy, migration, religious controversy, social mobility and exploitation in the larger context of the empire, this is a definitive history of ancient Rome.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPQR</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">526.0</publicationWeight>
         <rdfs:label xml:lang="en">SPQR: A History of Ancient Rome</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Simon_&amp;_Schuster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Simon_&amp;_Schuster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Publisher"/>
+        <publisherName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon &amp; Schuster</publisherName>
+        <rdfs:label xml:lang="en">Simon &amp; Schuster</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Ambassador&apos;s_Mission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Ambassador&apos;s_Mission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#High_Fantasy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Historical"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Romance"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Trudi_Canavan"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
+        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Traitor_Spy_Trilogy"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-04-07T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841495927</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book 1 of The Traitor Spy Trilogy</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">As the son of the late High Lord Akkarin, saviour of the city, and Sonea, the former street urchin turned Black Magician, Lorkin has a legacy of heroism and adventure to live up to. So when Lord Dannyl takes the position of Guild Ambassador to Sachaka, Lorkin volunteers to be his assistant in the hopes of making his mark on the world.
+
+When news comes that Lorkin is in danger, the law that forbids Black Magicians leaving the city forces Sonea to trust that Dannyl will save him. Besides, her old friend Cery needs her as never before: someone has been assassinating Thieves, and when his family is targeted he finds evidence that this Thief Hunter uses magic.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Ambassador&apos;s Mission</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">388.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Ambassador&apos;s Mission</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Handmaid&apos;s_Tale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Handmaid&apos;s_Tale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Download"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Horror"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Read"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Science_Fiction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Thriller"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Margaret_Atwood"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Vintage_Publishing"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1996-09-19T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9780099740919</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chair, a table, a lamp. Above, on the  white ceiling, a relief ornament in the shape of a wreath, and in the centre of it a blank space, plastered over, like the place in a face where the eye has been taken out. There must have been a chandelier, once. They’ve removed anything you could tie a rope to.
+
+Offred lives in The Republic of Gilead. To some, it is a utopian vision of the future, a place of safety, a place where everyone has a purpose, a function. But The Republic of Gilead offers Offred only one function: to breed.
+
+If she deviates, she will, like dissenters, be hanged at the wall or sent out to die slowly of radiation sickness. But even a repressive state cannot obliterate desire - neither Offred&apos;s nor that of the two men on which her future hangs.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Handmaid&apos;s Tale</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">224.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Handmaid&apos;s Tale</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1540,23 +2011,26 @@ Covering 1,000 years of history, and casting fresh light on the basics of Roman 
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Magicians’_Guild">
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#High_Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Trudi_Canavan"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
-        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465</Pages>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Each year the magicians of Imardin gather together to purge the city streets of vagrants, urchins and miscreants. Masters of the disciplines of magic, they know that no one can oppose them. But their protective shield is not as impenetrable as they believe.
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841499604</publicationISBN>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465</publicationPageCount>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Each year the magicians of Imardin gather together to purge the city streets of vagrants, urchins and miscreants. Masters of the disciplines of magic, they know that no one can oppose them. But their protective shield is not as impenetrable as they believe.
 
 Sonea, angry, frustrated and outraged by the treatment of her family and friends, hurls a stone at the shield, putting all her rage behind it. To the amazement of all who bear witness, the stone passes unhindered through the barrier and renders a magician unconscious.
 
-The guild&apos;s worst fear has been realised . . . There is an untrained magician loose on the streets. She must be found before her uncontrolled powers unleash forces that will destroy both her, and the city that is her home.</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Magicians&apos; Guild</Title>
-        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841499604</publicationISBN>
+The guild&apos;s worst fear has been realised . . . There is an untrained magician loose on the streets. She must be found before her uncontrolled powers unleash forces that will destroy both her, and the city that is her home.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Magicians&apos; Guild</publicationTitle>
         <rdfs:label xml:lang="en">The Magicians’ Guild</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1566,23 +2040,67 @@ The guild&apos;s worst fear has been realised . . . There is an untrained magici
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Magician’s_Apprentice">
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#High_Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Trudi_Canavan"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Orbit"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
-        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">702</Pages>
-        <Publication_Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-01T00:00:00</Publication_Date>
-        <Summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the remote village of Mandryn, Tessia serves as assistant to her father, the village Healer - much to the frustration of her mother, who would rather she found a husband. But her life is about to take a very unexpected turn.
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-01T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841495903</publicationISBN>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">702</publicationPageCount>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the remote village of Mandryn, Tessia serves as assistant to her father, the village Healer - much to the frustration of her mother, who would rather she found a husband. But her life is about to take a very unexpected turn.
 
 When treating a patient at the residence of the local magician, Lord Dakon, Tessia is forced to fight off the advances of a visiting Sachakan mage - and instinctively uses magic. She now finds herself facing an entirely different future as Lord Dakon&apos;s apprentice.
 
-But along with the excitement and privilege, Tessia is about to discover that her magical gifts bring with them a great deal of responsibility. Events are brewing that will lead nations into war, rival magicians into conflict, and spark an act of sorcery so brutal that its effects will be felt for centuries . . .</Summary>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Magician&apos;s Apprentice</Title>
-        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841495903</publicationISBN>
+But along with the excitement and privilege, Tessia is about to discover that her magical gifts bring with them a great deal of responsibility. Events are brewing that will lead nations into war, rival magicians into conflict, and spark an act of sorcery so brutal that its effects will be felt for centuries . . .</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Magician&apos;s Apprentice</publicationTitle>
         <rdfs:label xml:lang="en">The Magician’s Apprentice</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Man_Who_Didn&apos;t_Call -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Man_Who_Didn&apos;t_Call">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Mystery"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Romance"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Thriller"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Rosie_Walsh"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pan_Macmillan"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pan_Macmillan"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-25T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781509828302</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">352</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imagine you meet a man, spend seven glorious days together, and fall in love. And it&apos;s mutual: you&apos;ve never been so certain of anything.
+
+So when he leaves for a long-booked holiday and promises to call from the airport, you have no cause to doubt him.
+
+But he doesn&apos;t call.
+
+Your friends tell you to forget him, but you know they&apos;re wrong: something must have happened; there must be a reason for his silence.
+
+What do you do when you finally discover you&apos;re right? That there is a reason - and that reason is the one thing you didn&apos;t share with each other?
+
+The truth.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Man Who Didn&apos;t Call</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">252.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Man Who Didn&apos;t Call</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 

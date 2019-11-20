@@ -11,11 +11,13 @@ namespace NLS.Lib.Models
         public string Series { get; set; }
         public string Publisher { get; set; }
         public string Imprint { get; set; }
+        public string Edition { get; set; }
         public string ISBN { get; set; }
         public string Date { get; set; }
         public string Title { get; set; }
         public string Subtitle { get; set; }
         public string Summary { get; set; }
+        public string Subject { get; set; }
         public string Format { get; set; }
         public string Source { get; set; }
         public string PageCount { get; set; }

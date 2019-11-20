@@ -333,7 +333,7 @@ namespace NLS.Lib
                 }
             }
 
-            queryString.CommandText += " }";
+            queryString.CommandText += " } ORDER BY ASC(?class) ";
 
             SparqlQueryParser queryParser = new SparqlQueryParser();
             SparqlQuery query = queryParser.ParseFromString(queryString);
@@ -342,6 +342,40 @@ namespace NLS.Lib
             foreach (SparqlResult result in resultSet)
             {
                 string classURI = GetResultValue(result, "class");
+                string[] classSplit = classURI.Split('#');
+                string classOption = classSplit[(classSplit.Length - 1)].Trim().Replace('_', ' ');
+
+                queryResults.Add(classOption);
+            }
+
+            return queryResults;
+        }
+
+        public static List<string> QueryAllIndividuals()
+        {
+            List<string> queryResults = new List<string>();
+
+            SparqlParameterizedString queryString = new SparqlParameterizedString();
+            queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
+            queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
+
+            queryString.CommandText = "SELECT ?title ";
+            queryString.CommandText += "WHERE { ";
+            queryString.CommandText += "?class rdfs:label ?title. ";
+            queryString.CommandText += "{ ?class a lib:Article } UNION ";
+            queryString.CommandText += "{ ?class a lib:eBook } UNION ";
+            queryString.CommandText += "{ ?class a lib:Hardback } UNION ";
+            queryString.CommandText += "{ ?class a lib:Paperback } UNION ";
+            queryString.CommandText += "{ ?class a lib:Textbook }. } ";
+            queryString.CommandText += "ORDER BY ASC(?title) ";
+
+            SparqlQueryParser queryParser = new SparqlQueryParser();
+            SparqlQuery query = queryParser.ParseFromString(queryString);
+
+            SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+            foreach (SparqlResult result in resultSet)
+            {
+                string classURI = GetResultValue(result, "title");
                 string[] classSplit = classURI.Split('#');
                 string classOption = classSplit[(classSplit.Length - 1)].Trim().Replace('_', ' ');
 

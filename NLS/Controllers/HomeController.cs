@@ -25,6 +25,8 @@ namespace NLS.Controllers
             SearchViewModel viewModel = new SearchViewModel();
             PopulateSearchFilters(viewModel);
 
+            viewModel.Results = Server.QueryAllIndividuals();
+
             return View(viewModel);
         }
 

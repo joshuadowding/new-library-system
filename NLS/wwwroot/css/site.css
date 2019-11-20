@@ -61,13 +61,16 @@ button.btn:hover {
 select.custom-select {
     color: #495057;
     transition: all ease-in-out .1s;
-    background-color: white;
 }
 
 select.custom-select:hover {
-    color: black;
-    transition: all ease-in-out .1s;
-    background-color: #fafaff;
+    /*color: black;
+    transition: all ease-in-out .1s;*/
+}
+
+select.custom-select:focus {
+    box-shadow: none;
+    border-color: #ced4da;
 }
 
 a.btn {

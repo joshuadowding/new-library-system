@@ -67,112 +67,156 @@ namespace NLS.Lib
             SparqlQuery query = queryParser.ParseFromString(queryString);
             SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
 
+            int index = 0;
             foreach (SparqlResult result in resultSet)
             {
-                foreach (KeyValuePair<string, INode> _result in result)
+                if (index > 0)
                 {
-                    if (_result.Value != null)
+                    foreach (KeyValuePair<string, INode> _result in result)
                     {
-                        switch (_result.Key)
+                        if (_result.Value != null)
                         {
-                            case "title":
-                                string[] resultSplit = _result.Value.ToString().Split('@');
-                                publicationModel.Title = resultSplit[0].Trim().Replace('_', ' ');
-                                break;
+                            switch (_result.Key)
+                            {
+                                case "author":
+                                    string[] authorSplit = _result.Value.ToString().Split('#');
+                                    string author = authorSplit[1].Trim().Replace('_', ' ');
+                                    if (!publicationModel.Authors.Contains(author))
+                                    {
+                                        publicationModel.Authors.Add(author);
+                                    }
+                                    break;
 
-                            case "author":
-                                string[] authorSplit = _result.Value.ToString().Split('#');
-                                publicationModel.Authors.Add(authorSplit[1].Trim().Replace('_', ' '));
-                                break;
+                                case "service":
+                                    string[] serviceSplit = _result.Value.ToString().Split('#');
+                                    string service = serviceSplit[1].Trim().Replace('_', ' ');
+                                    if (!publicationModel.Services.Contains(service))
+                                    {
+                                        publicationModel.Services.Add(service);
+                                    }
+                                    break;
 
-                            case "publisher":
-                                string[] publisherSplit = _result.Value.ToString().Split('#');
-                                publicationModel.Publisher = publisherSplit[1].Trim().Replace('_', ' ');
-                                break;
-
-                            case "series":
-                                string[] seriesSplit = _result.Value.ToString().Split('#');
-                                publicationModel.Series = seriesSplit[1].Trim().Replace('_', ' ');
-                                break;
-
-                            case "imprint":
-                                string[] imprintSplit = _result.Value.ToString().Split('#');
-                                publicationModel.Imprint = imprintSplit[1].Trim().Replace('_', ' ');
-                                break;
-
-                            case "copyCount":
-                                string[] copySplit = _result.Value.ToString().Split('#');
-                                string[] _copySplit = copySplit[0].Split('^');
-                                publicationModel.CopyTotal = _copySplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "date":
-                                string[] dateSplit = _result.Value.ToString().Split('#');
-                                string[] _dateSplit = dateSplit[0].Split('^');
-                                publicationModel.Date = _dateSplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "edition":
-                                string[] editionSplit = _result.Value.ToString().Split('#');
-                                string[] _editionSplit = editionSplit[0].Split('^');
-                                publicationModel.Edition = _editionSplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "isbn":
-                                string[] isbnSplit = _result.Value.ToString().Split('#');
-                                string[] _isbnSplit = isbnSplit[0].Split('^');
-                                publicationModel.ISBN = _isbnSplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "language":
-                                string[] languageSplit = _result.Value.ToString().Split('#');
-                                publicationModel.Language = languageSplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "pageCount":
-                                string[] pageSplit = _result.Value.ToString().Split('#');
-                                string[] _pageSplit = pageSplit[0].Split('^');
-                                publicationModel.PageCount = _pageSplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "source":
-                                string[] sourceSplit = _result.Value.ToString().Split('#');
-                                publicationModel.Source = sourceSplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "subject":
-                                string[] subjectSplit = _result.Value.ToString().Split('#');
-                                publicationModel.Subject = subjectSplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "subtitle":
-                                string[] subtitleSplit = _result.Value.ToString().Split('#');
-                                publicationModel.Subtitle = subtitleSplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "summary":
-                                string[] summarySplit = _result.Value.ToString().Split('#');
-                                publicationModel.Summary = summarySplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "weight":
-                                string[] weightSplit = _result.Value.ToString().Split('#');
-                                string[] _weightSplit = weightSplit[0].Split('^');
-                                publicationModel.Weight = weightSplit[0].Trim().Replace('_', ' ');
-                                break;
-
-                            case "service":
-                                string[] serviceSplit = _result.Value.ToString().Split('#');
-                                publicationModel.Services.Add(serviceSplit[1].Trim().Replace('_', ' '));
-                                break;
-
-                            case "location":
-                                string[] locationSplit = _result.Value.ToString().Split('#');
-                                publicationModel.Locations.Add(locationSplit[1].Trim().Replace('_', ' '));
-                                break;
+                                case "location":
+                                    string[] locationSplit = _result.Value.ToString().Split('#');
+                                    string location = locationSplit[1].Trim().Replace('_', ' ');
+                                    if (!publicationModel.Locations.Contains(location))
+                                    {
+                                        publicationModel.Locations.Add(location);
+                                    }
+                                    break;
+                            }
                         }
                     }
                 }
+                else
+                {
+                    foreach (KeyValuePair<string, INode> _result in result)
+                    {
+                        if (_result.Value != null)
+                        {
+                            switch (_result.Key)
+                            {
+                                case "title":
+                                    string[] resultSplit = _result.Value.ToString().Split('@');
+                                    publicationModel.Title = resultSplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "author":
+                                    string[] authorSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Authors.Add(authorSplit[1].Trim().Replace('_', ' '));
+                                    break;
+
+                                case "publisher":
+                                    string[] publisherSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Publisher = publisherSplit[1].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "series":
+                                    string[] seriesSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Series = seriesSplit[1].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "imprint":
+                                    string[] imprintSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Imprint = imprintSplit[1].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "copyCount":
+                                    string[] copySplit = _result.Value.ToString().Split('#');
+                                    string[] _copySplit = copySplit[0].Split('^');
+                                    publicationModel.CopyTotal = _copySplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "date":
+                                    string[] dateSplit = _result.Value.ToString().Split('#');
+                                    string[] _dateSplit = dateSplit[0].Split('^');
+                                    publicationModel.Date = _dateSplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "edition":
+                                    string[] editionSplit = _result.Value.ToString().Split('#');
+                                    string[] _editionSplit = editionSplit[0].Split('^');
+                                    publicationModel.Edition = _editionSplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "isbn":
+                                    string[] isbnSplit = _result.Value.ToString().Split('#');
+                                    string[] _isbnSplit = isbnSplit[0].Split('^');
+                                    publicationModel.ISBN = _isbnSplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "language":
+                                    string[] languageSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Language = languageSplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "pageCount":
+                                    string[] pageSplit = _result.Value.ToString().Split('#');
+                                    string[] _pageSplit = pageSplit[0].Split('^');
+                                    publicationModel.PageCount = _pageSplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "source":
+                                    string[] sourceSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Source = sourceSplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "subject":
+                                    string[] subjectSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Subject = subjectSplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "subtitle":
+                                    string[] subtitleSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Subtitle = subtitleSplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "summary":
+                                    string[] summarySplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Summary = summarySplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "weight":
+                                    string[] weightSplit = _result.Value.ToString().Split('#');
+                                    string[] _weightSplit = weightSplit[0].Split('^');
+                                    publicationModel.Weight = weightSplit[0].Trim().Replace('_', ' ');
+                                    break;
+
+                                case "service":
+                                    string[] serviceSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Services.Add(serviceSplit[1].Trim().Replace('_', ' '));
+                                    break;
+
+                                case "location":
+                                    string[] locationSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Locations.Add(locationSplit[1].Trim().Replace('_', ' '));
+                                    break;
+                            }
+                        }
+                    }
+                }
+
+                index++;
             }
 
             publicationModel.Types = QueryIndividualTypes(individualName);

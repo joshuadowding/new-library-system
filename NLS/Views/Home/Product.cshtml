@@ -26,6 +26,16 @@
                 <p>Type: @type</p>
             }
 
+            @foreach (string location in Model.Publication.Locations)
+            {
+                <p>Location: @location</p>
+            }
+
+            @foreach (string service in Model.Publication.Services)
+            {
+                <p>Service: @service</p>
+            }
+
             <p>Summary: @Model.Publication.Summary</p>
 
             <p>Copy Count: @Model.Publication.CopyTotal</p>

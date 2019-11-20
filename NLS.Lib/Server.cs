@@ -40,12 +40,14 @@ namespace NLS.Lib
             queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
             queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
 
-            queryString.CommandText = "SELECT DISTINCT ?title ?author ?series ?publisher ?imprint ?copyCount ?date ?edition ?isbn ?language ?pageCount ?source ?subject ?subtitle ?summary ?weight ";
+            queryString.CommandText = "SELECT DISTINCT ?title ?author ?series ?publisher ?imprint ?copyCount ?date ?edition ?isbn ?language ?pageCount ?source ?subject ?subtitle ?summary ?weight ?location ?service ";
             queryString.CommandText += "WHERE { ?class rdfs:label ?title. ";
             queryString.CommandText += "?class lib:hasAuthor ?author. ";
             queryString.CommandText += "OPTIONAL { ?class lib:hasSeries ?series }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:hasPublisher ?publisher }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:hasImprint ?imprint }. ";
+            queryString.CommandText += "OPTIONAL { ?class lib:hasLocation ?location }. ";
+            queryString.CommandText += "OPTIONAL { ?class lib:hasService ?service }. ";
 
             queryString.CommandText += "OPTIONAL { ?class lib:publicationCopyTotal ?copyCount }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:publicationDate ?date }. ";
@@ -157,6 +159,16 @@ namespace NLS.Lib
                                 string[] weightSplit = _result.Value.ToString().Split('#');
                                 string[] _weightSplit = weightSplit[0].Split('^');
                                 publicationModel.Weight = weightSplit[0].Trim().Replace('_', ' ');
+                                break;
+
+                            case "service":
+                                string[] serviceSplit = _result.Value.ToString().Split('#');
+                                publicationModel.Services.Add(serviceSplit[1].Trim().Replace('_', ' '));
+                                break;
+
+                            case "location":
+                                string[] locationSplit = _result.Value.ToString().Split('#');
+                                publicationModel.Locations.Add(locationSplit[1].Trim().Replace('_', ' '));
                                 break;
                         }
                     }

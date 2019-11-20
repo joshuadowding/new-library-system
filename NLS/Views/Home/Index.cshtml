@@ -8,46 +8,47 @@
     <div class="search-filters">
         <form class="filters" asp-controller="Home" asp-action="Index" method="post">
             <label asp-for="Author"></label>
-            <select class="select" asp-for="Author" asp-items="Model.AvailableAuthors">
+            <select asp-for="Author" asp-items="Model.AvailableAuthors">
                 <option></option>
             </select>
 
             <label asp-for="Publisher"></label>
-            <select class="select" asp-for="Publisher" asp-items="Model.AvailablePublishers">
+            <select asp-for="Publisher" asp-items="Model.AvailablePublishers">
                 <option></option>
             </select>
 
             <label asp-for="Series"></label>
-            <select class="select" asp-for="Series" asp-items="Model.AvailableSeries">
+            <select asp-for="Series" asp-items="Model.AvailableSeries">
                 <option></option>
             </select>
 
             <label asp-for="Type"></label>
-            <select class="select" asp-for="Type" asp-items="Model.AvailableTypes">
+            <select asp-for="Type" asp-items="Model.AvailableTypes">
                 <option></option>
             </select>
 
             <label asp-for="Genre"></label>
-            <select class="select" asp-for="Genre" asp-items="Model.AvailableGenres">
+            <select asp-for="Genre" asp-items="Model.AvailableGenres">
                 <option></option>
             </select>
 
             <label asp-for="Form"></label>
-            <select class="select" asp-for="Form" asp-items="Model.AvailableForms">
+            <select asp-for="Form" asp-items="Model.AvailableForms">
                 <option></option>
             </select>
 
             <label asp-for="Age"></label>
-            <select class="select" asp-for="Age" asp-items="Model.AvailableAges">
+            <select asp-for="Age" asp-items="Model.AvailableAges">
                 <option></option>
             </select>
 
             <label asp-for="Location"></label>
-            <select class="select" asp-for="Location" asp-items="Model.AvailableLocations">
+            <select asp-for="Location" asp-items="Model.AvailableLocations">
                 <option></option>
             </select>
 
             <button class="btn btn-primary" type="submit">Search</button>
+            <a class="btn btn-secondary" id="clear-filters">Clear</a>
         </form>
     </div>
     <div class="search-results">

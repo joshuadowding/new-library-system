@@ -7,53 +7,47 @@
 <div class="container-search">
     <div class="search-filters">
         <form class="filters" asp-controller="Home" asp-action="Index" method="post">
-            <label asp-for="Author"></label>
-            <select asp-for="Author" asp-items="Model.AvailableAuthors">
-                <option></option>
+            <h1 class="header">Filters</h1>
+
+            <select class="custom-select" asp-for="Author" asp-items="Model.AvailableAuthors">
+                <option selected="selected" value="">Author</option>
             </select>
 
-            <label asp-for="Publisher"></label>
-            <select asp-for="Publisher" asp-items="Model.AvailablePublishers">
-                <option></option>
+            <select class="custom-select" asp-for="Publisher" asp-items="Model.AvailablePublishers">
+                <option selected="selected" value="">Publisher</option>
             </select>
 
-            <label asp-for="Series"></label>
-            <select asp-for="Series" asp-items="Model.AvailableSeries">
-                <option></option>
+            <select class="custom-select" asp-for="Series" asp-items="Model.AvailableSeries">
+                <option selected="selected" value="">Series</option>
             </select>
 
-            <label asp-for="Type"></label>
-            <select asp-for="Type" asp-items="Model.AvailableTypes">
-                <option></option>
+            <select class="custom-select" asp-for="Type" asp-items="Model.AvailableTypes">
+                <option selected="selected" value="">Type</option>
             </select>
 
-            <label asp-for="Genre"></label>
-            <select asp-for="Genre" asp-items="Model.AvailableGenres">
-                <option></option>
+            <select class="custom-select" asp-for="Genre" asp-items="Model.AvailableGenres">
+                <option selected="selected" value="">Genre</option>
             </select>
 
-            <label asp-for="Form"></label>
-            <select asp-for="Form" asp-items="Model.AvailableForms">
-                <option></option>
+            <select class="custom-select" asp-for="Form" asp-items="Model.AvailableForms">
+                <option selected="selected" value="">Form</option>
             </select>
 
-            <label asp-for="Age"></label>
-            <select asp-for="Age" asp-items="Model.AvailableAges">
-                <option></option>
+            <select class="custom-select" asp-for="Age" asp-items="Model.AvailableAges">
+                <option selected="selected" value="">Age</option>
             </select>
 
-            <label asp-for="Location"></label>
-            <select asp-for="Location" asp-items="Model.AvailableLocations">
-                <option></option>
+            <select class="custom-select" asp-for="Location" asp-items="Model.AvailableLocations">
+                <option selected="selected" value="">Location</option>
             </select>
 
-            <button class="btn btn-primary" type="submit">Search</button>
-            <a class="btn btn-secondary" id="clear-filters">Clear</a>
+            <button class="btn btn-sm" type="submit">Search</button>
+            <a class="btn btn-sm" id="clear-filters">Clear</a>
         </form>
     </div>
     <div class="search-results">
         <form class="results" method="post">
-            <h1>Results</h1>
+            <h1 class="header">Results</h1>
 
             @if (Model.Results != null)
             {

@@ -1,10 +1,95 @@
 ﻿html {
     position: relative;
     height: 100%;
+    font-size: 62.5%;
 }
 
 body {
     height: 100%;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h1.header {
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 2.0rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+h5 {
+    font-size: 1.6rem;
+}
+
+h6 {
+    font-size: 1.4rem;
+}
+
+div, span, select, option, button, input, a, p, i {
+    font-size: 1.4rem;
+}
+
+button.btn {
+    border: 1px solid #DEE2E6;
+    border-radius: .25rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #495057;
+    transition: all ease-in-out .1s;
+}
+
+button.btn:hover {
+    border: 1px solid #75c275;
+    color: black;
+    transition: all ease-in-out .1s;
+    background-color: #90ee90;
+}
+
+select.custom-select {
+    color: #495057;
+    transition: all ease-in-out .1s;
+    background-color: white;
+}
+
+select.custom-select:hover {
+    color: black;
+    transition: all ease-in-out .1s;
+    background-color: #fafaff;
+}
+
+a.btn {
+    border: 1px solid #DEE2E6;
+    border-radius: .25rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #495057 !important;
+    transition: all ease-in-out .1s;
+}
+
+a.btn:hover {
+    border: 1px solid #75c275;
+    color: black !important;
+    transition: all ease-in-out .1s;
+    background-color: #90ee90;
+}
+
+a.btn#clear-filters:hover {
+    border: 1px solid #dc143c;
+    background-color: #e55471;
 }
 
 main {
@@ -19,7 +104,7 @@ main {
     height: 100%;
     position: absolute;
     top: 0;
-    padding-top: 57px;
+    padding-top: 48px;
     z-index: 999;
 }
 
@@ -31,13 +116,21 @@ main {
 
 .container-search .search-filters {
     width: 256px;
-    padding: 16px;
-    border-right: 1px solid #dee2e6;
+    padding: 16px 8px;
+    border-right: 1px solid #DEE2E6;
 }
 
 .container-search .search-filters .filters {
     display: flex;
     flex-direction: column;
+}
+
+.container-search .search-filters .filters label {
+    font-size: 1.4rem;
+}
+
+.container-search .search-filters .filters select {
+    font-size: 1.4rem;
 }
 
 .container-search .search-filters .filters select,
@@ -58,9 +151,17 @@ main {
 }
 
 nav.navbar {
+    height: 48px;
     z-index: 1000;
-
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
+}
+
+nav.navbar .navbar-brand {
+    font-size: 1.8rem;
+}
+
+nav.navbar .nav-item .nav-link {
+    font-size: 1.4rem;
 }

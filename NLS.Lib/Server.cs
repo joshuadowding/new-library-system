@@ -61,6 +61,11 @@ namespace NLS.Lib
             queryString.CommandText += "OPTIONAL { ?class lib:publicationSummary ?summary }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:publicationWeight ?weight }. ";
 
+            if (individualName.Contains("'"))
+            {
+                individualName = individualName.Replace("'", @"\'");
+            }
+
             queryString.CommandText += "FILTER(regex(str(?title), '" + individualName.Replace('_', ' ') + "')) }";
 
             SparqlQueryParser queryParser = new SparqlQueryParser();

@@ -20,6 +20,7 @@ main {
     position: absolute;
     top: 0;
     padding-top: 57px;
+    z-index: 999;
 }
 
 .container-search {
@@ -57,6 +58,8 @@ main {
 }
 
 nav.navbar {
+    z-index: 1000;
+
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);

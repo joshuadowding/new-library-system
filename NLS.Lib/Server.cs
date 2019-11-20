@@ -338,7 +338,7 @@ namespace NLS.Lib
             {
                 string classURI = GetResultValue(result, "class");
                 string[] classSplit = classURI.Split('#');
-                string classOption = classSplit[1].Trim().Replace('_', ' ');
+                string classOption = classSplit[(classSplit.Length - 1)].Trim().Replace('_', ' ');
 
                 queryResults.Add(classOption);
             }
@@ -353,19 +353,26 @@ namespace NLS.Lib
 
             if (result.TryGetValue(variable, out node))
             {
-                switch (node.NodeType)
+                if (node != null)
                 {
-                    case NodeType.Uri:
-                        value = ((IUriNode)node).Uri.AbsoluteUri;
-                        break;
+                    switch (node.NodeType)
+                    {
+                        case NodeType.Uri:
+                            value = ((IUriNode)node).Uri.ToString();
+                            break;
 
-                    case NodeType.Literal:
-                        value = ((ILiteralNode)node).Value;
-                        break;
+                        case NodeType.Literal:
+                            value = ((ILiteralNode)node).Value;
+                            break;
 
-                    default:
-                        value = String.Empty;
-                        break;
+                        default:
+                            value = String.Empty;
+                            break;
+                    }
+                }
+                else
+                {
+                    value = String.Empty;
                 }
             }
             else

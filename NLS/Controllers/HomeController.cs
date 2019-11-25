@@ -52,7 +52,7 @@ namespace NLS.Controllers
 
             if (!String.IsNullOrWhiteSpace(viewModel.Location))
             {
-                searchModel.SearchClasses.Add(viewModel.Location);
+                searchModel.SearchIndividuals.Add("Location", viewModel.Location);
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Publisher))
@@ -115,7 +115,7 @@ namespace NLS.Controllers
         {
             // TODO: Drastically simplify everything below.
 
-            foreach (string option in Server.QueryFilterOptions("Location", QueryFilterType.Class))
+            foreach (string option in Server.QueryFilterOptions("Location", QueryFilterType.Individual))
             {
                 viewModel.AvailableLocations.Add(new SelectListItem(option, option));
             }

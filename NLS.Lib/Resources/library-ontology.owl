@@ -386,6 +386,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Child"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
     </owl:Class>
     
 
@@ -393,7 +401,7 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range">
-        <rdfs:label xml:lang="en">Age</rdfs:label>
+        <rdfs:label xml:lang="en">Age Range</rdfs:label>
     </owl:Class>
     
 
@@ -436,25 +444,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Download -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Download">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Web_Service"/>
-        <rdfs:label xml:lang="en">Download</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book_Loan">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Local_Service"/>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:label xml:lang="en">Loan</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge">
@@ -467,6 +456,23 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Child -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Child">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:label xml:lang="en">Child</rdfs:label>
     </owl:Class>
     
 
@@ -561,16 +567,6 @@
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Imprint -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Imprint"/>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Interlibrary_Loan">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Local_Service"/>
-        <rdfs:comment xml:lang="en">Interlibrary Loan</rdfs:comment>
-        <rdfs:label xml:lang="en">Transfer</rdfs:label>
-    </owl:Class>
     
 
 
@@ -693,14 +689,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Read -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Read">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Web_Service"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Romance -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Romance">
@@ -755,6 +743,23 @@
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range"/>
+        <owl:disjointWith>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Child"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:disjointWith>
+        <rdfs:label xml:lang="en">Teen</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Textbook -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Textbook">
@@ -789,28 +794,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range"/>
-        <rdfs:label xml:lang="en">Teen</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#eBook">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Book"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Children&apos;s -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Children&apos;s">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Age_Range"/>
-        <rdfs:label xml:lang="en">Child</rdfs:label>
     </owl:Class>
     
 
@@ -823,6 +810,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Child_Books -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Child_Books">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Imprint"/>
+        <imprintName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bloomsbury Child Books</imprintName>
+        <rdfs:label xml:lang="en">Bloomsbury Child Books</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -1133,6 +1130,37 @@ Full-colour maps and images throughoutHighlights and itineraries help you tailor
     
 
 
+    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pompeii -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Pompeii">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Commentary"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#History"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
+        <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Mary_Beard"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#CPI_Group_(UK)"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
+        <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Profile_Books"/>
+        <hasService rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Loan"/>
+        <hasService rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Transfer"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
+        <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-11-04T00:00:00</publicationDate>
+        <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
+        <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781846684715</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
+        <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">368</publicationPageCount>
+        <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
+        <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;Pompeii&apos;</publicationSubject>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Life of a Roman Town</publicationSubtitle>
+        <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The world&apos;s most controversial classicist debunks our movie-style myths about the Roman town with meticulous scholarship and propulsive energy&apos; Laura Silverman, Daily Mail The ruins of Pompeii, buried by an explosion of Vesuvius in 79 CE, offer the best evidence we have of everyday life in the Roman empire. This remarkable book rises to the challenge of making sense of those remains, as well as exploding many myths: the very date of the eruption, probably a few months later than usually thought; or the hygiene of the baths which must have been hotbeds of germs; or the legendary number of brothels, most likely only one; or the massive death count, maybe less than ten per cent of the population. An extraordinary and involving portrait of an ancient town, its life and its continuing re-discovery, by Britain&apos;s favourite classicist.</publicationSummary>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pompeii</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">334.0</publicationWeight>
+        <rdfs:label xml:lang="en">Pompeii</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Profile_Books -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Profile_Books">
@@ -1221,11 +1249,11 @@ Although Jobs cooperated with this book, he asked for no control over what was w
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Beast_of_Buckingham_Palace -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Beast_of_Buckingham_Palace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Child"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Hardback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Low_Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novella"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Supernatural"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Children&apos;s"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#David_Williams"/>
         <hasIllustrator rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tony_Ross"/>
         <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
@@ -1418,9 +1446,9 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
-        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Child_Books"/>
         <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
@@ -1637,16 +1665,6 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
     
 
 
-    <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books">
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Imprint"/>
-        <imprintName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bloomsbury Children&apos;s Books</imprintName>
-        <rdfs:label xml:lang="en">Bloomsbury Children&apos;s Books</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK) -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)">
@@ -1709,9 +1727,9 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
-        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Child_Books"/>
         <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
@@ -1740,7 +1758,7 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Screenplay"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Jack_Thorne"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#John_Tiffany"/>
@@ -1773,9 +1791,9 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
-        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Child_Books"/>
         <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
@@ -1803,9 +1821,9 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
-        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Child_Books"/>
         <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
@@ -1834,7 +1852,7 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Large_Print_Press"/>
         <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
@@ -1865,9 +1883,9 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
-        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Child_Books"/>
         <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
@@ -1896,9 +1914,9 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Fantasy"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Novel"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling"/>
-        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Children&apos;s_Books"/>
+        <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Child_Books"/>
         <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Cambridge"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Bloomsbury_Publishing_(UK)"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
@@ -1928,7 +1946,7 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Manga"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Paperback"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Romance"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Young_Adult"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Teen"/>
         <hasAuthor rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Tomohito_Oda"/>
         <hasImprint rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Viz_Media"/>
         <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Peterborough"/>
@@ -2220,9 +2238,6 @@ The truth.</publicationSummary>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Online">
         <rdfs:label xml:lang="en">Online</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Read">
-        <rdfs:label xml:lang="en">Read</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 

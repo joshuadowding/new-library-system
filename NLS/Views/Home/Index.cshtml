@@ -22,6 +22,16 @@
 
 <div class="container-search">
     <div class="search-filters">
+        <form class="search" asp-controller="Home" asp-action="Search" method="post">
+            <h1 class="header">Search</h1>
+
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Title" aria-label="Title" asp-for="Title" />
+            </div>
+
+            <button class="btn btn-sm" type="submit">Search</button>
+        </form>
+
         <form class="filters" asp-controller="Home" asp-action="Index" method="post">
             <h1 class="header">Filters</h1>
 
@@ -57,19 +67,26 @@
                 <option selected="selected" value="">Location</option>
             </select>
 
-            <button class="btn btn-sm" type="submit">Search</button>
+            <button class="btn btn-sm" type="submit">Filter</button>
             <a class="btn btn-sm" id="clear-filters" asp-controller="Home" asp-action="Reset">Reset</a>
         </form>
     </div>
     <div class="search-results">
         <form class="results" method="post">
-            <h1 class="header">Results (@Model.Results.Count)</h1>
+            @if(Model.Results != null)
+            {
+                <h1 class="header">Results (@Model.Results.Count)</h1>
+            }
+            else
+            {
+                <h1 class="header">Results (0)</h1>
+            }
 
             @if (Model.Results != null)
             {
                 for (var i = 0; i < Model.Results.Count(); i++)
                 {
-                    <a asp-controller="Home" asp-action="Search" asp-route-id="@Model.Results[i].ToString().Replace(' ', '_')" target="_blank">@Model.Results[i].ToString()</a>
+                    <a asp-controller="Home" asp-action="Select" asp-route-id="@Model.Results[i].ToString().Replace(' ', '_')" target="_blank">@Model.Results[i].ToString()</a>
                 }
             }
         </form>

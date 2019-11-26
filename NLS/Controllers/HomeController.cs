@@ -12,7 +12,7 @@ namespace NLS.Controllers
 {
     public class HomeController : Controller
     {
-        private const string NO_FILTER_WARNING = @"No filters selected - returning all individuals by default.";
+        private const string NO_FILTER_WARNING = @"No filters selected - returning all publications by default.";
 
         private readonly ILogger<HomeController> _logger;
 
@@ -27,7 +27,17 @@ namespace NLS.Controllers
             SearchViewModel viewModel = new SearchViewModel();
             PopulateSearchFilters(viewModel);
 
-            viewModel.Results = Server.QueryAllIndividuals();
+            if (viewModel.Results != null)
+            {
+                if (viewModel.Results.Count == 0)
+                {
+                    viewModel.Results = Server.QueryAllIndividuals();
+                }
+            }
+            else
+            {
+                viewModel.Results = Server.QueryAllIndividuals();
+            }
 
             return View(viewModel);
         }
@@ -105,8 +115,33 @@ namespace NLS.Controllers
             return View(viewModel);
         }
 
+        [HttpPost]
+        public IActionResult Search(SearchViewModel viewModel)
+        {
+            if (!String.IsNullOrWhiteSpace(viewModel.Title))
+            {
+                string title = viewModel.Title.Trim();
+                List<string> results = Server.QueryIndividualsWithTextContains(title);
+
+                if (results != null)
+                {
+                    if (results.Count > 0)
+                    {
+                        viewModel.Results = results;
+                    }
+                }
+            }
+            else
+            {
+                //viewModel.Results = Server.QueryAllIndividuals(); // Get all individuals by default.
+                viewModel.Message = NO_FILTER_WARNING;
+            }
+
+            return View("Index", viewModel);
+        }
+
         [HttpGet]
-        public IActionResult Search()
+        public IActionResult Select()
         {
             string selectedItem = HttpContext.Request.RouteValues["id"].ToString();
 

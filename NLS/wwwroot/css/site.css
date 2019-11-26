@@ -142,18 +142,23 @@ main {
     flex-direction: column;
 }
 
-.container-search .search-filters .filters label {
-    font-size: 1.4rem;
+.container-search .search-filters .search {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
 }
 
-.container-search .search-filters .filters select {
+.container-search .search-filters .filters label,
+.container-search .search-filters .filters select,
+.container-search .search-filters .search input {
     font-size: 1.4rem;
 }
 
 .container-search .search-filters .filters select,
 .container-search .search-filters .filters label,
 .container-search .search-filters .filters button,
-.container-search .search-filters .filters a {
+.container-search .search-filters .filters a,
+.container-search .search-filters .search input {
     margin-bottom: 8px;
 }
 

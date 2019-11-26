@@ -14,6 +14,7 @@ namespace NLS.Models
         public string Publisher { get; set; }
         public string Series { get; set; }
         public string Message { get; set; }
+        public string Title { get; set; }
 
         public List<SelectListItem> AvailableAges { get; set; }
         public List<SelectListItem> AvailableAuthors { get; set; }

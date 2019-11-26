@@ -413,6 +413,38 @@ namespace NLS.Lib
             return queryResults;
         }
 
+
+        public static List<string> QueryIndividualsWithTextContains(string individualName)
+        {
+            List<string> queryResults = new List<string>();
+
+            SparqlParameterizedString queryString = new SparqlParameterizedString();
+            queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
+            queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
+
+            queryString.CommandText = "SELECT DISTINCT ?class ?label ";
+            queryString.CommandText += "WHERE { ";
+            queryString.CommandText += "?class lib:publicationTitle ?title. ";
+            queryString.CommandText += "?class rdfs:label ?label. ";
+            queryString.CommandText += "FILTER CONTAINS(?title, \"" + individualName + "\") } ";
+            queryString.CommandText += "ORDER BY ASC(?label) ";
+
+            SparqlQueryParser queryParser = new SparqlQueryParser();
+            SparqlQuery query = queryParser.ParseFromString(queryString);
+            SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+
+            foreach (SparqlResult result in resultSet)
+            {
+                string classURI = GetResultValue(result, "label");
+                string[] classSplit = classURI.Split('#');
+                string classLabel = classSplit[(classSplit.Length - 1)].Trim().Replace('_', ' ');
+
+                queryResults.Add(classLabel);
+            }
+
+            return queryResults;
+        }
+
         private static string GetResultValue(SparqlResult result, string variable)
         {
             INode node;

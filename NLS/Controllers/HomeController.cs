@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using NLS.Lib;
@@ -14,11 +15,25 @@ namespace NLS.Controllers
     {
         private const string NO_FILTER_WARNING = @"No filters selected - returning all publications by default.";
 
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> logger;
+
+        public Server Server { get; set; }
+
+        private bool initializeServer;
 
         public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger;
+            this.logger = logger;
+
+            if (!initializeServer)
+            {
+                Server = new Server();
+
+                if (Server.Connect())
+                {
+                    initializeServer = true;
+                }
+            }
         }
 
         [HttpGet]
@@ -31,14 +46,15 @@ namespace NLS.Controllers
             {
                 if (viewModel.Results.Count == 0)
                 {
-                    viewModel.Results = Server.QueryAllIndividuals();
+                    viewModel.Results = Server.Query.QueryAllIndividuals();
                 }
             }
             else
             {
-                viewModel.Results = Server.QueryAllIndividuals();
+                viewModel.Results = Server.Query.QueryAllIndividuals();
             }
 
+            logger.LogInformation("Index:GET");
             return View(viewModel);
         }
 
@@ -105,7 +121,7 @@ namespace NLS.Controllers
             }
             else
             {
-                List<string> results = Server.QueryIndividualsWithSearchModel(searchModel); //TODO: Query Ontology - Take values from viewModel and construct a query with them.
+                List<string> results = Server.Query.QueryIndividualsWithSearchModel(searchModel); //TODO: Query Ontology - Take values from viewModel and construct a query with them.
 
                 if (results != null)
                 {
@@ -118,6 +134,7 @@ namespace NLS.Controllers
 
             PopulateSearchFilters(viewModel);
 
+            logger.LogInformation("Index:POST");
             return View(viewModel);
         }
 
@@ -127,7 +144,7 @@ namespace NLS.Controllers
             if (!String.IsNullOrWhiteSpace(viewModel.Title))
             {
                 string title = viewModel.Title.Trim().ToLower();
-                List<string> results = Server.QueryIndividualsWithTextContains(title);
+                List<string> results = Server.Query.QueryIndividualsWithTextContains(title);
 
                 if (results != null)
                 {
@@ -145,6 +162,7 @@ namespace NLS.Controllers
 
             PopulateSearchFilters(viewModel);
 
+            logger.LogInformation("Search:POST");
             return View("Index", viewModel);
         }
 
@@ -155,66 +173,72 @@ namespace NLS.Controllers
 
             ProductViewModel productViewModel = new ProductViewModel();
             productViewModel.SelectedItem = selectedItem;
+
+            logger.LogInformation("Select:GET");
             return RedirectToAction("Product", productViewModel);
         }
 
         [HttpGet]
         public IActionResult Reset()
         {
+            logger.LogInformation("Reset:GET");
             return RedirectToAction("Index");
         }
 
         [HttpGet]
         public IActionResult Product(ProductViewModel viewModel)
         {
-            viewModel.Publication = Server.QueryIndividualPublication(viewModel.SelectedItem); // Query ontology for product page.
+            viewModel.Publication = Server.Query.QueryIndividualPublication(viewModel.SelectedItem);
+
+            logger.LogInformation("Product:GET");
             return View(viewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+            logger.LogError(HttpContext.Features.Get<IExceptionHandlerPathFeature>().Error.ToString());
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
         private void PopulateSearchFilters(SearchViewModel viewModel)
         {
-            foreach (string option in Server.QueryFilterOptions("Location", QueryFilterType.Individual))
+            foreach (string option in Server.Query.QueryFilterOptions("Location", QueryFilterType.Individual))
             {
                 viewModel.AvailableLocations.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryFilterOptions("Literary_Form", QueryFilterType.Class))
+            foreach (string option in Server.Query.QueryFilterOptions("Literary_Form", QueryFilterType.Class))
             {
                 viewModel.AvailableForms.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryFilterOptions("Genre", QueryFilterType.Class))
+            foreach (string option in Server.Query.QueryFilterOptions("Genre", QueryFilterType.Class))
             {
                 viewModel.AvailableGenres.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryFilterOptions("Publication", QueryFilterType.Class))
+            foreach (string option in Server.Query.QueryFilterOptions("Publication", QueryFilterType.Class))
             {
                 viewModel.AvailableTypes.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryFilterOptions("Age_Range", QueryFilterType.Class))
+            foreach (string option in Server.Query.QueryFilterOptions("Age_Range", QueryFilterType.Class))
             {
                 viewModel.AvailableAges.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryFilterOptions("Series", QueryFilterType.Individual))
+            foreach (string option in Server.Query.QueryFilterOptions("Series", QueryFilterType.Individual))
             {
                 viewModel.AvailableSeries.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryFilterOptions("Publisher", QueryFilterType.Individual))
+            foreach (string option in Server.Query.QueryFilterOptions("Publisher", QueryFilterType.Individual))
             {
                 viewModel.AvailablePublishers.Add(new SelectListItem(option, option));
             }
 
-            foreach (string option in Server.QueryFilterOptions("Author", QueryFilterType.Individual))
+            foreach (string option in Server.Query.QueryFilterOptions("Author", QueryFilterType.Individual))
             {
                 viewModel.AvailableAuthors.Add(new SelectListItem(option, option));
             }

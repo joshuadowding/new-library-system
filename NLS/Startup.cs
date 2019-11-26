@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NLS.Lib;
 
 namespace NLS
 {
@@ -23,7 +22,7 @@ namespace NLS
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostApplicationLifetime life, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -45,14 +44,6 @@ namespace NLS
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-
-            life.ApplicationStopping.Register(OnApplicationClose);
-        }
-
-        private void OnApplicationClose()
-        {
-            //TODO: Logger - 'Application Closing'
-            Server.Disconnect();
         }
     }
 }

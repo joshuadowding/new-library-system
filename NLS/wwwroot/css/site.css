@@ -226,4 +226,9 @@ nav.navbar .nav-item .nav-link {
 
 .stack {
     display: flex;
+    flex-direction: row;
+}
+
+.stack.inverse {
+    flex-direction: column;
 }

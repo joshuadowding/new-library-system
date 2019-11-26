@@ -413,7 +413,6 @@ namespace NLS.Lib
             return queryResults;
         }
 
-
         public static List<string> QueryIndividualsWithTextContains(string individualName)
         {
             List<string> queryResults = new List<string>();

@@ -94,7 +94,7 @@ namespace NLS.Controllers
 
             if (tries == 0)
             {
-                viewModel.Results = Server.QueryAllIndividuals(); // Get all individuals by default.
+                //viewModel.Results = Server.QueryAllIndividuals(); // Get all individuals by default.
                 viewModel.Message = NO_FILTER_WARNING;
             }
             else
@@ -136,6 +136,8 @@ namespace NLS.Controllers
                 //viewModel.Results = Server.QueryAllIndividuals(); // Get all individuals by default.
                 viewModel.Message = NO_FILTER_WARNING;
             }
+
+            PopulateSearchFilters(viewModel);
 
             return View("Index", viewModel);
         }

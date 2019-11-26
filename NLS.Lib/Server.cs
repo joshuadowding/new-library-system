@@ -45,8 +45,9 @@ namespace NLS.Lib
             queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
             queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
 
-            queryString.CommandText = "SELECT DISTINCT ?title ?author ?series ?publisher ?imprint ?copyCount ?date ?edition ?isbn ?language ?pageCount ?source ?subject ?subtitle ?summary ?weight ?location ?service ";
-            queryString.CommandText += "WHERE { ?class rdfs:label ?title. ";
+            queryString.CommandText = "SELECT DISTINCT ?label ?title ?author ?series ?publisher ?imprint ?copyCount ?date ?edition ?isbn ?language ?pageCount ?source ?subject ?subtitle ?summary ?weight ?location ?service ";
+            queryString.CommandText += "WHERE { ?class rdfs:label ?label. ";
+
             queryString.CommandText += "?class lib:hasAuthor ?author. ";
             queryString.CommandText += "OPTIONAL { ?class lib:hasSeries ?series }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:hasPublisher ?publisher }. ";
@@ -54,6 +55,7 @@ namespace NLS.Lib
             queryString.CommandText += "OPTIONAL { ?class lib:hasLocation ?location }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:hasService ?service }. ";
 
+            queryString.CommandText += "?class lib:publicationTitle ?title. ";
             queryString.CommandText += "OPTIONAL { ?class lib:publicationCopyTotal ?copyCount }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:publicationDate ?date }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:publicationEdition ?edition }. ";
@@ -71,7 +73,7 @@ namespace NLS.Lib
                 individualName = individualName.Replace("'", @"\'");
             }
 
-            queryString.CommandText += "FILTER(regex(str(?title), '" + individualName.Replace('_', ' ') + "')) }";
+            queryString.CommandText += "FILTER(regex(str(?label), '" + individualName.Replace('_', ' ') + "')) }";
 
             SparqlQueryParser queryParser = new SparqlQueryParser();
             SparqlQuery query = queryParser.ParseFromString(queryString);
@@ -160,7 +162,8 @@ namespace NLS.Lib
                                 case "date":
                                     string[] dateSplit = _result.Value.ToString().Split('#');
                                     string[] _dateSplit = dateSplit[0].Split('^');
-                                    publicationModel.Date = _dateSplit[0].Trim().Replace('_', ' ');
+                                    string[] __dateSplit = _dateSplit[0].Split('T');
+                                    publicationModel.Date = __dateSplit[0].Trim().Replace('_', ' ');
                                     break;
 
                                 case "edition":
@@ -209,7 +212,7 @@ namespace NLS.Lib
                                 case "weight":
                                     string[] weightSplit = _result.Value.ToString().Split('#');
                                     string[] _weightSplit = weightSplit[0].Split('^');
-                                    publicationModel.Weight = weightSplit[0].Trim().Replace('_', ' ');
+                                    publicationModel.Weight = _weightSplit[0].Trim().Replace('_', ' ');
                                     break;
 
                                 case "service":

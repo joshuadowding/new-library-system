@@ -15,10 +15,12 @@
                 <h2>@Model.Publication.Subtitle</h2>
             }
 
-            @foreach (string type in Model.Publication.Types)
-            {
-                <p><span class="badge badge-secondary">@type</span></p>
-            }
+            <div class="type-attributes">
+                @foreach (string type in Model.Publication.Types)
+                {
+                    <p><span class="badge badge-secondary">@type</span></p>
+                }
+            </div>
 
             @if (Model.Publication.Authors.Count > 1)
             {
@@ -55,62 +57,66 @@
                 <p>@Model.Publication.Summary</p>
             }
 
-            <h3>Available Locations</h3>
-            @foreach (string location in Model.Publication.Locations)
-            {
-                <p>@location</p>
-            }
+            <div class="library-attributes">
+                <h3>Available Locations</h3>
+                @foreach (string location in Model.Publication.Locations)
+                {
+                    <p>@location</p>
+                }
 
-            <h3>Available Services</h3>
-            @foreach (string service in Model.Publication.Services)
-            {
-                <p>@service</p>
-            }
+                <h3>Available Services</h3>
+                @foreach (string service in Model.Publication.Services)
+                {
+                    <p>@service</p>
+                }
 
-            @if (!String.IsNullOrWhiteSpace(Model.Publication.CopyTotal))
-            {
-                <p>Copy Count: @Model.Publication.CopyTotal</p>
-            }
+                @if (!String.IsNullOrWhiteSpace(Model.Publication.CopyTotal))
+                {
+                    <p>Copy Count: @Model.Publication.CopyTotal</p>
+                }
+            </div>
 
-            @if (!String.IsNullOrWhiteSpace(Model.Publication.PageCount))
-            {
-                <p>Page Count: @Model.Publication.PageCount</p>
-            }
+            <div class="publication-attributes">
+                @if (!String.IsNullOrWhiteSpace(Model.Publication.PageCount))
+                {
+                    <p>Page Count: @Model.Publication.PageCount</p>
+                }
 
-            @if (!String.IsNullOrWhiteSpace(Model.Publication.Date))
-            {
-                <p>Publication Date: @Model.Publication.Date</p>
-            }
+                @if (!String.IsNullOrWhiteSpace(Model.Publication.Date))
+                {
+                    <p>Publication Date: @Model.Publication.Date</p>
+                }
 
-            @if (!String.IsNullOrWhiteSpace(Model.Publication.Edition))
-            {
-                <p>Edition: @Model.Publication.Edition</p>
-            }
+                @if (!String.IsNullOrWhiteSpace(Model.Publication.Edition))
+                {
+                    <p>Edition: @Model.Publication.Edition</p>
+                }
 
-            @if (!String.IsNullOrWhiteSpace(Model.Publication.ISBN))
-            {
-                <p>ISBN: @Model.Publication.ISBN</p>
-            }
+                @if (!String.IsNullOrWhiteSpace(Model.Publication.ISBN))
+                {
+                    <p>ISBN: @Model.Publication.ISBN</p>
+                }
 
-            @if (!String.IsNullOrWhiteSpace(Model.Publication.Language))
-            {
-                <p>Language: @Model.Publication.Language</p>
-            }
+                @if (!String.IsNullOrWhiteSpace(Model.Publication.Language))
+                {
+                    <p>Language: @Model.Publication.Language</p>
+                }
 
-            @if (!String.IsNullOrWhiteSpace(Model.Publication.Source))
-            {
-                <p>Source: @Model.Publication.Source</p>
-            }
+                @if (!String.IsNullOrWhiteSpace(Model.Publication.Source))
+                {
+                    <p>Source: @Model.Publication.Source</p>
+                }
 
-            @if (!String.IsNullOrWhiteSpace(Model.Publication.Subject))
-            {
-                <p>Subject: @Model.Publication.Subject</p>
-            }
+                @if (!String.IsNullOrWhiteSpace(Model.Publication.Subject))
+                {
+                    <p>Subject: @Model.Publication.Subject</p>
+                }
 
-            @if (!String.IsNullOrWhiteSpace(Model.Publication.Weight))
-            {
-                <p>Weight: @Model.Publication.Weight</p>
-            }
+                @if (!String.IsNullOrWhiteSpace(Model.Publication.Weight))
+                {
+                    <p>Weight: @Model.Publication.Weight</p>
+                }
+            </div>
         </div>
     </div>
 </div>

@@ -1,6 +1,7 @@
 ﻿using NLS.Lib.Models;
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
@@ -353,7 +354,15 @@ namespace NLS.Lib
 
                 foreach (KeyValuePair<string, string> searchIndividual in searchModel.SearchIndividuals)
                 {
-                    queryString.CommandText += "FILTER(regex(str(?" + searchIndividual.Key.ToLower() + "), '" + searchIndividual.Value.Replace(' ', '_') + "')) ";
+                    string value = searchIndividual.Value;
+
+                    if (searchIndividual.Value.Contains("(") || searchIndividual.Value.Contains(")"))
+                    {
+                        value = Regex.Replace(value, "[(]", @"\\\\(");
+                        value = Regex.Replace(value, "[)]", @"\\\\)");
+                    }
+
+                    queryString.CommandText += "FILTER(regex(str(?" + searchIndividual.Key.ToLower() + "), '" + value.Replace(' ', '_') + "')) ";
                 }
             }
 

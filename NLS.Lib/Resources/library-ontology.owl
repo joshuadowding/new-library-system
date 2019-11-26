@@ -963,7 +963,6 @@ With disarming candour, he also tells for the first time the story of the person
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#J._K._Rowling">
         <rdf:type rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Author"/>
-        <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Harry_Potter"/>
         <authorName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J. K. Rowling</authorName>
         <rdfs:label xml:lang="en">J. K. Rowling</rdfs:label>
     </owl:NamedIndividual>

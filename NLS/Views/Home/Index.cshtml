@@ -50,7 +50,7 @@
             </select>
 
             <select class="custom-select" asp-for="Age" asp-items="Model.AvailableAges">
-                <option selected="selected" value="">Age</option>
+                <option selected="selected" value="">Age Range</option>
             </select>
 
             <select class="custom-select" asp-for="Location" asp-items="Model.AvailableLocations">
@@ -58,12 +58,12 @@
             </select>
 
             <button class="btn btn-sm" type="submit">Search</button>
-            <a class="btn btn-sm" id="clear-filters" asp-controller="Home" asp-action="Reset">Clear</a>
+            <a class="btn btn-sm" id="clear-filters" asp-controller="Home" asp-action="Reset">Reset</a>
         </form>
     </div>
     <div class="search-results">
         <form class="results" method="post">
-            <h1 class="header">Results</h1>
+            <h1 class="header">Results (@Model.Results.Count)</h1>
 
             @if (Model.Results != null)
             {

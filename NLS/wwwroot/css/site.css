@@ -18,8 +18,17 @@ h1.header {
     font-weight: 600;
 }
 
+h1.publication-title {
+    font-weight: 600;
+}
+
 h2 {
     font-size: 2.2rem;
+}
+
+h2.publication-subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
 }
 
 h3 {
@@ -40,6 +49,11 @@ h6 {
 
 div, span, select, option, button, input, a, p, i {
     font-size: 1.4rem;
+}
+
+p.heading {
+    margin-right: 8px;
+    font-weight: 600;
 }
 
 button.btn {
@@ -175,4 +189,41 @@ nav.navbar .nav-item .nav-link {
     top: 64px;
     right: 16px;
     z-index: 1000;
+}
+
+.type-attributes {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.type-attributes .badge {
+    font-size: 100%;
+    margin: 0 8px 0 0;
+}
+
+.publication-header {
+    padding: 0 16px;
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.publication-metadata {
+    padding: 0 16px;
+}
+
+.library-attributes {
+    padding: 0 16px;
+    margin-top: 32px;
+}
+
+.publication-attributes {
+    padding: 0 16px;
+    margin-top: 32px;
+}
+
+.stack {
+    display: flex;
 }

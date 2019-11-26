@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            <div class="publication-metadata">
+            <div class="product-block" id="publication-metadata">
                 <div class="stack">
                     @if (Model.Publication.Authors.Count > 1)
                     {
@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="library-attributes">
+            <div class="product-block">
                 <div class="stack">
                     <p class="heading">Available Locations</p>
 
@@ -131,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="publication-attributes">
+            <div class="product-block">
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.PageCount))
                     {
@@ -192,7 +192,7 @@
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Weight))
                     {
                         <p class="heading">Weight</p>
-                        <p>@Model.Publication.Weight</p>
+                        <p>@Model.Publication.Weight<span>g</span></p>
                     }
                 </div>
             </div>

@@ -10,13 +10,13 @@ namespace NLS.Lib
 {
     public class Server
     {
-        private const string APACHE_FUSEKI_DIR = "~/Resources/apache-jena-fuseki";
-        private const string APACHE_SERVER_URL = "http://localhost:3030";
-        private const string APACHE_FUSEKI_URI = "http://localhost:3030/library-ontology/data";
-        private const string ONTOLOGY_BASE_URI = "http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#";
-        private const string RDFS_BASE_URI = "http://www.w3.org/2000/01/rdf-schema#";
-        private const string RDF_BASE_URI = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
-        private const string OWL_BASE_URI = "http://www.w3.org/2002/07/owl#";
+        private const string APACHE_FUSEKI_DIR = @"~/Resources/apache-jena-fuseki";
+        private const string APACHE_SERVER_URL = @"http://localhost:3030";
+        private const string APACHE_FUSEKI_URI = @"http://localhost:3030/library-ontology/data";
+        private const string ONTOLOGY_BASE_URI = @"http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#";
+        private const string RDFS_BASE_URI = @"http://www.w3.org/2000/01/rdf-schema#";
+        private const string RDF_BASE_URI = @"http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+        private const string OWL_BASE_URI = @"http://www.w3.org/2002/07/owl#";
 
         private static FusekiConnector fusekiConnector;
 
@@ -361,8 +361,8 @@ namespace NLS.Lib
 
             SparqlQueryParser queryParser = new SparqlQueryParser();
             SparqlQuery query = queryParser.ParseFromString(queryString);
-
             SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+
             foreach (SparqlResult result in resultSet)
             {
                 string classURI = GetResultValue(result, "class");

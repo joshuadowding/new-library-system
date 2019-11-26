@@ -210,18 +210,13 @@ nav.navbar .nav-item .nav-link {
     justify-content: center;
 }
 
-.publication-metadata {
-    padding: 0 16px;
-}
-
-.library-attributes {
+.product-block {
     padding: 0 16px;
     margin-top: 32px;
 }
 
-.publication-attributes {
-    padding: 0 16px;
-    margin-top: 32px;
+.product-block#publication-metadata {
+    margin-top: 0;
 }
 
 .stack {

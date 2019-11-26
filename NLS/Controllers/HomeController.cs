@@ -12,6 +12,8 @@ namespace NLS.Controllers
 {
     public class HomeController : Controller
     {
+        private const string NO_FILTER_WARNING = @"No filters selected - returning all individuals by default.";
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -83,7 +85,7 @@ namespace NLS.Controllers
             if (tries == 0)
             {
                 viewModel.Results = Server.QueryAllIndividuals(); // Get all individuals by default.
-                viewModel.Message = @"No filters selected - returning all individuals by default.";
+                viewModel.Message = NO_FILTER_WARNING;
             }
             else
             {
@@ -134,8 +136,6 @@ namespace NLS.Controllers
 
         private void PopulateSearchFilters(SearchViewModel viewModel)
         {
-            // TODO: Drastically simplify everything below.
-
             foreach (string option in Server.QueryFilterOptions("Location", QueryFilterType.Individual))
             {
                 viewModel.AvailableLocations.Add(new SelectListItem(option, option));

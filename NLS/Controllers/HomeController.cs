@@ -122,9 +122,7 @@ namespace NLS.Controllers
         [HttpGet]
         public IActionResult Product(ProductViewModel viewModel)
         {
-            // TODO: Query ontology for product page.
-            viewModel.Publication = Server.QueryIndividualPublication(viewModel.SelectedItem);
-
+            viewModel.Publication = Server.QueryIndividualPublication(viewModel.SelectedItem); // Query ontology for product page.
             return View(viewModel);
         }
 

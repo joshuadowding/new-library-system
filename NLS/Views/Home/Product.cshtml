@@ -37,9 +37,18 @@
                         <p class="heading">Author</p>
                     }
 
-                    @foreach (string author in Model.Publication.Authors)
+                    @for (int index = 0; index < Model.Publication.Authors.Count; index++)
                     {
-                        <p>@author</p>
+                        <p>
+                            @if (index > 0)
+                            {
+                                <span>,</span> @Model.Publication.Authors[index]
+                            }
+                            else
+                            {
+                                @Model.Publication.Authors[index]
+                            }
+                        </p>
                     }
                 </div>
 
@@ -67,25 +76,51 @@
                     }
                 </div>
 
-                @if (!String.IsNullOrWhiteSpace(Model.Publication.Summary))
-                {
-                    <p class="heading">Summary</p>
-                    <p>@Model.Publication.Summary</p>
-                }
+                <div class="stack inverse">
+                    @if (!String.IsNullOrWhiteSpace(Model.Publication.Summary))
+                    {
+                        <p class="heading">Summary</p>
+                        <p>@Model.Publication.Summary</p>
+                    }
+                </div>
             </div>
 
             <div class="library-attributes">
-                <p class="heading">Available Locations</p>
-                @foreach (string location in Model.Publication.Locations)
-                {
-                    <p>@location</p>
-                }
+                <div class="stack">
+                    <p class="heading">Available Locations</p>
 
-                <p class="heading">Available Services</p>
-                @foreach (string service in Model.Publication.Services)
-                {
-                    <p>@service</p>
-                }
+                    @for (int index = 0; index < Model.Publication.Locations.Count; index++)
+                    {
+                        <p>
+                            @if (index > 0)
+                            {
+                                <span>,</span> @Model.Publication.Locations[index]
+                            }
+                            else
+                            {
+                                @Model.Publication.Locations[index]
+                            }
+                        </p>
+                    }
+                </div>
+
+                <div class="stack">
+                    <p class="heading">Available Services</p>
+
+                    @for (int index = 0; index < Model.Publication.Services.Count; index++)
+                    {
+                        <p>
+                            @if (index > 0)
+                            {
+                                <span>,</span> @Model.Publication.Services[index]
+                            }
+                            else
+                            {
+                                @Model.Publication.Services[index]
+                            }
+                        </p>
+                    }
+                </div>
 
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.CopyTotal))

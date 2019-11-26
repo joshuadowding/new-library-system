@@ -14,4 +14,8 @@ $(document).ready(function () {
         $("#Age").val("");
         $("#Location").val("");
     });
+
+    $("#warning-toast .close").click(function () {
+        $("#warning-toast").hide();
+    });
 });

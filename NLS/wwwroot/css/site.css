@@ -168,3 +168,11 @@ nav.navbar .navbar-brand {
 nav.navbar .nav-item .nav-link {
     font-size: 1.4rem;
 }
+
+.toast#warning-toast {
+    opacity: 1;
+    position: absolute;
+    top: 64px;
+    right: 16px;
+    z-index: 1000;
+}

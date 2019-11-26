@@ -394,6 +394,7 @@
                 </owl:unionOf>
             </owl:Class>
         </owl:disjointWith>
+        <rdfs:label xml:lang="en">Adult</rdfs:label>
     </owl:Class>
     
 

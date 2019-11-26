@@ -32,6 +32,11 @@ namespace NLS.Lib
             fusekiConnector.Dispose();
         }
 
+        /// <summary>
+        /// Gets the publication that's selected from the search results.
+        /// </summary>
+        /// <param name="individualName"></param>
+        /// <returns>PublicationModel</returns>
         public static PublicationModel QueryIndividualPublication(string individualName)
         {
             PublicationModel publicationModel = new PublicationModel();
@@ -228,6 +233,11 @@ namespace NLS.Lib
             return publicationModel;
         }
 
+        /// <summary>
+        /// Gets the class types for a given individual.
+        /// </summary>
+        /// <param name="individualName">Individul Name</param>
+        /// <returns>Types (List)</returns>
         public static List<string> QueryIndividualTypes(string individualName)
         {
             List<string> individualTypes = new List<string>();
@@ -260,6 +270,12 @@ namespace NLS.Lib
             return individualTypes;
         }
 
+        /// <summary>
+        /// Gets the classes and individuals that make up the filter options.
+        /// </summary>
+        /// <param name="filterName">Filter Name</param>
+        /// <param name="filterType">Filter Type (Class/Individual)</param>
+        /// <returns>Filters (List)</returns>
         public static List<string> QueryFilterOptions(string filterName, QueryFilterType filterType)
         {
             List<string> filterOptions = new List<string>();
@@ -301,7 +317,12 @@ namespace NLS.Lib
             return filterOptions;
         }
 
-        public static List<string> QueryWithSearchModel(SearchModel searchModel)
+        /// <summary>
+        /// Gets individuals relative to search filters.
+        /// </summary>
+        /// <param name="searchModel">SearchModel</param>
+        /// <returns>Results (List)</returns>
+        public static List<string> QueryIndividualsWithSearchModel(SearchModel searchModel)
         {
             List<string> queryResults = new List<string>();
 
@@ -351,6 +372,10 @@ namespace NLS.Lib
             return queryResults;
         }
 
+        /// <summary>
+        /// Gets all individuals.
+        /// </summary>
+        /// <returns>Results (List)</returns>
         public static List<string> QueryAllIndividuals()
         {
             List<string> queryResults = new List<string>();

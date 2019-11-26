@@ -35,49 +35,66 @@ namespace NLS.Controllers
         {
             SearchModel searchModel = new SearchModel();
 
+            int tries = 0;
             if (!String.IsNullOrWhiteSpace(viewModel.Author))
             {
                 searchModel.SearchIndividuals.Add("Author", viewModel.Author);
+                tries++;
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Form))
             {
                 searchModel.SearchClasses.Add(viewModel.Form);
+                tries++;
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Genre))
             {
                 searchModel.SearchClasses.Add(viewModel.Genre);
+                tries++;
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Location))
             {
                 searchModel.SearchIndividuals.Add("Location", viewModel.Location);
+                tries++;
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Publisher))
             {
                 searchModel.SearchIndividuals.Add("Publisher", viewModel.Publisher);
+                tries++;
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Series))
             {
                 searchModel.SearchIndividuals.Add("Series", viewModel.Series);
+                tries++;
             }
 
             if (!String.IsNullOrWhiteSpace(viewModel.Type))
             {
                 searchModel.SearchClasses.Add(viewModel.Type);
+                tries++;
             }
 
             viewModel = new SearchViewModel();
-            List<string> results = Server.QueryWithSearchModel(searchModel); //TODO: Query Ontology - Take values from viewModel and construct a query with them.
 
-            if (results != null)
+            if (tries == 0)
             {
-                if (results.Count > 0)
+                viewModel.Results = Server.QueryAllIndividuals(); // Get all individuals by default.
+                viewModel.Message = @"No filters selected - returning all individuals by default.";
+            }
+            else
+            {
+                List<string> results = Server.QueryIndividualsWithSearchModel(searchModel); //TODO: Query Ontology - Take values from viewModel and construct a query with them.
+
+                if (results != null)
                 {
-                    viewModel.Results = results;
+                    if (results.Count > 0)
+                    {
+                        viewModel.Results = results;
+                    }
                 }
             }
 
@@ -94,6 +111,12 @@ namespace NLS.Controllers
             ProductViewModel productViewModel = new ProductViewModel();
             productViewModel.SelectedItem = selectedItem;
             return RedirectToAction("Product", productViewModel);
+        }
+
+        [HttpGet]
+        public IActionResult Reset()
+        {
+            return RedirectToAction("Index");
         }
 
         [HttpGet]

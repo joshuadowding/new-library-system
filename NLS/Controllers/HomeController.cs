@@ -66,6 +66,12 @@ namespace NLS.Controllers
                 tries++;
             }
 
+            if (!String.IsNullOrWhiteSpace(viewModel.Age))
+            {
+                searchModel.SearchClasses.Add(viewModel.Age);
+                tries++;
+            }
+
             if (!String.IsNullOrWhiteSpace(viewModel.Location))
             {
                 searchModel.SearchIndividuals.Add("Location", viewModel.Location);
@@ -120,7 +126,7 @@ namespace NLS.Controllers
         {
             if (!String.IsNullOrWhiteSpace(viewModel.Title))
             {
-                string title = viewModel.Title.Trim();
+                string title = viewModel.Title.Trim().ToLower();
                 List<string> results = Server.QueryIndividualsWithTextContains(title);
 
                 if (results != null)

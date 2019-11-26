@@ -413,6 +413,11 @@ namespace NLS.Lib
             return queryResults;
         }
 
+        /// <summary>
+        /// Gets individuals where their publicationTitles match the search criteria.
+        /// </summary>
+        /// <param name="individualName">Individual Name</param>
+        /// <returns>Results (List)</returns>
         public static List<string> QueryIndividualsWithTextContains(string individualName)
         {
             List<string> queryResults = new List<string>();
@@ -425,7 +430,7 @@ namespace NLS.Lib
             queryString.CommandText += "WHERE { ";
             queryString.CommandText += "?class lib:publicationTitle ?title. ";
             queryString.CommandText += "?class rdfs:label ?label. ";
-            queryString.CommandText += "FILTER CONTAINS(?title, \"" + individualName + "\") } ";
+            queryString.CommandText += "FILTER CONTAINS(lcase(str(?title)), \"" + individualName + "\") } ";
             queryString.CommandText += "ORDER BY ASC(?label) ";
 
             SparqlQueryParser queryParser = new SparqlQueryParser();

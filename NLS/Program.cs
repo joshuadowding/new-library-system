@@ -1,3 +1,4 @@
+using ElectronNET.API;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
@@ -14,6 +15,7 @@ namespace NLS
             Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder.UseStartup<Startup>();
+                webBuilder.UseElectron(args);
             });
     }
 }

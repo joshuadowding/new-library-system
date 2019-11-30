@@ -20,18 +20,28 @@
     </div>
 }
 
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">NLS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <form class="search" asp-controller="Home" asp-action="Search" method="post">
+                    <div class="input-group" id="search-group">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Search" asp-for="Title" />
+                        <button class="btn btn-sm" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
 <div class="container-search">
     <div class="search-filters">
-        <form class="search" asp-controller="Home" asp-action="Search" method="post">
-            <h1 class="header">Search</h1>
-
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Title" aria-label="Title" asp-for="Title" />
-            </div>
-
-            <button class="btn btn-sm" type="submit">Search</button>
-        </form>
-
         <form class="filters" asp-controller="Home" asp-action="Index" method="post">
             <h1 class="header">Filters</h1>
 
@@ -73,7 +83,7 @@
     </div>
     <div class="search-results">
         <form class="results" method="post">
-            @if(Model.Results != null)
+            @if (Model.Results != null)
             {
                 <h1 class="header">Results (@Model.Results.Count)</h1>
             }
@@ -86,7 +96,9 @@
             {
                 for (var i = 0; i < Model.Results.Count(); i++)
                 {
-                    <a asp-controller="Home" asp-action="Select" asp-route-id="@Model.Results[i].ToString().Replace(' ', '_')" target="_blank">@Model.Results[i].ToString()</a>
+                    <div class="result">
+                        <a asp-controller="Home" asp-action="Select" asp-route-id="@Model.Results[i].ToString().Replace(' ', '_')">@Model.Results[i].ToString()</a>
+                    </div>
                 }
             }
         </form>

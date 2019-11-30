@@ -5,7 +5,26 @@
 
 @model ProductViewModel
 
-<div class="container">
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">NLS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Back</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container" id="container-product">
     <div class="row">
         <div class="col-12">
             <div class="publication-header">
@@ -30,11 +49,11 @@
                 <div class="stack">
                     @if (Model.Publication.Authors.Count > 1)
                     {
-                        <p class="heading">Authors</p>
+                        <p class="heading">Authors:</p>
                     }
                     else
                     {
-                        <p class="heading">Author</p>
+                        <p class="heading">Author:</p>
                     }
 
                     @for (int index = 0; index < Model.Publication.Authors.Count; index++)
@@ -55,7 +74,7 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Series))
                     {
-                        <p class="heading">Series</p>
+                        <p class="heading">Series:</p>
                         <p>@Model.Publication.Series</p>
                     }
                 </div>
@@ -63,7 +82,7 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Publisher))
                     {
-                        <p class="heading">Publisher</p>
+                        <p class="heading">Publisher:</p>
                         <p>@Model.Publication.Publisher</p>
                     }
                 </div>
@@ -71,7 +90,7 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Imprint))
                     {
-                        <p class="heading">Imprint</p>
+                        <p class="heading">Imprint:</p>
                         <p>@Model.Publication.Imprint</p>
                     }
                 </div>
@@ -79,7 +98,7 @@
                 <div class="stack inverse">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Summary))
                     {
-                        <p class="heading">Summary</p>
+                        <p class="heading">Summary:</p>
                         <p>@Model.Publication.Summary</p>
                     }
                 </div>
@@ -87,7 +106,7 @@
 
             <div class="product-block">
                 <div class="stack">
-                    <p class="heading">Available Locations</p>
+                    <p class="heading">Available Locations:</p>
 
                     @for (int index = 0; index < Model.Publication.Locations.Count; index++)
                     {
@@ -105,7 +124,7 @@
                 </div>
 
                 <div class="stack">
-                    <p class="heading">Available Services</p>
+                    <p class="heading">Available Services:</p>
 
                     @for (int index = 0; index < Model.Publication.Services.Count; index++)
                     {
@@ -125,7 +144,7 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.CopyTotal))
                     {
-                        <p class="heading">Available Copies</p>
+                        <p class="heading">Available Copies:</p>
                         <p>@Model.Publication.CopyTotal</p>
                     }
                 </div>
@@ -135,15 +154,15 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.PageCount))
                     {
-                        <p class="heading">Pages (Total)</p>
-                        <p>@Model.Publication.PageCount</p>
+                        <p class="heading">Pages:</p>
+                        <p>@Model.Publication.PageCount (Total)</p>
                     }
                 </div>
 
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Date))
                     {
-                        <p class="heading">Publication Date</p>
+                        <p class="heading">Publication Date:</p>
                         <p>@Model.Publication.Date</p>
                     }
                 </div>
@@ -151,7 +170,7 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Edition))
                     {
-                        <p class="heading">Edition</p>
+                        <p class="heading">Edition:</p>
                         <p>@Model.Publication.Edition</p>
                     }
                 </div>
@@ -159,7 +178,7 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.ISBN))
                     {
-                        <p class="heading">ISBN</p>
+                        <p class="heading">ISBN:</p>
                         <p>@Model.Publication.ISBN</p>
                     }
                 </div>
@@ -167,7 +186,7 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Language))
                     {
-                        <p class="heading">Language</p>
+                        <p class="heading">Language:</p>
                         <p>@Model.Publication.Language</p>
                     }
                 </div>
@@ -175,7 +194,7 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Source))
                     {
-                        <p class="heading">Source</p>
+                        <p class="heading">Source:</p>
                         <p>@Model.Publication.Source</p>
                     }
                 </div>
@@ -183,7 +202,7 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Subject))
                     {
-                        <p class="heading">Subject</p>
+                        <p class="heading">Subject:</p>
                         <p>@Model.Publication.Subject</p>
                     }
                 </div>
@@ -191,7 +210,7 @@
                 <div class="stack">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Weight))
                     {
-                        <p class="heading">Weight</p>
+                        <p class="heading">Weight:</p>
                         <p>@Model.Publication.Weight<span>g</span></p>
                     }
                 </div>

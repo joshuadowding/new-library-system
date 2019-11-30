@@ -250,8 +250,8 @@ namespace NLS.Lib
 
             SparqlQueryParser queryParser = new SparqlQueryParser();
             SparqlQuery query = queryParser.ParseFromString(queryString);
-
             SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+
             foreach (SparqlResult result in resultSet)
             {
                 string resultValue = GetResultValue(result, "type");
@@ -297,8 +297,8 @@ namespace NLS.Lib
 
             SparqlQueryParser queryParser = new SparqlQueryParser();
             SparqlQuery query = queryParser.ParseFromString(queryString);
-
             SparqlResultSet resultSet = (SparqlResultSet)fusekiConnector.Query(query.ToString());
+
             foreach (SparqlResult result in resultSet)
             {
                 string resultValue = GetResultValue(result, "class");

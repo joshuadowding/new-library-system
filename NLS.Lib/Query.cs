@@ -64,6 +64,12 @@ namespace NLS.Lib
                 individualName = individualName.Replace("'", @"\'");
             }
 
+            if (individualName.Contains("(") || individualName.Contains(")"))
+            {
+                individualName = Regex.Replace(individualName, "[(]", @"\\\\(");
+                individualName = Regex.Replace(individualName, "[)]", @"\\\\)");
+            }
+
             queryString.CommandText += "FILTER(regex(str(?label), '" + individualName.Replace('_', ' ') + "')) }";
 
             SparqlQueryParser queryParser = new SparqlQueryParser();
@@ -221,6 +227,11 @@ namespace NLS.Lib
                 }
 
                 index++;
+            }
+
+            if (!String.IsNullOrWhiteSpace(publicationModel.Subtitle))
+            {
+                publicationModel.Combined = publicationModel.Title + publicationModel.Subtitle;
             }
 
             publicationModel.Types = QueryIndividualTypes(individualName);

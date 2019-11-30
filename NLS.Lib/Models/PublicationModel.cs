@@ -26,6 +26,7 @@ namespace NLS.Lib.Models
         public string CopyTotal { get; set; }
         public string Language { get; set; }
         public string Weight { get; set; }
+        public string Combined { get; set; }
 
         public PublicationModel()
         {

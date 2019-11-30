@@ -29,11 +29,13 @@
         <div class="col-12">
             <div class="publication-header">
                 <h1 class="publication-title">
-                    @Model.Publication.Title
-
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Subtitle))
                     {
-                        @Model.Publication.Subtitle
+                        @Model.Publication.Combined
+                    }
+                    else
+                    {
+                        @Model.Publication.Title
                     }
                 </h1>
 

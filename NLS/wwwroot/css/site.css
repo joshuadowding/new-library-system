@@ -227,6 +227,7 @@ nav.navbar {
 
 nav.navbar .navbar-brand {
     font-size: 1.8rem;
+    font-weight: 600;
 }
 
 nav.navbar .nav-item .nav-link {

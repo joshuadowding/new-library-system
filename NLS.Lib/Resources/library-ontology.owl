@@ -1160,14 +1160,14 @@ With disarming candour, he also tells for the first time the story of the person
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">224</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paris</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Travel Guide</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: Travel Guide</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Planet&apos;s Pocket Paris is your passport to the most relevant, up-to-date advice on what to see and skip, and what hidden discoveries await you. Watch the sunset from the steps of Sacre Coeur, shop the flea markets and the Grands Boulevards and start your days at the best patisseries - all with your trusted travel companion. Get to the heart of the best of Paris and begin your journey now!
 
 Inside Lonely Planet&apos;s Pocket Paris:
 Full-colour maps and images throughoutHighlights and itineraries help you tailor your trip to your personal needs and interestsInsider tips to save time and money and get around like a local, avoiding crowds and trouble spotsEssential info at your fingertips - hours of operation, phone numbers, websites, transit tips, pricesHonest reviews for all budgets - eating, sleeping, sightseeing, going out, shopping, hidden gems that most guidebooks missFree, convenient pull-out map (included in print version), plus over 20 colour neighborhood mapsUser-friendly layout with helpful icons, and organised by neighbourhood to help you pick the best spots to spend your timeCovers Eiffel Tower, Les Invalides, Arc de Triomphe, Champs-Elysees, Louvre, Tuileries, Opera, Sacre-Coeur, Montmartre, Centre Pompidou, Marais, Notre Dame, Latin Quarter, Musee d&apos;Orsay, St-Germain des Pres, and more.</publicationSummary>
-        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Planet Pocket Paris</publicationTitle>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonely Planet&apos;s Pocket Paris</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">220.0</publicationWeight>
-        <rdfs:label xml:lang="en">Pocket Paris</rdfs:label>
+        <rdfs:label xml:lang="en">Lonely Planet&apos;s Pocket Paris</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1195,11 +1195,11 @@ Full-colour maps and images throughoutHighlights and itineraries help you tailor
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">368</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;Pompeii&apos;</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Life of a Roman Town</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: The Life of a Roman Town</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The world&apos;s most controversial classicist debunks our movie-style myths about the Roman town with meticulous scholarship and propulsive energy&apos; Laura Silverman, Daily Mail The ruins of Pompeii, buried by an explosion of Vesuvius in 79 CE, offer the best evidence we have of everyday life in the Roman empire. This remarkable book rises to the challenge of making sense of those remains, as well as exploding many myths: the very date of the eruption, probably a few months later than usually thought; or the hygiene of the baths which must have been hotbeds of germs; or the legendary number of brothels, most likely only one; or the massive death count, maybe less than ten per cent of the population. An extraordinary and involving portrait of an ancient town, its life and its continuing re-discovery, by Britain&apos;s favourite classicist.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pompeii</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">334.0</publicationWeight>
-        <rdfs:label xml:lang="en">Pompeii</rdfs:label>
+        <rdfs:label xml:lang="en">Pompeii: The Life of a Roman Town</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1315,7 +1315,6 @@ Although Jobs cooperated with this book, he asked for no control over what was w
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">464</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fly into a fiery and fantastical future with No. 1 bestselling author David Walliams, in an epic adventure of myth and legend, good and evil, and one small boy who must save the world… Illustrated by the artistic genius Tony Ross!</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Beast of Buckingham Palace</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">600.0</publicationWeight>
@@ -1386,15 +1385,19 @@ Although Jobs cooperated with this book, he asked for no control over what was w
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
         <hasService rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Loan"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</publicationCopyTotal>
         <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</publicationDate>
         <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841499628</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">647</publicationPageCount>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: The Black Magician Trilogy (Book 3)</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the city of Imardin, where those who wield magic wield power, a young street-girl, adopted by the Magician&apos;s Guild, finds herself at the centre of a terrible plot that may destroy the entire world . . .
 
 Sonea has learned much at the magicians&apos; guild and the other novices now treat her with a grudging respect. But she cannot forget what she witnessed in the High Lord&apos;s underground room - or his warning that the realm&apos;s ancient enemy is growing in power once more. As Sonea learns more, she begins to doubt her guildmaster&apos;s word. Could the truth really be as terrifying as Akkarin claims, or is he trying to trick her into assisting in some unspeakably dark scheme?</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The High Lord</publicationTitle>
-        <rdfs:label xml:lang="en">The High Lord</rdfs:label>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">442.0</publicationWeight>
+        <rdfs:label xml:lang="en">The High Lord: The Black Magician Trilogy (Book 3)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1423,7 +1426,6 @@ Sonea has learned much at the magicians&apos; guild and the other novices now tr
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">496</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deep in the woods of Maine, there is a dark state facility where kids, abducted from across the United States, are incarcerated. In the Institute they are subjected to a series of tests and procedures meant to combine their exceptional gifts - telepathy, telekinesis - for concentrated effect.
 
 Luke Ellis is the latest recruit. He&apos;s just a regular 12-year-old, except he&apos;s not just smart, he&apos;s super-smart. And he has another gift which the Institute wants to use...
@@ -1459,11 +1461,11 @@ Back in the Institute&apos;s downtrodden playground and corridors where posters 
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">336</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commentary</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Essays on Software Engineering</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: Essays on Software Engineering</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Few books on software project management have been as influential and timeless asThe Mythical Man-Month. With a blend of software engineering facts and thought-provoking opinions, Fred Brooks offers insight for anyone managing complex projects. These essays draw from his experience as project manager for the IBM System/360 computer family and then for OS/360, its massive software system. Now, 20 years after the initial publication of his book, Brooks has revisited his original ideas and added new thoughts and advice, both for readers already familiar with his work and for readers discovering it for the first time.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Mythical Man-Month</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">466.0</publicationWeight>
-        <rdfs:label xml:lang="en">The Mythical Man Month</rdfs:label>
+        <rdfs:label xml:lang="en">The Mythical Man Month: Essays on Software Engineering</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1484,15 +1486,19 @@ Back in the Institute&apos;s downtrodden playground and corridors where posters 
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
         <hasService rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Loan"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
         <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</publicationDate>
         <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841499611</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">592</publicationPageCount>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: The Black Magician Trilogy (Book 2)</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imardin is a city of dark intrigues and deadly politics, where those who wield magic wield power. Into this established order has blundered a young street-girl with extraordinary magical gifts. Adopted by the Magicians&apos; Guild, her life is changed forever - but for better or for worse?
 
 Sonea knew that she&apos;d face a tough time training within the Magicians&apos; Guild but she little realised the level of animosity she would face from her fellow novices. The sons and daughters of the most powerful families in the realm, her classmates seem determined to see her fail - at whatever cost. But in accepting the protection of the guild&apos;s high lord, Sonea may have embraced an even bleaker fate. For High Lord Akkarin harbours a secret that is far darker than his magician&apos;s robes.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Novice</publicationTitle>
-        <rdfs:label xml:lang="en">The Novice</rdfs:label>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">400.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Novice: The Black Magician Trilogy (Book 2)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1521,11 +1527,11 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Prisoner of Azkaban</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and the Prisoner of Azkaban</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Let the magic of J.K. Rowling&apos;s classic Harry Potter series take you back to Hogwarts School of Witchcraft and Wizardry. Issued to mark the 20th anniversary of first publication of Harry Potter and the Prisoner of Azkaban, this irresistible Slytherin House Edition celebrates the noble character of the Hogwarts house famed for its pride, ambition and cunning. Harry&apos;s third year at Hogwarts is packed with thrilling Slytherin moments, including Draco Malfoy&apos;s typically sneaky attempts to sabotage the Gryffindor Seeker . With vibrant sprayed edges in Slytherin house livery, the book features beautiful house-themed cover artwork with intricate gold foiling. With an exciting, bespoke introduction exploring the history of Slytherin House, and exclusive insights into the use of the Patronus Charm by favourite Slytherin characters, the book also boasts a spectacular image by Kate Greenaway winner Levi Pinfold of Severus Snape conjuring his Patronus. All seven books in the series will be issued in these highly collectable, beautifully crafted House Editions, designed to be treasured and read for years to come.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">388.0</publicationWeight>
-        <rdfs:label xml:lang="en">Harry Potter: The Prisoner of Azkaban</rdfs:label>
+        <rdfs:label xml:lang="en">Harry Potter and the Prisoner of Azkaban</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1558,13 +1564,13 @@ Sonea knew that she&apos;d face a tough time training within the Magicians&apos;
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book 2 of The Traitor Spy Trilogy</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: The Traitor Spy Trilogy (Book 2)</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyralia is facing threats at home and abroad, as a rogue killer stalks its capital&apos;s streets, while the neighbouring kingdom of Sachaka is breeding a rebellion that could destabilise the entire region.
 
 High Lord Akkarin and Sonea&apos;s son Lorkin has a legacy of heroism to live up to, but despite his good intentions, his incarceration in Sachaka&apos;s rebel traitor stronghold could destroy the tenuous peace between the two countries. Angered by Lorkin&apos;s seeming defection the Sachakans blame the Kyralian ambassador, Danny--and they are a savage people when roused.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Rogue</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">346.0</publicationWeight>
-        <rdfs:label xml:lang="en">The Rogue</rdfs:label>
+        <rdfs:label xml:lang="en">The Rogue: The Traitor Spy Trilogy (Book 2)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1592,11 +1598,11 @@ High Lord Akkarin and Sonea&apos;s son Lorkin has a legacy of heroism to live up
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dublin Murder Squad</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: Dublin Murder Squad</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A year ago a boy was found murdered at a girlsʼ boarding school, and the case was never solved. Detective Stephen Moran has been waiting for his chance to join Dublin’s Murder Squad when sixteen-year-old Holly Mackey arrives in his office with a photo of the boy with the caption: “I KNOW WHO KILLED HIM.” Stephen joins with Detective Antoinette Conway to reopen the case—beneath the watchful eye of Holly’s father, fellow detective Frank Mackey. With the clues leading back to Holly’s close-knit group of friends, to their rival clique, and to the tangle of relationships that bound them all to the murdered boy, the private underworld of teenage girls turns out to be more mysterious and more dangerous than the detectives imagined.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Secret Place</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">400.0</publicationWeight>
-        <rdfs:label xml:lang="en">The Secret Place</rdfs:label>
+        <rdfs:label xml:lang="en">The Secret Place: Dublin Murder Squad</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1629,13 +1635,13 @@ High Lord Akkarin and Sonea&apos;s son Lorkin has a legacy of heroism to live up
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">544</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book 3 of The Traitor Spy Trilogy</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: The Traitor Spy Trilogy (Book 3)</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Events are building to a climax in Sachaka as Lorkin returns from his exile with the Traitor rebels.
 
 The Traitor Queen has given Lorkin the huge task of brokering an alliance between his people and the Traitors. Lorkin has also had to become a feared black magician in order to harness the power of an entirely new kind of gemstone magic. This knowledge could transform the Guild of Magicians - or make Lorkin an outcast forever.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Traitor Queen</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">370.0</publicationWeight>
-        <rdfs:label xml:lang="en">The Traitor Queen</rdfs:label>
+        <rdfs:label xml:lang="en">The Traitor Queen: The Traitor Spy Trilogy (Book 3)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1811,11 +1817,11 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">384</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Chamber of Secrets</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and the Chamber of Secrets</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter&apos;s summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone . Dobby&apos;s sinister predictions seem to be coming true. These new editions of the classic and internationally bestselling, multi-award-winning series feature instantly pick-up-able new jackets by Jonny Duddle, with huge child appeal, to bring Harry Potter to the next generation of readers. It&apos;s time to PASS THE MAGIC ON.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">315.0</publicationWeight>
-        <rdfs:label xml:lang="en">Harry Potter: The Chamber of Secrets</rdfs:label>
+        <rdfs:label xml:lang="en">Harry Potter and the Chamber of Secrets</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1846,11 +1852,11 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">352</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parts One and Two</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and the Cursed Child</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It was always difficult being Harry Potter and it isn&apos;t much easier now that he is an overworked employee of the Ministry of Magic, a husband, and father of three school-age children. While Harry grapples with a past that refuses to stay where it belongs, his youngest son Albus must struggle with the weight of a family legacy he never wanted. As past and present fuse ominously, both father and son learn the uncomfortable truth: sometimes, darkness comes from unexpected places.</publicationSummary>
-        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter and the Cursed Child</publicationTitle>
+        <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">280.0</publicationWeight>
-        <rdfs:label xml:lang="en">Harry Potter: The Cursed Child</rdfs:label>
+        <rdfs:label xml:lang="en">Harry Potter and the Cursed Child</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1878,11 +1884,11 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Deathly Hallows</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and the Deathly Hallows</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;Give me Harry Potter, and I shall leave the school untouched. Give me Harry Potter, and you will be rewarded&apos; Lord Voldemort Harry Potter is preparing to leave the Dursleys and Privet Drive for the last time. But the future that awaits him is full of danger, not only for him, but for anyone close to him - and Harry has already lost so much. Only by destroying Voldemort&apos;s remaining Horcruxes can Harry free himself and overcome the Dark Lord&apos;s forces of evil. In this dramatic conclusion to the Harry Potter series, Harry must leave his most loyal friends behind, and in a final perilous journey find the strength and the will to face his terrifying destiny: a deadly confrontation that is his alone to fight. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">512.0</publicationWeight>
-        <rdfs:label xml:lang="en">Harry Potter: The Deathly Hallows</rdfs:label>
+        <rdfs:label xml:lang="en">Harry Potter and the Deathly Hallows</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1911,11 +1917,11 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">640</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Goblet of Fire</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and the Goblet of Fire</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;It matters not what someone is born, but what they grow to be&apos; Albus Dumbledore When the Quidditch World Cup is disrupted by Voldemort&apos;s rampaging supporters alongside the resurrection of the terrifying Dark Mark, it is obvious to Harry Potter that, far from weakening, Voldemort is getting stronger. Back at Hogwarts for his fourth year, Harry is astonished to be chosen by the Goblet of Fire to represent the school in the Triwizard Tournament. The competition is dangerous, the tasks terrifying, and true courage is no guarantee of survival - especially when the darkest forces are on the rise. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">513.0</publicationWeight>
-        <rdfs:label xml:lang="en">Harry Potter: The Goblet of Fire</rdfs:label>
+        <rdfs:label xml:lang="en">Harry Potter and the Goblet of Fire</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1944,11 +1950,11 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Half-Blood Prince</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and the Half-Blood Prince</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book 6 in the Harry Potter seriesA New York Times BestsellerIn the fifth and most recent book, Harry Potter and the Order of the Phoenix, the last chapter, titled The Second War Begins, started: &apos;In a brief statement Friday night, Minister of Magic Cornelius Fudge confirmed that He-Who-Must-Not-Be-Named has returned to this country and is active once more. It is with great regret that I must confirm that the wizard styling himself Lord -- well, you know who I mean -- is alive among us again, said Fudge.&apos;Harry Potter and the Half-Blood Prince takes up the story of Harry Potter&apos;s sixth year at Hogwarts School of Witchcraft and Wizardry at this point in the midst of the storm of this battle of good and evil. The author has already said that the Half-Blood Prince is neither Harry nor Voldemort. And most importantly, the opening chapter of Harry Potter and the Half-Blood Prince has been brewing in J. K. Rowling&apos;s mind for 13 years.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">453.0</publicationWeight>
-        <rdfs:label xml:lang="en">Harry Potter: The Half-Blood Prince</rdfs:label>
+        <rdfs:label xml:lang="en">Harry Potter and the Half-Blood Prince</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1977,11 +1983,11 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">816</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Order of the Phoenix</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and the Order of the Phoenix</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;This is the weapon he has been seeking so assiduously since his return: the knowledge of how to destroy you&apos; Albus Dumbledore Harry Potter is furious that he has been abandoned at the Dursleys&apos; house for the summer, for he suspects that Voldemort is gathering an army, that he himself could be attacked, and that his so-called friends are keeping him in the dark. Finally rescued by wizard bodyguards, he discovers that Dumbledore is regrouping the Order of the Phoenix - a secret society first formed years ago to fight Voldemort. But the Ministry of Magic is against the Order, lies are being spread by the wizards&apos; tabloid, the Daily Prophet, and Harry fears that he may have to take on this epic battle against evil alone. These adult editions have been stylishly redesigned to showcase Andrew Davidson&apos;s beautiful woodcut cover artwork.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">648.0</publicationWeight>
-        <rdfs:label xml:lang="en">Harry Potter: The Order of the Phoenix</rdfs:label>
+        <rdfs:label xml:lang="en">Harry Potter and the Order of the Phoenix</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2010,11 +2016,11 @@ The Traitor Queen has given Lorkin the huge task of brokering an alliance betwee
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">352</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Philosopher&apos;s Stone</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and the Philosopher&apos;s Stone</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gryffindor, Slytherin, Hufflepuff, Ravenclaw . Twenty years ago these magical words and many more flowed from a young writer&apos;s pen, an orphan called Harry Potter was freed from the cupboard under the stairs - and a global phenomenon started. Harry Potter and the Philosopher&apos;s Stone has been read and loved by every new generation since. To mark the 20th anniversary of first publication, Bloomsbury has published four House Editions of J.K. Rowling&apos;s modern classic. These stunning editions each feature the individual house crest on the jacket and line illustrations exclusive to that house, by Kate Greenaway Medal winner Levi Pinfold. Exciting new extra content includes fact files and profiles of favourite characters, and each book has sprayed edges in the house colours. Available for a limited period only, these highly collectable editions are a must-have for all Harry Potter fans.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harry Potter</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">284.0</publicationWeight>
-        <rdfs:label xml:lang="en">Harry Potter: The Philosopher&apos;s Stone</rdfs:label>
+        <rdfs:label xml:lang="en">Harry Potter and the Philosopher&apos;s Stone</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2110,7 +2116,7 @@ Timid Tadano is a total wallflower, and that&apos;s just the way he likes it. Bu
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">608</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ancient Rome</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A History of Ancient Rome</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: A History of Ancient Rome</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ancient Rome matters.
 
 Its history of empire, conquest, cruelty and excess is something against which we still judge ourselves. Its myths and stories - from Romulus and Remus to the Rape of Lucretia - still strike a chord with us. And its debates about citizenship, security and the rights of the individual still influence our own debates on civil liberty today.
@@ -2165,13 +2171,13 @@ Covering 1,000 years of history, and casting fresh light on the basics of Roman 
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">560</publicationPageCount>
         <publicationSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSource>
         <publicationSubject rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</publicationSubject>
-        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book 1 of The Traitor Spy Trilogy</publicationSubtitle>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: The Traitor Spy Trilogy (Book 1)</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">As the son of the late High Lord Akkarin, saviour of the city, and Sonea, the former street urchin turned Black Magician, Lorkin has a legacy of heroism and adventure to live up to. So when Lord Dannyl takes the position of Guild Ambassador to Sachaka, Lorkin volunteers to be his assistant in the hopes of making his mark on the world.
 
 When news comes that Lorkin is in danger, the law that forbids Black Magicians leaving the city forces Sonea to trust that Dannyl will save him. Besides, her old friend Cery needs her as never before: someone has been assassinating Thieves, and when his family is targeted he finds evidence that this Thief Hunter uses magic.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Ambassador&apos;s Mission</publicationTitle>
         <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">388.0</publicationWeight>
-        <rdfs:label xml:lang="en">The Ambassador&apos;s Mission</rdfs:label>
+        <rdfs:label xml:lang="en">The Ambassador&apos;s Mission: The Traitor Spy Trilogy (Book 1)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2228,17 +2234,21 @@ If she deviates, she will, like dissenters, be hanged at the wall or sent out to
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
         <hasSeries rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#The_Black_Magician_Trilogy"/>
         <hasService rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Loan"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
         <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-03-04T00:00:00</publicationDate>
         <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841499604</publicationISBN>
+        <publicationLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</publicationLanguage>
         <publicationPageCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">465</publicationPageCount>
+        <publicationSubtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">: The Black Magician Trilogy (Book 1)</publicationSubtitle>
         <publicationSummary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Each year the magicians of Imardin gather together to purge the city streets of vagrants, urchins and miscreants. Masters of the disciplines of magic, they know that no one can oppose them. But their protective shield is not as impenetrable as they believe.
 
 Sonea, angry, frustrated and outraged by the treatment of her family and friends, hurls a stone at the shield, putting all her rage behind it. To the amazement of all who bear witness, the stone passes unhindered through the barrier and renders a magician unconscious.
 
 The guild&apos;s worst fear has been realised . . . There is an untrained magician loose on the streets. She must be found before her uncontrolled powers unleash forces that will destroy both her, and the city that is her home.</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Magicians&apos; Guild</publicationTitle>
-        <rdfs:label xml:lang="en">The Magicians’ Guild</rdfs:label>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">330.0</publicationWeight>
+        <rdfs:label xml:lang="en">The Magicians’ Guild: The Black Magician Trilogy (Book 1)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2258,6 +2268,7 @@ The guild&apos;s worst fear has been realised . . . There is an untrained magici
         <hasLocation rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Chelmsford"/>
         <hasPublisher rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Little,_Brown"/>
         <hasService rdf:resource="http://www.semanticweb.org/joshu/ontologies/2019/9/library-ontology#Loan"/>
+        <publicationCopyTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</publicationCopyTotal>
         <publicationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-01T00:00:00</publicationDate>
         <publicationEdition rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</publicationEdition>
         <publicationISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9781841495903</publicationISBN>
@@ -2268,6 +2279,7 @@ When treating a patient at the residence of the local magician, Lord Dakon, Tess
 
 But along with the excitement and privilege, Tessia is about to discover that her magical gifts bring with them a great deal of responsibility. Events are brewing that will lead nations into war, rival magicians into conflict, and spark an act of sorcery so brutal that its effects will be felt for centuries . . .</publicationSummary>
         <publicationTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Magician&apos;s Apprentice</publicationTitle>
+        <publicationWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">520.0</publicationWeight>
         <rdfs:label xml:lang="en">The Magician’s Apprentice</rdfs:label>
     </owl:NamedIndividual>
     

@@ -229,9 +229,17 @@ namespace NLS.Lib
                 index++;
             }
 
+            // TODO: This is a disgusting hack and needs to be improved.
             if (!String.IsNullOrWhiteSpace(publicationModel.Subtitle))
             {
-                publicationModel.Combined = publicationModel.Title + publicationModel.Subtitle;
+                if(publicationModel.Subtitle.Contains(":"))
+                {
+                    publicationModel.Combined = publicationModel.Title + publicationModel.Subtitle;
+                }
+                else
+                {
+                    publicationModel.Combined = publicationModel.Title + " " + publicationModel.Subtitle;
+                }
             }
 
             publicationModel.Types = QueryIndividualTypes(individualName);

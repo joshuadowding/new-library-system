@@ -177,6 +177,10 @@ header {
     width: 512px;
 }
 
+.navbar .search #search-group .form-control {
+    border-radius: .25rem;
+}
+
 .navbar .search h1.header {
     margin-bottom: 0;
 }

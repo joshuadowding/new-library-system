@@ -118,7 +118,8 @@ main {
 }
 
 .container#container-product {
-    padding-top: 48px;
+    padding-top: 64px;
+    padding-bottom: 16px;
 }
 
 .container-fluid {
@@ -175,6 +176,10 @@ header {
 
 .navbar .search #search-group {
     width: 512px;
+}
+
+.navbar .search #search-group .form-control {
+    border-radius: .25rem;
 }
 
 .navbar .search h1.header {

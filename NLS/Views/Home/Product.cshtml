@@ -26,7 +26,12 @@
 
 <div class="container" id="container-product">
     <div class="row">
-        <div class="col-12">
+        <div class="col-3">
+            <div class="product-block">
+                <img class="publication-thumbnail" src="@Model.Publication.Thumbnail" alt="thumbnail" />
+            </div>
+        </div>
+        <div class="col-9">
             <div class="publication-header">
                 <h1 class="publication-title">
                     @if (!String.IsNullOrWhiteSpace(Model.Publication.Subtitle))

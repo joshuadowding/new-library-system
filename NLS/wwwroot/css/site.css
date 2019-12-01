@@ -118,7 +118,8 @@ main {
 }
 
 .container#container-product {
-    padding-top: 48px;
+    padding-top: 64px;
+    padding-bottom: 16px;
 }
 
 .container-fluid {

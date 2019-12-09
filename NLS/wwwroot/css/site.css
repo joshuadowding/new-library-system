@@ -58,6 +58,10 @@ p.heading {
     font-weight: 600;
 }
 
+img.publication-thumbnail {
+    width: 100%;
+}
+
 button.btn {
     border: 1px solid #DEE2E6;
     border-radius: .25rem;

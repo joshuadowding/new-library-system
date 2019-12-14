@@ -5,6 +5,8 @@
     <StartupObject>NLS.Program</StartupObject>
     <ApplicationIcon />
     <OutputType>Exe</OutputType>
+    <Version>1.0.1</Version>
+    <NeutralLanguage>en-GB</NeutralLanguage>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

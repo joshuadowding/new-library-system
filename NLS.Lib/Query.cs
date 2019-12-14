@@ -36,7 +36,7 @@ namespace NLS.Lib
             queryString.Namespaces.AddNamespace("rdfs", new Uri(RDFS_BASE_URI));
             queryString.Namespaces.AddNamespace("lib", new Uri(ONTOLOGY_BASE_URI));
 
-            queryString.CommandText = "SELECT DISTINCT ?label ?title ?author ?series ?publisher ?imprint ?copyCount ?date ?edition ?isbn ?language ?pageCount ?source ?subject ?subtitle ?summary ?weight ?location ?service ";
+            queryString.CommandText = "SELECT DISTINCT ?label ?title ?author ?series ?publisher ?imprint ?copyCount ?date ?edition ?isbn ?language ?pageCount ?source ?subject ?subtitle ?summary ?weight ?location ?service ?thumbnail ";
             queryString.CommandText += "WHERE { ?class rdfs:label ?label. ";
 
             queryString.CommandText += "?class lib:hasAuthor ?author. ";
@@ -47,6 +47,7 @@ namespace NLS.Lib
             queryString.CommandText += "OPTIONAL { ?class lib:hasService ?service }. ";
 
             queryString.CommandText += "?class lib:publicationTitle ?title. ";
+            queryString.CommandText += "OPTIONAL { ?class lib:publicationThumbnail ?thumbnail }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:publicationCopyTotal ?copyCount }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:publicationDate ?date }. ";
             queryString.CommandText += "OPTIONAL { ?class lib:publicationEdition ?edition }. ";
@@ -62,6 +63,12 @@ namespace NLS.Lib
             if (individualName.Contains("'"))
             {
                 individualName = individualName.Replace("'", @"\'");
+            }
+
+            if (individualName.Contains("(") || individualName.Contains(")"))
+            {
+                individualName = Regex.Replace(individualName, "[(]", @"\\\\(");
+                individualName = Regex.Replace(individualName, "[)]", @"\\\\)");
             }
 
             queryString.CommandText += "FILTER(regex(str(?label), '" + individualName.Replace('_', ' ') + "')) }";
@@ -215,12 +222,30 @@ namespace NLS.Lib
                                     string[] locationSplit = _result.Value.ToString().Split('#');
                                     publicationModel.Locations.Add(locationSplit[1].Trim().Replace('_', ' '));
                                     break;
+
+                                case "thumbnail":
+                                    string[] thumbnailSplit = _result.Value.ToString().Split('#');
+                                    publicationModel.Thumbnail = thumbnailSplit[0].Trim();
+                                    break;
                             }
                         }
                     }
                 }
 
                 index++;
+            }
+
+            // TODO: This is a disgusting hack and needs to be improved.
+            if (!String.IsNullOrWhiteSpace(publicationModel.Subtitle))
+            {
+                if(publicationModel.Subtitle.Contains(":"))
+                {
+                    publicationModel.Combined = publicationModel.Title + publicationModel.Subtitle;
+                }
+                else
+                {
+                    publicationModel.Combined = publicationModel.Title + " " + publicationModel.Subtitle;
+                }
             }
 
             publicationModel.Types = QueryIndividualTypes(individualName);
